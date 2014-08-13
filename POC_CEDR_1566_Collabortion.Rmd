@@ -1,0 +1,154 @@
+---
+title: "1566 Measurement POC/CEDR Collaboration Document"
+output:
+  html_document:
+    theme: cerulean
+  pdf_document: default
+---
+
+##Background - Measurements as Described in Law
+
+Second Substitute House Bill 1566 requires that "[b]y January 1, 2015 and annually thereafter, [a] university-based child welfare research entity [POC] must submit a report to the legislature." The bill specifies specific measurements that should be included in the report. However, since this bill was passed, POC has been in regular communication with both the main sponsor of the bill and other proponents of the bill. Through these conversations, it has become clear that the proposed measures are to be taken as suggested starting points for the report that will be written. Some of the measures are simply not available. Some of the measures will, in principle, be available at some point in the future but are not available for the January 2015 report. A brief summary of the availability of each measure is as follows: 
+
+* Aggregate scores from the Washington state kindergarten readiness assessment
+    * Beginning in the 2012-13 academic year, and as the result of [Senate Bill 5427](http://apps.leg.wa.gov/billinfo/summary.aspx?bill=5427&year=2011), the Washington Kindergarten Inventory of Developing Skills (WaKIDS) was made mandatory for all full-time kindergartners. Thus, the 2012-13 academic year will serve as the baseline reporting year for this measure. 
+    * This measure will only be possible for the January 2015 report if CEDR/UW is provided with the WaKIDS data prior to the completion of the report.
+
+* Aggregate scores from the third grade statewide student assessment in reading
+    * Beginning in the 2009-10 academic year, the state implemented a standardized test known as the Measurements of Student Progress (MSP) which, among other subjects, measures a students proficiency in reading at grades three through eight. 
+    * Thus, the 2009-10 academic year will serve as the baseline reporting year for this measure.
+
+* Number of youth graduating from high school with a documented plan for postsecondary education, employment, or military service;
+    * This measure is an oblique reference to the [High School and Beyond Plan](https://www.k12.wa.us/graduationrequirements/Requirement-HighSchoolBeyond.aspx) which, although a requirement for graduation in Washington, does not appear to be tracked in a standardized format by any school district. 
+    * An alternative to this measurement is being developed and is described elsewhere. This measurement will not involve any educational data. 
+
+* Number of youth completing one year of postsecondary education, the equivalent of first-year student credits, or achieving a postsecondary certificate
+    * This measurement fails to account for the time-varying nature of post-secondary education. 
+    * A variation on standard demographic reporting of grade attainment is proposed as an alternative to this measurement below. 
+
+* Number of youth who complete an associate or bachelor's degree.
+    * This measurement fails to account for the time-varying nature of post-secondary education. 
+    * A variation on standard demographic reporting of grade attainment is proposed as an alternative to this measurement below. 
+
+
+##Populations of Interest
+
+All measurements described in this document will be concerned with the population of foster children ($P$) of a particular age ($a$) and grade ($g$) in a particular academic year ($y$). Unless otherwise indicated, $a$ is taken to indicate the child's age on September 1 of a given academic year. In general, the population will be described with some variation of the symbol (${}_{y}P^g_a$). If a particular index ($g$ or $a$) is not specified in any notation, this is to be taken as an indication that no restriction is being placed on the population as a function of the unspecified index. For example, ${}_{0910}P^g_{17}$ can be taken to indicate all foster children who were aged 17 on September 1 of the 2009-10 academic year, across all levels of $g$. 
+
+For the purposes of the January 2015 report, it is proposed that ${}_{y}P^g_a$ be defined using the CEDARS Element I10 (Free/Reduced-Price Meal Eligibility Status). While the foster care flag (CEDARS Element B25) exists, there have been a number of changes to the manner in which this field has been updated over the life of CEDARS and it would be difficult to interpret any observed variation in a measurement based on this field of data. Element I10 has been updated based on a nightly batch process (ostensibly over the life of CEDARS) and should provide a reliable indicator of foster care status from the 2009-10 academic year to present. Specifically, ${}_{y}P^g_a$ shall be selected based on the following Structured Query Language (SQL) pseudocode: 
+
+```SQL
+select 
+  [CEDARS File B].[Research ID] as id
+  ,[CEDARS File B].[School Year] as y
+  ,max([CEDARS File I].[Start Date]) as max_fc_start_date
+  ,[Calculated Age at School Year Begin] a
+  ,[CEDARS File B].[Grade Level] g
+into [Population Table]
+from [CEDARS File B]
+  join [CEDARS File I]
+    on [CEDARS File B].[Research ID] = [CEDARS File I].[Research ID] 
+      and [CEDARS File B].[School Year] = [CEDARS File I].[School Year] 
+where 
+  [Free/Reduced-Price Meal Eligibility Status] = [8–Free via foster child income status]
+group by 
+   [CEDARS File B].[Research ID]
+  ,[CEDARS File B].[School Year] 
+  ,[Calculated Age at School Year Begin]
+  ,[CEDARS File B].[Grade Level]
+  
+
+select 
+  count(id) P
+  ,y
+  ,a
+  ,g
+from [Population Table]
+group by 
+  y
+  ,a
+  ,g
+```
+As should hopefully be clear from the second select statement above, the above logic (which can be implemented in the software of the analyst's choice) should ultimately yield a table which contains an aggregated count of foster children grouped by $y$, $a$, and $g$. By selecting `max([CEDARS File I].[Start Date])` we identify the last record in which `[Free/Reduced-Price Meal Eligibility Status] = [8–Free via foster child income status]` in a given academic year which prevents the retrieval of duplicate records while still allowing us to determine if a child was in foster care at any point during the academic year. The resulting table `[Population Table]` should contain the base population of all measurements described in this document. 
+
+##Operational/Alternate Measurement Definitions
+
+The measures proposed by the legislature fall into two broad categories: 1) Measurements concerned with educational readiness, and 2) Measurements concerned with adult educational attainment. Using the proposed legislative measurements as a guide, the following measurements are proposed within each category to meet intention of the legislation within the confines of current data availability. 
+
+###Measurements concerned with educational readiness.
+
+####Kindergarten readiness rate (The ratio of kindergarten readiness among kindergarten foster children)
+
+#####Definition
+
+The kindergarten readiness rate shall be defined as 
+
+$$
+\frac{{}_{y}R^K_a}{{}_{y}P^K_a}
+$$
+
+where ${}_{y}R^K_a$ is the age-specific number of foster children in Kindergarten performing at expected levels across all six developmental areas as assessed by the WaKIDS assessment for a particular value of $y$. This measurement should begin (to the extent data are available) with $y=1213$ and be calculated annually thereafter. For this measure, children should be excluded from ${}_{y}P^K_a$ if they did not complete the WaKIDS assessment. 
+
+#####Proposed Table Format
+
+A table, similar in format to `[Population Table]` described above but containing an additional column of data indicating $R^K$ grouped by $y$ and $a$. 
+
+######Third grade literacy rate (The ratio of third-grade reading proficiency among third grade foster children)
+
+#####Definition
+
+The third-grade literacy rate shall be defined as 
+
+$$
+\frac{{}_{y}L^3_a}{{}_{y}P^3_a}
+$$
+
+where ${}_{y}L^3_a$ is the age-specific number of foster children in third-grade reading at (or above) expected levels as measured by the MSP for a particular value of $y$. This measurement should begin (to the extent data are available) with $y=0910$ and be calculated annually thereafter. For this measure, children should be excluded from ${}_{y}P^3_a$ if they did not complete the MSP assessment. 
+
+#####Proposed Table Format
+
+A table, similar in format to `[Population Table]` described above but containing an additional column of data indicating $L^3$ grouped by $y$ and $a$. 
+
+###Measurements concerned with adult educational attainment.
+
+####Cumulative grade attainment rate (The rate of grade completion per former foster child BY grade BY age) 
+
+#####Definition
+
+The cumulative grade attainment rate shall be defined as 
+
+$$
+\frac{{}_{y+n}C^{g^+}_a}{{}_{y}P^{g}_{17}}
+$$
+
+where ${}_{y}P^{g}_{17}$ is the count of persons in a grade-specific cohort of 17 year-old foster children (i.e. foster children who will reach the age-of-majority prior to the start of the following academic year) and ${}_{y+n}C^{g^+}_a$ is the count of persons in a given cohort who have completed grade $g$ or beyond by the end of $n$ academic years (including $n=0$, the current academic year). Using a combination of data from PCHEES, NSC, and CEDARS, grade attainment shall be reported based on the follow-up time available. In general, the extent to which a particular value of $g^+$ will be reported shall be determined as a function of $n$ as shown in the table below. The categories of $g^+$ are based on US Census categories of educational [attainment](https://www.census.gov/hhes/socdemo/education/about/). 
+
+| $g^+$   | $n\geq5$ 	| $n=4$ 	| $n=3$ 	| $n=2$ 	| $n\leq1$ 	|
+|-----------------------------------------------------------------	|----------	|--------------	|--------------	|--------------	|--------------	|
+| High school (grades 9-12, no degree) OR MORE 	| Reported 	| Reported 	| Reported 	| Reported 	| Reported 	|
+| High school graduate (or equivalent) OR MORE 	| Reported 	| Reported 	| Reported 	| Reported 	| Reported 	|
+| Some college (1-4 years, no degree) OR MORE 	| Reported 	| Reported 	| Reported 	| Reported 	| Reported 	|
+| Associate’s degree (including occupational or academic degrees) OR MORE 	| Reported 	| Reported 	| Reported 	| Reported 	| Reported 	|
+| Bachelor’s degree (BA, BS, AB, etc) OR MORE 	| Reported 	| Reported 	| Reported 	| Reported 	| Not Reported 	|
+| Master’s degree (MA, MS, MENG, MSW, etc) OR MORE 	| Reported 	| Reported 	| Reported 	| Not Reported 	| Not Reported 	|
+| Professional school degree (MD, DDC, JD, etc) OR MORE 	| Reported 	| Reported 	| Not Reported 	| Not Reported 	| Not Reported 	|
+| Doctorate degree (PhD, EdD, etc) OR MORE 	| Reported 	| Not Reported 	| Not Reported 	| Not Reported 	| Not Reported 	|
+
+Depending on cell-sizes, alternative aggregations of the identified values of $g^+$ may be identified. 
+
+#####Proposed Table Format
+
+A table, similar in format to `[Population Table]` described above but containing an additional columns of data indicating $C$ grouped by $y$, $n$, $g$, $g^+$ and $a$. 
+
+####Median years of education (The median years of schooling for former foster child BY years since childhood)
+
+#####Definition
+
+The median years of education shall be defined as the statistical median years of education for the same grade-specific cohort of 17 year-old foster children defined above. The measurement will be calculated for $n$ years following the initial cohort (including a calculation at $n=0$ - the end of the child's last year of childhood). 
+
+In calculating the number of years of education for a particular child, an individual can receive a maximum of 12 years of education from elementary and secondary education, a maximum of four years of education between the completion of their high school education and the award of a bachelors degree, and an additional four years of credit for graduate education for a maximum of 18 years of education. Years of education shall be prorated between the specified degree ceilings based on the number of reported credits or enrollment periods reported for a particular individual.  
+
+#####Proposed Table Format
+
+A table, similar in format to `[Population Table]` described above but containing an additional column of data indicating median years of education grouped by $y$, $g$, $n$. 
+
