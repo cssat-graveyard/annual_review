@@ -1,0 +1,30 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{fourier}
+\usepackage{amsmath}
+\usetikzlibrary{positioning,arrows, shapes.geometric}
+\usepackage{xcolor}
+\begin{document}
+\begin{tikzpicture}
+
+\tikzstyle{lens} = [draw=nice_green, circle, minimum size=2mm, ultra thick]
+\tikzstyle{dot} = [draw, circle, minimum size=1mm, inner sep=0pt]
+
+\definecolor{nice_brown}{HTML}{B15928}
+\definecolor{nice_purple}{HTML}{6A3D9A}
+\definecolor{nice_blue}{HTML}{1F78B4}
+\definecolor{nice_green}{HTML}{33A02C}
+\definecolor{nice_orange}{HTML}{FF7F00}
+
+
+
+
+%magnifying glass bottom
+%\node[text=nice_green] at (6.25,-3.7)  {\Large = X};
+\node[lens] (lens) at (5.5,-3.7)  {};
+\coordinate (handle) at (5.75,-3.95);
+\draw[ultra thick, draw=nice_green, round cap-] (handle) -- (lens);
+
+\end{tikzpicture}
+\end{document}
+

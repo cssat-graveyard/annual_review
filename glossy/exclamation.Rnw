@@ -1,0 +1,30 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{fourier}
+\usepackage{amsmath}
+\usetikzlibrary{positioning,arrows, shapes.geometric}
+\usepackage{xcolor}
+\begin{document}
+\begin{tikzpicture}
+
+\tikzstyle{lens} = [draw=nice_green, circle, minimum size=2mm, ultra thick]
+\tikzstyle{dot} = [draw, circle, minimum size=1mm, inner sep=0pt]
+
+\definecolor{nice_brown}{HTML}{B15928}
+\definecolor{nice_purple}{HTML}{6A3D9A}
+\definecolor{nice_blue}{HTML}{1F78B4}
+\definecolor{nice_green}{HTML}{33A02C}
+\definecolor{nice_orange}{HTML}{FF7F00}
+
+%exclamation
+%\node[text=nice_blue] at (6.25,2.25)  {\Large = X};
+\coordinate (bar1) at (5.6,2.5);
+\coordinate (bar2) at (5.4,2.5);
+\coordinate (bar3) at (5.5,2.05);
+\draw[fill=nice_blue, draw=none, rounded corners=2pt]  (bar1) --  (bar2) --  (bar3) -- cycle;
+
+\node[dot, draw=none, fill=nice_blue] (dot) at (5.5,2)  {};
+
+\end{tikzpicture}
+\end{document}
+

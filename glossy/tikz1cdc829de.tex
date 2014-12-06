@@ -1,0 +1,45 @@
+\documentclass{article}
+\include{preview}
+\usepackage[pdftex,active,tightpage]{preview}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{fit,calendar}
+\usepackage{xcolor}
+\usetikzlibrary{matrix}
+\begin{document}
+\begin{preview}
+%% TIKZ_CODE %%
+\usetikzlibrary{arrows,positioning} 
+\tikzset{
+    %Define standard arrow tip
+    >=stealth',
+    %Define style for boxes
+    punkt/.style={
+           rectangle,
+           rounded corners,
+           draw=black, very thick,
+           text width=6.5em,
+           minimum height=2em,
+           text centered},
+    % Define arrow style
+    pil/.style={
+           ->,
+           thick,
+           shorten <=2pt,
+           shorten >=2pt,}
+}
+
+\begin{document}
+
+\begin{tikzpicture}[node distance=1cm, auto,]
+ \node[punkt] (obs) {Metric Observed};
+  \node[punkt, below=of obs, align=center] (plan) {Develop Analysis\\ Plan};
+\node[punkt, below=of plan, align=center] (rpt) {Report Results\\ Within 1 Year};
+
+\draw[->]  (obs) to node [auto] {} (plan);
+\draw[->]  (plan) to node [auto] {} (rpt);
+
+\end{tikzpicture}
+\end{document}
+\end{preview}
+\end{document}

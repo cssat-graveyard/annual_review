@@ -1,0 +1,50 @@
+\documentclass{article}
+\include{preview}
+\usepackage[pdftex,active,tightpage]{preview}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{matrix}
+\begin{document}
+\begin{preview}
+%% TIKZ_CODE %%
+\usetikzlibrary{arrows,positioning} 
+\tikzset{
+    %Define standard arrow tip
+    >=stealth',
+    %Define style for boxes
+    punkt/.style={
+           rectangle,
+           rounded corners,
+           draw=black, very thick,
+           text width=6.5em,
+           minimum height=2em,
+           text centered},
+    % Define arrow style
+    pil/.style={
+           ->,
+           thick,
+           shorten <=2pt,
+           shorten >=2pt,}
+}
+
+\begin{document}
+
+\begin{tikzpicture}[node distance=1cm, auto,]
+ %nodes
+ \node[] (market) {\textbf{Study}};
+ % We make a dummy figure to make everything look nice.
+ \node[above=of market] (dummy) {};
+ \node[right=of dummy] (t) {Act}
+   edge[pil,bend left=45] (market.east) % edges are used to connect two nodes
+   %edge[pil, bend left=45] (formidler.east); % .east since we want
+                                             % consistent style
+ \node[left=of dummy] (g) {Do}
+   edge[pil, bend right=45] (market.west)
+   edge[pil, bend right=45] (formidler.west)
+   edge[pil,<->, bend left=45] node[auto] {Plan} (t);
+\end{tikzpicture}
+
+
+\end{document}
+\end{preview}
+\end{document}

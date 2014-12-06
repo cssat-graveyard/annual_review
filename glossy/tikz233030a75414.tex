@@ -1,0 +1,44 @@
+\documentclass{article}
+\include{preview}
+\usepackage[pdftex,active,tightpage]{preview}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{matrix}
+\begin{document}
+\begin{preview}
+%% TIKZ_CODE %%
+\usetikzlibrary{calc} 
+\makeatletter 
+\@namedef{color@1}{red!40}
+\@namedef{color@2}{green!40}   
+\@namedef{color@3}{blue!40} 
+\@namedef{color@4}{cyan!40}  
+\@namedef{color@5}{magenta!40} 
+\@namedef{color@6}{yellow!40}    
+
+\newcommand{\graphitemize}[1]{%
+\begin{tikzpicture}[every node/.style={align=center}]  
+
+\foreach \gritem [count=\xi] in {#1}  {\global\let\maxgritem\xi}  
+
+\foreach \gritem [count=\xi] in {#1}
+{% 
+\pgfmathtruncatemacro{\angle}{360/\maxgritem*\xi}
+\edef\col{\@nameuse{color@\xi}}
+\node[circle,
+     ultra thick,
+     draw=white,
+     fill opacity=.5,
+     fill=\col,
+     minimum size=3cm] (satellite\xi) at (\angle:4cm) {\gritem };
+}%
+
+\foreach \gritem [count=\xi] in {#1}
+{% 
+\pgfmathsetmacro{\xj}{mod(\xi, \maxgritem) + 1}
+\edef\col{\@nameuse{color@\xi}}
+\draw[<-,line width=.5cm,opacity=.5,\col] (satellite\xj) to[bend left] (satellite\xi);
+}%
+\end{tikzpicture}  
+\end{preview}
+\end{document}

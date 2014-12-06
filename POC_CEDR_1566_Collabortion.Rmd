@@ -1,9 +1,9 @@
 ---
 title: "1566 Measurement POC/CEDR Collaboration Document"
 output:
+  pdf_document: default
   html_document:
     theme: cerulean
-  pdf_document: default
 ---
 
 ##Background - Measurements as Described in Law

@@ -63,15 +63,24 @@
    
 \maketitle
 
+% \section{Notation}
+% 
+% \begin{tikzpicture}
+% 
+%     \tikzstyle{every node}=[font=\small]
+%     \node[draw,rectangle] (a) {A};
+% 
+% \end{tikzpicture}
+
 \section{Safety}
 \subsection{Safety Concerns}
-\subsubsection{Incidence Rate of Referrals ($IRR$)}
+\subsubsection{General Rate of Referrals ($R_r$)}
 
-The incidence of reports of household safety concerns ($IRR$) shall be defined as the total number of first referrals to Children's Administration (CA) per month, per 1,000 households with own children under the age of 18 as defined by the US Census. This measure will focus only on those referrals aledging child maltreatment or an eminent risk of serious harm to the child. This rate shall be calculated simply by 
-\begin{equation}\label{eq:IRR}
-IRR = (I_R \div P_{H<18}) \cdot 1,000
+The general rate of referrals (i.e. reports of maltreatment) ($R_r$) shall be defined as the total number of household referrals to Children's Administration (CA) per month, per 1,000 households with own children under the age of 18 as defined by the US Census. This measure will focus only on those referrals aledging child maltreatment or an eminent risk of serious harm to the child. This rate shall be calculated simply by 
+\begin{equation}\label{eq:Rr}
+R_r = (I_r \div N_{h}^{<18}) \cdot 1,000
 \end{equation}
-where $I_R$ represents the total number of first referrals occuring during the month and $P_{H<18}$ the number of households with own children under the age of 18 as defined by the US Census. To the extent that estimates are available, values of $P_{H<18}$ (and subsequent measures of the general population used in this document) shall be calculated from the following sources in order of priority:
+where $I_r$ represents the total number of first referrals occuring during the month and $N_{h}^{<18}$ the population of households with own children under the age of 18 as defined by the US Census. If more than one referral is received for a given household within a 48 hour period, those referrals will only be counted once. To the extent that estimates are available, values of $N_{h}^{<18}$ (and subsequent measures of the general population used in this document) shall be calculated from the following sources in order of priority:
 
 \begin{enumerate}
   \item US Census,
@@ -80,126 +89,182 @@ where $I_R$ represents the total number of first referrals occuring during the m
   \item Linear interpolation taking the above estimates as ``True'' values. 
 \end{enumerate}
 
-\subsubsection{Finding Rate ($FR$)}
+\subsubsection{General Rate of Findings ($R_f$)}
 
-The rate of household findings ($FR$) shall be defined as the monthly total number of first findings of child-abuse or neglect per 1,000 referrals to CA with no prior history of a founded allegation of child abuse or neglect. This measure will focus only on those referrals aledging child maltreatment or an eminent risk of serious harm to the child and will be calculated at the household level. A household is considered to have a finding if any allegation from a given referral is founded. This rate shall be calculated as 
-\begin{equation}\label{eq:FR}
-FR = (F \div I_{R_{NPF}}) \cdot 1,000
+The rate of household findings ($R_f$) shall be defined as the monthly total number of first findings of child maltreatment per 1,000 referrals to CA. This measure will focus only on those referrals aledging child maltreatment or an eminent risk of serious harm to the child and will be calculated at the household level. A household is considered to have a finding if any allegation from a given referral is founded. This rate shall be calculated as 
+\begin{equation}\label{eq:Rf}
+R_f = (I_f \div N_r) \cdot 1,000
 \end{equation}
-where $F$ represents the total findings occuring during the month among referrals for households with no previous finding ($I_{R_{NPF}}$). 
+where $I_f$ represents the total findings occuring during the month among referrals to the child welfare system over the same month. The value of $N_r$ shall be calculated similarly to the value of $I_r$ as described above. 
 
 
 \subsection{Recurrence of Safety Concerns}
 
-\subsubsection{Second-Order Rereferral Rate ($RRR_2$)}
+\subsubsection{Order-Specific Rate of Referrals (${}^iR_r$)}
 
-In measuring rereferrals, it is important to distinguish between first referrals ($IR_S$) and rereferrals. In general, those households that experience at least one referral to the child welfare system are at an increased risk of rereferral. As such, there is interest in distinguishing between first and higher order referrals (e.g. second referrals, third referrals, etc.). 
+In measuring referrals, it is important to distinguish between first referrals and subsequent referrals. In general, those households that experience at least one referral to the child welfare system are at an increased risk of rereferral. As such, there is interest in distinguishing between first and higher order referrals (e.g. second referrals, third referrals, etc.). However, the population at risk for higher-order referrals is different for each order.
 
-The order-specific rereferral rate is defined as the number of referrals of a given order during a month per 1,000 households with own children under the age of 18. The formula for the first referral is given in formula ~\ref{eq:IRR}. The formula for $ith$ order rereferral rates is 
-\begin{equation}\label{eq:RRRi}
-RRR_i = \frac{I_{R_i}}{P_{i-1PR<18}} \cdot 1,000
+The order-specific rereferral rate is defined as the number of referrals of a given order during a month per 1,000 households with own children under the age of 18. The general formula for $ith$ order rereferral rates is 
+\begin{equation}\label{eq:iRr}
+{}^iR_r = \frac{{}^iI_r} {{}_{pr}^{i-1}N_{h}^{<18}} \cdot 1,000
 \end{equation}
-where $I_{R_i}$ represents the total number of $ith$ order rereferrals and $P_{i-1PR<18}$ represents the number of $ith-1$ order referrals in which all children in the household are still under the age of 18. At this time, it is proposed that only second-order rereferrals ($RRR_2$) be used as measures under 1774. Future reports may include higher-order rereferrals. 
+where ${}^iI_r$ represents the total number of $ith$ order referrals and ${}_{pr}^{i-1}N_{h}^{<18}$ represents the population of households with $ith-1$ order referrals in which all children in the household ($h$) are still under the age of 18. At this time, it is proposed that only first and second-order rereferrals be used as measures under 1774. Future reports may include higher-order rereferrals. 
 
-\subsubsection{Second-Order Refinding Rate ($RFR_2$)}
+\subsubsection{Order-Specific Rate of Findings (${}^iR_f$)}
 
-Similarly to rereferrals, those households that experience at least one finding ($FR$) to the child welfare system are at an increased risk of refinding. As such, there is interest in distinguishing between first and higher order referrals (e.g. second referrals, third referrals, etc.). 
+Similarly to referrals, those households that experience at least one finding of maltreatment to the child welfare system are at an increased risk of findings of maltreatment. As such, there is interest in distinguishing between first and higher order findings (e.g. second findings, third findings, etc.). However, the population at risk for higher-order findings is different for each order.
 
-The order-specific refinding rate is defined as the number of findings of a given order during a month per 1,000 households with own children under the age of 18 who have received $i-1$ prior referrals. The formula for the first referral is given in formula ~\ref{eq:FR}. The formula for $ith$ order rereferral rates is 
-\begin{equation}\label{eq:RRRi}
-RFR_i = \frac{I_{F_i}}{P_{i-1PF<18}} \cdot 1,000
+The order-specific finding rate is defined as the number of findings of a given order during a month per 1,000 families with referrals who have received $i-1$ prior findings. The general formula for $ith$ order rereferral rates is 
+\begin{equation}\label{eq:iRf}
+{}^iR_f = \frac{{}^iI_f} {{}_{pf}^{i-1}N_{r}} \cdot 1,000
 \end{equation}
-where $I_{F_i}$ represents the total number of $ith$ order refindings and $P_{i-1PF<18}$ represents the number of $ith-1$ order findings in which all children in the household are still under the age of 18. As with rereferrals, it is proposed that only second-order refindings ($RFR_2$) be used as measures under 1774. Future reports may include higher-order refindings. 
+where ${}^iI_f}$ represents the total number of $ith$ order findings and ${}_{pf}^{i-1}N_{r}^{<18}$ represents the population of referrals with $ith-1$ order findings. As with order-specific referrals, it is proposed that only first and second-order refindings be used as measures under 1774. Future reports may include higher-order findings. 
 
 \subsection{Placement in Out-Of-Home Care}
 
-\subsubsection{Incidence Rate of Placement ($IRP$)}
+\subsubsection{General Rate of Placement ($R_p$)}
 
-The incidence of placement into out-of-home care ($IRP$) shall be defined as the monthly total number of referrals to Children's Administration per 1,000 persons under the age of 18. This rate shall be calculated simply by 
+The general rate of placement into out-of-home care ($R_p$) shall be defined as the monthly total number of placements to Children's Administration per 1,000 referrals to CA. This rate shall be calculated simply by 
 \begin{equation}\label{eq:IRP}
-IRP = (I_P \div P_C) \cdot 1,000
+R_p = (I_p \div N_r) \cdot 1,000
 \end{equation}
-where $I_P$ represents the total number of placements occuring during the month and $P_C$ the number of children under the age of 18 in the general population. To the extent that estimates are available, values of $P_C$ shall be calculated from the same sources and order of priority as in $P_H$ above.
+where $I_p$ represents the total number of placements occuring during the month and $N_r$ the number of referrals (as defined above). 
 
-\subsubsection{Placement Rate ($PR$)}
+\subsubsection{Order-Specific Placement Rate (${}^iR_p$)}
 
-The rate of placement ($PR$) shall be defined as the monthly total number of first placements per 1,000 referrals to CA with no prior history of a placement in the household. For consistency with previous measurements, this measure will focus only on those referrals aledging child maltreatment or an eminent risk of serious harm to the child and will be calculated at the household level. A household is considered to have a placement if any child associated with the home on a given referral is placed into out-of-home care. This rate shall be calculated as 
-\begin{equation}\label{eq:PR}
-PR = (P \div I_{R_{NPP}}) \cdot 1,000
+Similarly to referrals and findings, those households that experience at least one placement in out-of-home care are at an increased risk of placement during the investigation of subsequent referrals. As such, there is interest in distinguishing between first and higher order placements (e.g. second placements, third placements, etc.). However, the population at risk for higher-order placements is different for each order.
+
+The order-specific placement rate is defined as the number of placements of a given order during a month per 1,000 referrals who have received $i-1$ prior placements. The general formula for $ith$ order placement rates is 
+\begin{equation}\label{eq:iRf}
+{}^iR_p = \frac{{}^iI_p} {{}_{pp}^{i-1}N_{r}} \cdot 1,000
 \end{equation}
-where $P$ represents the total placements occuring during the month among referrals for households with no previous placement ($I_{R_{NPP}}$). 
+where ${}^iI_f}$ represents the total number of $ith$ order placements and ${}_{pf}^{i-1}N_{r}^{<18}$ represents the population of referrals with $ith-1$ order placements. As with order-specific referrals and findings, it is proposed that only first and second-order placements be used as measures under 1774. Future reports may include higher-order placements. 
 
 \subsection{Maltreatment in Foster Care}
 
-\subsubsection{Foster Care Finding Rate (${}_{FC}FR$)}
+\subsubsection{Care-Day Finding Rate (${}_{d}R_f$)}
 
-The final safety measurement concerns the rate of findings per day of foster care. This is the first ``care-day'' measurement proposed in this document - measurements in which the denominator is a count of days of out-of-home care for some population as opposed to a count of some type of person. 
-The Foster-Care Finding Rate (${}_{FC}FR$) follows the similarly named proposed CFSR measurement where ${}_{FC}FR$ is defined as 
-\begin{equation}\label{eq:_FCFR}
-{}_{FC}FR = \frac{{}_{FC}I_F}{c} \cdot 100,000
+The final safety measurement concerns the rate of findings per day of foster care. This is the first ``care-day'' measurement proposed in this document - measurements in which the population of interest is the is a count of days ($d$) of out-of-home care for some population as opposed to a count of some type of person.
+
+The care-day finding rate follows the similarly calculated proposed CFSR measurement where ${}_{d}R_f$ is defined as 
+\begin{equation}\label{eq:dRf}
+{}_{d}R_f = ({}_{d}I_f \div N_d) \cdot 100,000
 \end{equation}
-where $c$ represents the total number of care days provided by CA in a given year and ${}_{FC}I_F$ represents the number of maltreatment findings for children in out-of-home care over that period. This measurement excludes children in foster care for less than 8 days and also excludes reports made within the first 7 days of the referral. 
+where $N_d$ represents the total number of care days provided by CA in a given year and ${}_{d}I_f$ represents the number of maltreatment findings for children taking place during a day of care over the same period. This measurement excludes children in foster care for less than 8 days and also excludes reports made within the first 7 days of the referral. 
 
 \section{Permanency}
 
+\subsection{Placement Mobility}
+
+\subsubsection{Duration-Specific Movement Rate ($R_m^j$)}
+This measurement will adopt the basic approach of the analagous proposed CFSR measurement in which total placements are measured against the number of care days experienced for children during their first year of care. In this measurement, we propose that we extend this basic logic to a duration-specific mobility measurement in which a care-day mobility rate is calculated for the first through tenth duration periods ($j$) of care such that $R_m^j$ is given as 
+\begin{equation}\label{eq:Rmj}
+R_m^j = (I_m^j \div N_d) \cdot 100,000
+\end{equation}
+where $I_m^j$ is the count of placement moves during the $jth$ year and $C^j$ is the number of care days associated with the $jth$ year of a particular episode of care. Care days associated with children who stay in care for less than 8 days in their original placement episode will be excluded from $N_d$ in this measurement and moves to respite or other temporary situations will be excluded from $I_m^j$ in this measure. 
+
+\subsubsection{Transition-Duration-Specific Mobility Rate (${}_{tx}R_m^j$)}
+In order to get a sense of the \emph{types} of transitions that are experienced by children, $R_m^j$ shall be extended to also measure the type of transition that children are moving toward ($tx$) (i.e. foster care ($f$), relative placement ($r$), and group care ($g$.). The ${}_{tx}R_m^j$ measurement shall be calculated identically to $R_m^j$ above. However, ${}_{tx}R_m^j$ shall be calculated seperately for $tx=f$, $tx=r$, and $tx=g$. 
+
+\subsubsection{Age-Order-Specific AWOL Rate (${}^iR_{awol}^a$)}
+This measurement will extend the care-day approach to the measurement of how well the agency is avoiding children on AWOL status. This measurement will measure the number of AWOL care days per 100,000 care days within a given year.  
+\begin{equation}\label{eq:Rmj}
+{}^iR_{awol}^a = \frac{{}_{awol}^iI_{d}^a}{N_d^{\geq9}} \cdot 100,000
+\end{equation}
+where ${}_{awol}^iI_{d}^a$ is the number of $ith$ order AWOL care-days for children of age $a$ and $N_d^{\geq9}$ is the number of care days (restricted similarly to the above measures) associated with children where $a\geq9$. 
+
 \subsection{Time to Permanence}
 
-\subsubsection{Percentage of Children Remaining in Care After 1 Year (${}_{P}\hat{S}(365)$)}
+\subsubsection{Percentage of Children Experiencing Permanency Before 1 Year ($P_{pm}^1$)}
 
 This measurement is similar to the proposed CFSR measurement requiring exit to permanency within 12 months. However, instead of calculating a specific percentage, we propose that a Kaplan-Meier estimator be used to better account for right censoring of children who either age-out of the system or exit to a form of permanency other than adoption, reunification, or some form of guardianship. 
  
-The Kaplan-Meier estimator for a federally recognized form of permanency $P$ is given as
+The Kaplan-Meier estimator for a federally recognized form of permanency $pm$ is given as
 \begin{equation}\label{eq:KM1}
-{}_P\hat S(t) = \prod\limits_{t_i<t} \frac{n_i-p_{i}}{n_i}
+{}_{pm}\hat S(t) = \prod\limits_{t_i<t} \frac{n_i-pm_{i}}{n_i}
 \end{equation}
-where $n_{i}$ is the number of children entering out-of-home care in a given fiscal year who are still in care just prior to time $t_{i}$, and $p_{i}$ is the number of permanency events at $t_{i}$. Thus, the probability of exit within 1 year is given as ${}_P\hat S(365)$. A reasonable approximation of the new CFSR measurement is given as $(1 - {}_P\hat S(365)) \cdot 100$. For the sake of simplicity, we propose simply reporting annual calculations of ${}_{P}\hat{S}(365)$ for this measure. All children who stay in care for less than 8 days will be excluded from this measurement. Children aging out of care or experiencing a permanency outcome other than reunification, adoption, or some form of guardianship will be treated as right-censored to observation. 
+where $n_{i}$ is the number of children entering out-of-home care in a given fiscal year who are still in care just prior to time $t_{i}$, and ${pm}_{i}$ is the number of permanency events at $t_{i}$. Thus, the probability of exit within 1 year is given as ${}_{pm}\hat S(365)$. A reasonable approximation of the new CFSR measurement is given as $(1 - {}_{pm}\hat S(365)) \cdot 100$ and is thus the proposed definition of this measure. All children who stay in care for less than 8 days will be excluded from this measurement. Children aging out of care or experiencing a permanency outcome other than reunification, adoption, or some form of guardianship will be treated as right-censored to observation. 
 
-\subsubsection{Percentage of Legally Free Children Awaiting Adoption After 1 Year (${}_{A}\hat{S}(365)$)}
+\subsubsection{Percentage of Children Experiencing Adoption Before 1 Year ($P_{ad}^1$)}
 
-This measurement will also make use of a Kaplan-Meier estimator. Specifically, the Kaplan-Meier estimator for adoption $A$ is given as
-\begin{equation}\label{eq:KM}
-{}_A\hat S(t) = \prod\limits_{t_i<t} \frac{n_i-a_{i}}{n_i}
+This measurement will also make use of a Kaplan-Meier estimator. Specifically, the Kaplan-Meier estimator for adoption $ad$ is given as
+\begin{equation}\label{eq:KM2}
+{}_{ad}\hat S(t) = \prod\limits_{t_i<t} \frac{n_i-ad_{i}}{n_i}
 \end{equation}
-where $n_{i}$ is the number of children entering legally-free status in a given fiscal year who have not yet been adopted just prior to time $t_{i}$, and $a_{i}$ is the number of adoption events at $t_{i}$. Thus, the probability of adoption within 1 year is given as ${}_A\hat S(365)$. Children aging out of care or experiencing a permanency outcome other than adoption will be treated as right-censored to observation. 
+where $n_{i}$ is the number of children entering legally-free status in a given fiscal year who have not yet been adopted just prior to time $t_{i}$, and $ad_{i}$ is the number of adoption events at $t_{i}$. Thus, the probability of adoption within 1 year is given as ${}_{ad}\hat S(365)$. Children aging out of care or experiencing a permanency outcome other than adoption will be treated as right-censored to observation. For consistency with the proposed CFSR permanency measure, $(1 - {}_{ad}\hat S(365)) \cdot 100$ is the proposed definition of this measure.
+
+\subsubsection{Care-Day Rate ($R_d$)}
+
+This measurement will further extend the use of care-days - this time as an incidence as opposed to a population of interest. Specifically, this measure will report the rate of care-days per exit from care. This measure shall be calculated simply as 
+\begin{equation}\label{eq:Rd}
+R_d = (I_d \div N_{pm}) \cdot 100,000
+\end{equation}
+where $I_d$ is the number of care-days generated over a given reporting period and $N_{pm}$is the number of federally recognized forms of permanency ($pm$) as described above. 
 
 \subsection{Duration of Permanence}
 
 \subsubsection{Percentage of Children Reentering Care Within 1 Year (${}_{R}\hat{S}(365)$)}
 
-This measurement will also make use of a Kaplan-Meier estimator. Specifically, the Kaplan-Meier estimator for reentry $R$ is given as
-\begin{equation}\label{eq:KM}
-{}_R\hat S(t) = \prod\limits_{t_i<t} \frac{n_i-r_{i}}{n_i}
+This measurement will also make use of a Kaplan-Meier estimator. Specifically, the Kaplan-Meier estimator for reentry $rt$ is given as
+\begin{equation}\label{eq:KM3}
+{}_{rt}\hat S(t) = \prod\limits_{t_i<t} \frac{n_i-rt_{i}}{n_i}
 \end{equation}
-where $n_{i}$ is the number of children entering permanency in a given fiscal year who have not yet reentered care just prior to time $t_{i}$, and $r_{i}$ is the number of reentry events at $t_{i}$. Thus, the probability of reentry within 1 year is given as ${}_R\hat S(365)$. Children aging out of care or experiencing a permanency outcome other than adoption will be treated as right-censored to observation. Children who stay in care for less than 8 days will be excluded from this measurement.
-
-\subsection{Placement Mobility}
-
-\subsubsection{Duration-specific mobility rate ($M^d$)}
-This measurement will adopt the basic approach of the analagous proposed CFSR measurement in which total placements are measured against the number of care days experienced for children during their first year of care. In this measurement, we propose that we extend this basic logic to a duration-specific mobility measurement in which a care-day mobility rate is calculated for the first through tenth duration periods ($d$) of care such that $M^d$ is given as 
-\begin{equation}\label{eq:M_d}
-M^d = (m^d \div C^d) \cdot 100,000
-\end{equation}
-where $m^d$ is the count of placement moves during the $dth$ year and $C^d$ is the number of care days associated with the $dth$ year. Children who stay in care for less than 8 days in their original placement episode will be excluded from this measurement.
-
-\subsubsection{Transition-Duration-Specific mobility rate (${}_tM^d$)}
-In order to get a sense of the \emph{types} of transitions that are experienced by children, $M^d$ shall be extended to also measure the type of transition that children are moving toward ($t$) (i.e. foster care ($f$), relative placement ($r$), and group care ($g$.). The ${}_tM^d$ measurement shall be calculated identically to $M_d$ above. However, ${}_tM^d$ shall be calculated seperately for $t=f$, $t=r$, and $t=g$. 
-
-\subsubsection{Age-order-specific AWOL rate ($A^i_d$)}
-This measurement will extend the care-day approach to the measurement of how well the agency is avoiding children on AWOL. This 
-This measurement will adopt the basic approach of the analagous proposed CFSR measurement in which total placements are measured against the number of care days experienced for children during their first year of care. In this measurement, we propose that we extend this basic logic to a duration-specific mobility measurement in which a care-day mobility rate is calculated for the first through tenth duration periods ($d$) of care such that $M^d$ is given as 
-\begin{equation}\label{eq:M_d}
-M^d = (m^d \div C^d) \cdot 100,000
-\end{equation}
-where $m^d$ is the count of placement moves during the $dth$ year and $C^d$ is the number of care days associated with the $dth$ year. Children who stay in care for less than 8 days in their original placement episode will be excluded from this measurement.
+where $n_{i}$ is the number of children entering permanency in a given fiscal year who have not yet reentered care just prior to time $t_{i}$, and $rt_{i}$ is the number of reentry events at $t_{i}$. Thus, the probability of reentry within 1 year is given as ${}_{rt}\hat S(365)$. Children aging out of care or experiencing a permanency outcome other than adoption will be treated as right-censored to observation. Children who stay in care for less than 8 days will be excluded from this measurement. For consistency with the proposed CFSR permanency measure, $(1 - {}_{rt}\hat S(365)) \cdot 100$ is the proposed definition of this measure.
 
 
 \section{Well-Being}
 
 \subsection{Maintenance of Family Relationships}
 
+\subsubsection{Sibling Placement Rate ($R_{sp}$)}
+
+This measurement will also utilize a care-day approach to report the extent to which agency care-days tend to involve the joint placement of sibling groups. Specifically, this measurement will report the number of care-days where siblings are placed together per 100,000 sibling care-days. The measurement ($R_{sp}$) is specifically defined as 
+\begin{equation}\label{eq:Rsp}
+R_{sp} = ({}_{tg}I_{d_s} \div N_{d_s}) \cdot 100,000
+\end{equation}
+where $N_d_s$ is the number of days of care associated with children that are members of a recorded sibling group and ${}_{tg}I_d_s$ is the number of days of care associated with children that are members of a recorded sibling group, where the sibling group was placed together. Restrictions will be placed on $N_d_s$ similarly to other measurements. 
+
 \subsection{Educational Readiness}
 
+\subsubsection{Post-Secondary Planning Rate ($R_{psp}$)}
+
+The post-secondary planning rate $R_{psp}$ shall be defined as the total number of children per fiscal year exiting with some record of post-secondary planning activity. This rate shall be calculated simply by 
+\begin{equation}\label{eq:Rpsp}
+R_{psp} = (I_{e_{psp}^{\geq17}} \div N_e^{\geq17}) \cdot 100,000
+\end{equation}
+where $I_{e_{psp}^{\geq17}}$ is defined as the number of children exiting where the child's age is $\geq17$ with some record of the child being provided with assistance in completing college applications, obtaining financial aid, planning for college tours, or some other form of post-secondary activity and $N_e^{\geq17}$ is defined as the number of children exiting care where the child's age is $\geq17$. This measure will be limited to children in care for more than 7 days.
+
+\subsubsection{Age-Specific-Kindergarten Readiness Rate ($P_{kr}$)}
+
+The age-specific-kindergarten readiness rate shall be defined as the ratio of kindergarten readiness among kindergarten foster children, expressed as a percentage. The percentage shall be calculated as 
+$$
+P_{kr}= (I_{kr}^a \div N_k^a) \cdot 100
+$$
+where ${}I_{kr}^a$ is the age-specific number of foster children in Kindergarten performing at (or above) expected levels across all six developmental areas as assessed by the WaKIDS assessment for a particular academic year and $N_K^a$ is the age-specific number of foster children in kindergarten during a particular academic year. Children shall be excluded from this measurement if they did not complete the WaKIDS assessment. 
+
+\subsubsection{Age-Specific-Third Grade Literacy Rate ($P_{kr}^a$)}
+
+The age-specific-third-grade literacy rate shall be defined as the ratio of third-grade reading proficiency among third grade foster children, expressed as a percentage. The percentage shall be calculated as 
+$$
+P_{3l}^a= (I_{3l}^a \div N_3^a) \cdot 100
+$$
+where $I_{3l}^a$ is the age-specific number of foster children in third-grade performing at (or above) expected levels as measured by the MSP for a particular academic year. For this measure, children should be excluded from $N_3^a$ if they did not complete the MSP assessment. 
+
+
 \subsection{Adult Functioning}
+
+\subsubsection{Grade-Age-Specific-Cumulative Grade Attainment Rate ($P_{g+}^a$)}
+
+The grade-age-specific cumulative grade attainment rate shall be defined as the rate of grade completion per former foster child for a given grade and age. This measurement shall be expressed as a percentage and calculated as
+
+$$
+\frac{{}_{y+n}C^{g^+}_a}{{}_{y}P^{g}_{17}}
+$$
+
+where ${}_{y}P^{g}_{17}$ is the count of persons in a grade-specific cohort of 17 year-old foster children (i.e. foster children who will reach the age-of-majority prior to the start of the following academic year) and ${}_{y+n}C^{g^+}_a$ is the count of persons in a given cohort who have completed grade $g$ or beyond by the end of $n$ academic years (including $n=0$, the current academic year). Using a combination of data from PCHEES, NSC, and CEDARS, grade attainment shall be reported based on the follow-up time available. In general, the extent to which a particular value of $g^+$ will be reported shall be determined as a function of $n$ as shown in the table below. The categories of $g^+$ are based on US Census categories of educational [attainment](https://www.census.gov/hhes/socdemo/education/about/). 
+
+
+
 
 
 \subsubsection{Incidence of reports of safety concerns}
@@ -583,8 +648,6 @@ ggplot(dat, aes(y=A_hat_S365, x=fiscal_yr)) +
        ,x = "") +
   theme_bw()  
 @
-
-
 
 
 \subsubsection{Safe reunification of children placed in out-of-home care}

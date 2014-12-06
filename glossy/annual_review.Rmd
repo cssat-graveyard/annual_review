@@ -1,0 +1,2878 @@
+---
+output: word_document
+---
+
+# Annual Review of Child Welfare Indicators
+
+## (Page 1 Copy)
+
+## In Memoriam Representative Roger Freeman (1965 - 2014)
+
+The 1st Annual Review of Child Welfare Indicators for Washington is dedicated to the memory of State Representative Roger Freeman (D-30 Federal Way) - the sponsor of the legislative initiative which created the review. 
+
+Representative Freeman was a passionate and tireless advocate for social justice and equal opportunities for the children and families of Washington State. 
+
+This review has been humbly written in his honor. 
+
+## (Page 2 Copy)
+
+### Goal
+The goal of the annual review is to provide the public with information concerning the safety, permanency, and well-being of the children and families served by the child welfare system. The information in this review is designed to provide a detailed understanding of the system's performance in these domains and to help the state government in determining priorities for the investment of public dollars or other legislative activities to facilitate improvement in these domains. 
+
+### What is the Annual Review?
+The annual review is the result of a legislative initiative started in 2013 to help Washington better understand how children served by the state child welfare system were faring in the domains of safety, permanency, and well-being. The annual review does not replace requirements by the state to submit to other reporting requirements required by state or federal law. The annual review is, however, an attempt for Washington child welfare stakeholders to identify key metrics that will help the public understand how the child welfare system is performing and to monitor those metrics over time. 
+The metrics identified here represent the best thinking, to-date, concerning child welfare system performance in the areas of safety, permanency, and well-being. While some of these metrics may remain a part of the annual review indefinitely, some of the measurement definitions may change or even be eliminated as new data or better measurement techniques become available. 
+
+### Background of the Annual Review (AR)
+In 2013, the Washington State Legislature passed two pieces of legislation: Engrossed Substitute House Bill 1774 (ESHB 1774) and Second Substitute House Bill 1566 (SSHB 1566). The first bill was a broad mandate for a university-based research center to engage in the collaborative development of metrics concerning the safety, permanency, and well-being of children served by the child welfare system in Washington. The second bill is more specifically focused on the educational outcomes of foster children. In support of the goal of unified measurement for the child welfare system (i.e. a single set of measurements as opposed to disparate measurements resulting from different initiatives), the legislature mandated through SSHB 1566 that the research center include, as a part of the reports under ESHB 1774, several specific measurements concerning the educational progress of foster children in Washington. 
+
+Partners for Our Children (POC), at the University of Washington (UW) School of Social Work, was chosen as the research center to perform the annual review required by the legislation mentioned above. POC was specifically chosen due to the growing analytic capacity of POC resulting from private philanthropic investments in projects such as the Washington State Child Well-being Data Portal (hereafter, the Data Portal). Such efforts allow POC to perform the activities required under this legislation within its existing resources and without the expenditure of new state dollars. POC's association with the UW also provides for collaboration with relevant subject-matter experts and institutions located at the UW. For example, the measures identified under SSHB 1566 make use of data obtained at the UW under previously existing data sharing agreements between the UW's Center for Educational Data Research (CEDR) and the state's educational data centers - the Office of the Superintendent of Public Instruction (OSPI) and the Educational Research and Data Center (ERDC). Thus, by relying on POC to fulfill the reporting requirements of the annual review, the state was able to meet the requirements of this legislation with no additional expenditures from the state general fund.  
+
+## (Page 3 Copy)
+
+### The Annual Review Process - Implementing a Philosophy of Continuous Quality Improvement
+
+Following guidance from the federal government and long-standing advice from national child welfare organizations, CA has implemented a robust Quality Assurance and Continuous Quality Improvement system within the organization since the 1990s. 
+
+```{r plan_do_act_study, engine = "tikz", fig.cap = "CQI Process", fig.ext = 'png', echo=FALSE}
+\usetikzlibrary{arrows,positioning} 
+\tikzset{
+    %Define standard arrow tip
+    >=stealth',
+    %Define style for boxes
+    punkt/.style={
+           rectangle,
+           rounded corners,
+           draw=black, very thick,
+           text width=6.5em,
+           minimum height=2em,
+           text centered},
+    % Define arrow style
+    pil/.style={
+           ->,
+           thick,
+           shorten <=2pt,
+           shorten >=2pt,}
+}
+
+\begin{document}
+
+\begin{tikzpicture}[node distance=1cm, auto,]
+ %nodes
+ \node[punkt] (study) {\textbf{Study}};
+ % We make a dummy figure to make everything look nice.
+ \node[above=of study] (dummy) {};
+ \node[right=of dummy] (t) {Act}
+   edge[pil,<-, bend left=45] (study.east); % edges are used to connect two nodes
+ \node[left=of dummy] (g) {Do}
+   edge[pil, bend right=45] (study.west)
+   edge[pil,<-, bend left=45] node[auto] {Plan} (t);
+\end{tikzpicture}
+\end{document}
+```
+The annual review fits into the "study" component of the CQI process as shown in the graphic below. Starting this year, when the annual review process reveals a trend or metric that is of potential interest to stakeholders, a plan will be developed to conduct a formal analysis of the metric during the subsequent annual review period. The results of the analysis are then reported back to the legislature on or before the next annual review date and can be used to begin the "planning" portion of the CQI process. In this way, the annual review should not be thought of as a performance evaluation or report card. Rather, the annual review should be conceptualized as a quality improvement tool for the state child welfare system. 
+
+```{r plan_do_act_study2, engine = "tikz", fig.cap = "CQI Process", fig.ext = 'png', echo=FALSE}
+
+\tikzset{
+    %Define standard arrow tip
+    >=stealth',
+    %Define style for boxes
+    punkt/.style={
+           rectangle,
+           rounded corners,
+           draw=black, very thick,
+           text width=6.5em,
+           minimum height=2em,
+           text centered},
+    % Define arrow style
+    pil/.style={
+           ->,
+           thick,
+           shorten <=2pt,
+           shorten >=2pt,}
+}
+
+\begin{document}
+
+\begin{tikzpicture}[node distance=1cm, auto,]
+ \node[punkt] (obs) {Metric Observed};
+  \node[punkt, below=of obs, align=center] (plan) {Develop Analysis\\ Plan};
+\node[punkt, below=of plan, align=center] (rpt) {Report Results\\ Within 1 Year};
+
+\draw[->]  (obs) to node [auto] {} (plan);
+\draw[->]  (plan) to node [auto] {} (rpt);
+
+\end{tikzpicture}
+\end{document}
+```
+
+## (Page 4 Copy)
+### How were the annual review measured developed?
+The measures that were chosen for the first annual review were developed based on feedback from child welfare stakeholders throughout Washington and through a close working relationship between the staff of CA, the Research and Data Analysis (RDA) unit of DSHS, POC, CEDR, OSPI, and ERDC. Measurements utilized for the first annual review represent those measures which can be calculated with relative ease within the confines of existing state resources and data sets. Future annual reviews will seek to further refine and expand these measurements - particularly within the domain of child well-being. 
+
+`Graphic designer to prepare timeline graphic describing the stakeholder engagement process for these measures and the process for continued measurement development work.`
+
+### Our Approach to Measurement
+
+The graphic below outlines the way children and families move from one part of the child welfare system to another. While we do not measure all parts of the system specifically, we do take all parts of the system into account in the definition of our measures. 
+
+```{r system_description, engine = "tikz", fig.cap = "CQI Process", fig.ext = 'png', echo=FALSE}
+\usetikzlibrary{positioning,arrows, shapes.geometric}
+\usetikzlibrary{arrows,automata}
+\definecolor{nice_brown}{HTML}{B15928}
+\definecolor{nice_purple}{HTML}{6A3D9A}
+\definecolor{nice_blue}{HTML}{1F78B4}
+\definecolor{nice_green}{HTML}{33A02C}
+\definecolor{nice_orange}{HTML}{FF7F00}
+
+
+\begin{document}
+
+\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2.8cm,
+                    semithick]
+  \tikzstyle{every state}=[draw=none]
+  \node[state,label=above:\tiny Intakes]              (I)                    {\pgftext{\includegraphics{exclamation}}} ;
+  \node[state,label=below:\tiny Households]         (H) [above of=I]       {\pgftext{\includegraphics[scale=.3]{house}}};
+  \node[state,label=above:\tiny Screened-In]         (S) [right of=I]       {\pgftext{\includegraphics{magnifying_glass}}};
+  \node[state,label=above:\tiny Placement]         (P) [right of=S]       {\pgftext{\includegraphics[scale=.6]{orange_child}}};
+  \node[state,label=below:\tiny Adulthood]         (L) [above of=P]       {\pgftext{\includegraphics[scale=.05]{graduation}}};
+%  \node[]         (T) [above of=S]       {TPR};
+  
+
+  \path[shorten >=12pt, shorten <=12pt] (I) edge [line width=.5pt]  node {} (S)
+            edge [line width=.5pt, bend left] node {} (H)
+        (S) edge [line width=.5pt, bend right] node {} (H)
+            edge [line width=.5pt]              node {} (P)
+        (P) edge [line width=.5pt, bend right] node {} (H)
+            edge [line width=.5pt]  node {} (L)
+%            edge [line width=.5pt, bend right]  node {} (T)
+        (H) edge [<->, line width=.5pt, bend left] node {} (L)
+            edge [line width=.5pt, bend left] node {} (I);
+        %(T) edge [->, line width=.5pt, bend right] node {} (H);
+\end{tikzpicture}
+```
+
+Many of the measures that we deal with are child-specific measures. For these measures, we tend to look at cohorts of children (i.e. children entering the system at a particular point in time) or the number of days that kids stay in the system (i.e. care days). These measures focus on the transition between placement and household on the graphic above or the experience of a child within a particular placement. Other measures are household level measures. These measures focus more broadly on transitions between the different points in the graphic. 
+
+## (Page 5 Copy)
+### Our Approach to Monitoring Change
+
+#### Monitoring Processes
+
+In order to assess whether or not a particular measure is undergoing any change, the use of statistical process control techniques is proposed. A common tool in statistical process control, is referred to as an "attribute control chart" or just "control chart". 
+
+The goal of a control chart is to measure a particular attribute across a number of different cases. All of the measurements in this document can be reduced to this definition. A standard control chart is a two-dimensional graph with the x-axis representing time and the y-axis representing the outcome of whatever process we want to keep in control. Three lines are plotted on the chart: 1) a top line which identifies the upper limit of "acceptable" values, 2) a center line which identifies the value we would expect to see (perhaps based on performance in the previous year), and 3) a bottom line which identifies the lower limit of "acceptable" values. 
+
+#### Comparing points 
+
+On some measures we do not have enough data to really assess a process. However, we may still have a desire to compare individual points (perhaps from one year to the next). In order to do this, we make use of confidence intervals. Confidence intervals are similar to control charts. Rather than telling us how reliable a process is, however, confidence intervals tell us how reliable a particular estimate is.  
+
+## (Page 6 Copy)
+#### Simple assessment of trends
+
+In order to ease the interpretation of a particular trend, we have identified a way of categorizing various measurements to show how a measurement is changing and whether or not the change (if we have observed any) is of concern. The measurement categoris are as follows. 
+
+##### Change Categories 
+1. Within Expectations - Within our upper and lower control limits. 
+2. Below Expectations - Below our lower control limit for a given measure. 
+3. Above Expectations - Above our upper control limit for a given measure. 
+4. Monitoring Period - Below 10 years of data - continuing to monitor and study trend.
+
+##### Direction Categories 
+1. Trending Up - Based on our available data, apparently trending up. 
+2. Trending Down - Baed on our available data, apparently trending down. 
+3. Stable - Based on our available data, not moving up or down. 
+
+##### Overall Assessment Categories 
+1. Trends colored in blue indicate that a is within a monitoring period and further study is required to better understand the trend as it relates to the performance of the child welfare system.
+
+2. Trends colored in green indicate that a trend is within expected variation based on historical trends and is consistent with our understanding of system dynamics and the risk profile of the children and families served by the child welfare system OR the trend is outside of the expected variation but in a direction that is consistent with our expectations of a well-functioning child welfare system.
+
+3. Trends colored in orange indicate that the trend is outside of the bounds of expected variation. The trend will be examined in further detail during the next reporting period to better understand the variability. This means we are utilizing the "study" component of the CQI process outlined above. 
+
+4. Trends colored in red indicate that the trend has been consistently outside of the bounds of expected variation in a direction that is contrary to our expectations of a well-functioning system. We have an understanding of the variation and recommend policy change to remedy the trend.
+
+## (Page 7 Copy)
+
+### Indicators at a Glance
+
+#### Defining the Measures
+
+The measures in this document are organized around the goals of safety, permanency and well-being for children and families served by the child welfare system. 
+
+Some of the approaches that we use for measurement in this document borrow from the field of demography and may be unfamiliar to some. The following graphics will help you understand the approach that we are taking in these measures. 
+
+## (Page 8 Copy)
+
+### Care Day Measures
+
+As can be seen in the graphic below, care-day measures count all of the times that children experience a particular event of interest (e.g. movement from one placement to another) and divide that number by the total number of days that children have stayed in out-of-home care. 
+
+```{r care_day_desc, engine = "tikz", fig.cap = "CQI Process", fig.ext = 'png', echo=FALSE, fig.height=3, fig.width=3}
+\usetikzlibrary{fit,calendar}
+
+
+
+\definecolor{nice_brown}{HTML}{B15928}
+\definecolor{nice_purple}{HTML}{6A3D9A}
+\definecolor{nice_blue}{HTML}{1F78B4}
+\definecolor{nice_green}{HTML}{33A02C}
+\definecolor{nice_orange}{HTML}{FF7F00}
+\definecolor{nice_red}{HTML}{E31A1C}
+
+
+\makeatother%
+
+\begin{document}
+%\begin{center}
+\begin{tikzpicture}[scale=6,font=\fontsize{25}{12}\selectfont\bfseries]
+% 
+% \coordinate (in_home_begin) at (4,0);
+% \coordinate (in_home_end) at (5,0);
+% %\path[ultra thick, draw=nice_orange, ->] (in_home_begin) to[bend right] (in_home_end);
+% \draw[draw=none, line width=2pt, rounded corners, opacity=0.2, fill=nice_blue] (in_home_begin) +(-5pt,-5pt) rectangle +(25pt,5pt) {};
+
+\node[align=center] at (1.5,.5) {Timmy's Hypothetical Month in Care\\(First Year)};
+
+\node[align=center] at (1.5,-2.4) {Jane's Hypothetical Month in Care\\(End of First Year Start of Second)}; 
+
+\node[align=center] at (5,-1) {\underline{Timmy Activity}};
+\node[align=center, text=nice_blue] at (5,-1.25) {8 Foster Home Care Days (Year 1)};
+\node[align=center, text=nice_orange] at (5,-1.5) {14 Group Home Care Days (Year 1)};
+\node[align=center, text=nice_brown] at (5,-1.75) {1 Movement to Group Home (Year 1)};
+
+
+\node[align=center] at (5,-2.25) {\underline{Jane Activity}};
+\node[align=center, text=nice_blue] at (5,-2.5) {3 Foster Home Care Days (Year 1)};
+\node[align=center, text=nice_blue] at (5,-2.75) {19 Foster Home Care Days (Year 2)};
+
+\node[align=center, text=nice_red] at (5,-3) {8 Kinship Home Care Days (Year 2)};
+
+\node[align=center, text=nice_brown] at (5,-3.25) {1 Movement to Kinship Home (Year 2)};
+\node[align=center, text=nice_brown] at (5,-3.5) {1 Movement to Foster Home (Year 2)};
+
+\node[align=center] at (5,-4) {\underline{Example Calculation}};
+
+\node[align=center, ] at (5,-4.25) {$\textrm{Year 1 Movement Rate} = \frac{\textrm{1 Movement}}{\textrm{ 25 Care Days}}$};
+
+
+\node[rectangle
+      ,draw=none
+      ,rounded corners
+      ,fill=nice_purple
+      ,opacity=0.2
+      ,minimum width=10cm
+      ,minimum height=2cm] at (5,1) {}; 
+
+\node[] at (5,1) {Own Home}; 
+
+\node[rectangle
+      ,draw=none
+      ,rounded corners
+      ,fill=nice_blue
+      ,opacity=0.2
+      ,minimum width=10cm
+      ,minimum height=2cm] at (5,.625) {}; 
+
+\node[] at (5,.625) {Foster Home}; 
+
+\node[rectangle
+      ,draw=none
+      ,rounded corners
+      ,fill=nice_orange
+      ,opacity=0.2
+      ,minimum width=10cm
+      ,minimum height=2cm] at (5,.25) {}; 
+
+\node[] at (5,.25) {Group Home}; 
+
+\node[rectangle
+      ,draw=none
+      ,rounded corners
+      ,fill=nice_red
+      ,opacity=0.2
+      ,minimum width=10cm
+      ,minimum height=2cm] at (5,-.125) {}; 
+
+\node[] at (5,-.125) {Kinship Home}; 
+
+
+\node[rectangle
+      ,draw=none
+      ,rounded corners
+      ,fill=nice_green
+      ,opacity=0.2
+      ,minimum width=10cm
+      ,minimum height=2cm] at (5,-.5) {}; 
+
+\node[] at (5,-.5) {1 Year Since Removal}; 
+
+
+\calendar (hyp_cal) [dates=2013-05-01 to 2013-06-30
+                    ,week list
+                    ,month label above centered
+                    ,month text={}
+                    ,day yshift = 0.4cm];
+
+%at home
+\draw[draw=none, line width=2pt, rounded corners, opacity=0.2, fill=nice_purple] (hyp_cal-2013-05-01) +(-5pt,-5pt) rectangle +(65pt,5pt) ;
+\draw[draw=none, line width=2pt, rounded corners, opacity=0.2, fill=nice_purple] (hyp_cal-2013-05-06) +(-5pt,-5pt) rectangle +(20pt,5pt) ;
+
+%foster care
+\draw[draw=none, line width=2pt, rounded corners, opacity=0.2, fill=nice_blue] (hyp_cal-2013-05-08) +(-5pt,-5pt) rectangle +(65pt,5pt) ;
+\draw[draw=none, line width=2pt, rounded corners, opacity=0.2, fill=nice_blue] (hyp_cal-2013-05-13) +(-4pt,-5pt) rectangle +(35pt,5pt) ;
+
+%group care
+\draw[draw=none, line width=2pt, rounded corners, opacity=0.2, fill=nice_orange] (hyp_cal-2013-05-16) +(-5pt,-5pt) rectangle +(51pt,5pt) ;
+\draw[draw=none, line width=2pt, rounded corners, opacity=0.2, fill=nice_orange] (hyp_cal-2013-05-20) +(-4pt,-5pt) rectangle +(96pt,5pt) ;
+
+%back home
+\draw[draw=none, line width=2pt, rounded corners, opacity=0.2, fill=nice_purple] (hyp_cal-2013-05-30) +(-5pt,-5pt) rectangle +(20pt,5pt) ;
+\draw[draw=none, line width=2pt, rounded corners, opacity=0.2, fill=nice_orange] (hyp_cal-2013-05-27) +(-4pt,-5pt) rectangle +(35pt,5pt) ;
+
+\path[ultra thick
+      ,draw=nice_brown
+      ,line width=4pt
+      ,->] (hyp_cal-2013-05-15) to[bend right] (hyp_cal-2013-05-16);
+
+
+%foster care
+\draw[draw=none, line width=2pt, rounded corners, opacity=0.2, fill=nice_blue] (hyp_cal-2013-06-01) +(-5pt,-5pt) rectangle +(20pt,5pt) ;
+\draw[draw=none, line width=2pt, rounded corners, opacity=0.2, fill=nice_blue] (hyp_cal-2013-06-03) +(-5pt,-5pt) rectangle +(95pt,5pt) ;
+\draw[draw=none, line width=2pt, rounded corners, opacity=0.2, fill=nice_blue] (hyp_cal-2013-06-10) +(-4pt,-5pt) rectangle +(96pt,5pt) ;
+\draw[draw=none, line width=2pt, rounded corners, opacity=0.2, fill=nice_blue] (hyp_cal-2013-06-17) +(-4pt,-5pt) rectangle +(6pt,5pt) ;
+
+
+
+%kinship
+\draw[draw=none, line width=2pt, rounded corners, opacity=0.2, fill=nice_red] (hyp_cal-2013-06-18) +(-4pt,-5pt) rectangle +(81pt,5pt) ;
+\draw[draw=none, line width=2pt, rounded corners, opacity=0.2, fill=nice_red] (hyp_cal-2013-06-24) +(-4pt,-5pt) rectangle +(20pt,5pt) ;
+
+
+\draw[draw=none, line width=2pt, rounded corners, opacity=0.2, fill=nice_blue] (hyp_cal-2013-06-26) +(-5pt,-5pt) rectangle +(66pt,5pt) ;
+
+\draw[draw=none, line width=2pt, rounded corners, opacity=0.2, fill=nice_green] (hyp_cal-2013-06-04) circle (5pt);
+
+\path[ultra thick
+      ,draw=nice_brown
+      ,line width=4pt
+      ,->] (hyp_cal-2013-06-17) to[bend right] (hyp_cal-2013-06-18);
+
+\path[ultra thick
+      ,draw=nice_brown
+      ,line width=4pt
+      ,->] (hyp_cal-2013-06-25) to[bend right] (hyp_cal-2013-06-26);
+
+\end{tikzpicture}
+
+\end{document}
+```
+
+## (Page 9 Copy)
+
+### General Demographic Measures of Safety
+
+As can be seen in the graphics below, our demographic measures of safety are generally just reporting the rate that a particular event (e.g. intake to the child welfare system) occurs per 1,000 households in the general population. 
+
+```{r general_rate_desc1, engine = "tikz", fig.cap = "CQI Process", fig.ext = 'png', echo=FALSE, fig.height=3, fig.width=3}
+\usetikzlibrary{positioning,arrows, shapes.geometric}
+\begin{tikzpicture}
+
+\tikzstyle{lens} = [draw=nice_green, circle, minimum size=2mm, ultra thick]
+\tikzstyle{dot} = [draw, circle, minimum size=1mm, inner sep=0pt]
+
+\definecolor{nice_brown}{HTML}{B15928}
+\definecolor{nice_purple}{HTML}{6A3D9A}
+\definecolor{nice_blue}{HTML}{1F78B4}
+\definecolor{nice_green}{HTML}{33A02C}
+\definecolor{nice_orange}{HTML}{FF7F00}
+
+
+
+
+
+%house and people numerator
+\draw[ultra thick,draw=nice_brown] (0,2) -- (0,0) -- (4,0) -- (4,2) -- (2,4) -- (0,2) -- (0,0);
+
+%%people
+\draw[thick, fill=nice_purple, draw=none] (1.25,2) circle (3mm);
+\draw[thick, fill=nice_purple, draw=none] (2.75,2) circle (3mm);
+\coordinate (head1center) at (1.25,2);
+\coordinate (head2center) at (2.75,2);
+\node[rounded corners=2pt,minimum height=1.3cm,minimum width=0.4cm,fill=nice_purple,below = 3.5mm of head1center] (body1) {};
+\node[rounded corners=2pt,minimum height=1.3cm,minimum width=0.4cm,fill=nice_purple,below = 3.5mm of head2center] (body2) {};
+\draw[draw=nice_purple, line width=1mm,round cap-round cap] ([shift={(2pt,-1pt)}]body1.north east) --++(-90:6mm);
+\draw[draw=nice_purple, line width=1mm,round cap-round cap] ([shift={(-2pt,-1pt)}]body1.north west)--++(-90:6mm);
+\draw[thick,white,-round cap] (body1.south) --++(90:5.5mm);
+\draw[draw=nice_purple, line width=1mm,round cap-round cap] ([shift={(2pt,-1pt)}]body2.north east) --++(-90:6mm);
+\draw[draw=nice_purple, line width=1mm,round cap-round cap] ([shift={(-2pt,-1pt)}]body2.north west)--++(-90:6mm);
+\draw[thick,white,-round cap] (body2.south) --++(90:5.5mm);
+
+%fraction
+
+%\draw[ultra thick,] (-5,-.5) -- (12,-.5);
+
+%house and people denominator
+% \draw[ultra thick,draw=nice_brown] (0,-3) -- (0,-5) -- (4,-5) -- (4,-3) -- (2,-1) -- (0,-3) -- (0,-5);
+% 
+% \draw[thick,  fill=nice_purple, draw=none] (1.25,-3) circle (3mm);
+% \draw[thick,  fill=nice_purple, draw=none] (2.75,-3) circle (3mm);
+% \coordinate (head1center) at (1.25,-3);
+% \coordinate (head2center) at (2.75,-3);
+% \node[rounded corners=2pt,minimum height=1.3cm,minimum width=0.4cm,fill=nice_purple,,below = 3.5mm of head1center] (body1) {};
+% \node[rounded corners=2pt,minimum height=1.3cm,minimum width=0.4cm,fill=nice_purple,,below = 3.5mm of head2center] (body2) {};
+% \draw[draw=nice_purple, line width=1mm,fill=nice_purple,round cap-round cap] ([shift={(2pt,-1pt)}]body1.north east) --++(-90:6mm);
+% \draw[draw=nice_purple, line width=1mm,round cap-round cap] ([shift={(-2pt,-1pt)}]body1.north west)--++(-90:6mm);
+% \draw[thick,white,-round cap] (body1.south) --++(90:5.5mm);
+% % 
+% \draw[draw=nice_purple, line width=1mm,round cap-round cap] ([shift={(2pt,-1pt)}]body2.north east) --++(-90:6mm);
+% \draw[draw=nice_purple, line width=1mm,round cap-round cap] ([shift={(-2pt,-1pt)}]body2.north west)--++(-90:6mm);
+% \draw[thick,white,-round cap] (body2.south) --++(90:5.5mm);
+
+%left side of the equation 
+%\node[] (R_I) at (-7,-.4) {\Huge Measure = };
+
+%right side of the equation 
+
+%magnifying glass
+\node[lens] (lens) at (5.5,1.25)  {};
+\coordinate (handle) at (5.75,1);
+\draw[ultra thick, draw=nice_green, round cap-] (handle) -- (lens);
+
+%exclamation
+\coordinate (bar1) at (5.6,2.5);
+\coordinate (bar2) at (5.4,2.5);
+\coordinate (bar3) at (5.5,2.05);
+\draw[fill=nice_blue, draw=none, rounded corners=2pt]  (bar1) --  (bar2) --  (bar3) -- cycle;
+
+\node[dot, draw=none, fill=nice_blue] (dot) at (5.5,2)  {};
+
+
+%removal circle
+%\coordinate (remova_arrow_end) at (4.5,2);
+
+\node[ultra thick, draw=nice_orange, ellipse, minimum width=30pt, minimum height=80pt](removal_ellipse) at (2.75,1.25) {};
+
+\coordinate (removal_arrow_end) at (5.65,.25);
+
+\path[ultra thick, draw=nice_orange, ->] (removal_ellipse.east) to[bend right] (removal_arrow_end);
+
+%left side of house
+
+%removal
+\coordinate (removal_symbol_begin) at (-2,.25);
+\coordinate (removal_symbol_end) at (-1.35,.2);
+\path[ultra thick, draw=nice_orange, ->] (removal_symbol_begin) to[bend right] (removal_symbol_end);
+
+
+%exclamation
+\coordinate (bar1) at (-1.65,2.5);
+\coordinate (bar2) at (-1.85,2.5);
+\coordinate (bar3) at (-1.75,2.05);
+\draw[fill=nice_blue, draw=none, rounded corners=2pt]  (bar1) --  (bar2) --  (bar3) -- cycle;
+\node[dot, draw=none, fill=nice_blue] (dot) at (-1.75,2)  {};
+
+%magnifying glass
+\node[lens] (lens) at (-1.75,1.25)  {};
+\coordinate (handle) at (-1.5,1);
+\draw[ultra thick, draw=nice_green, round cap-] (handle) -- (lens);
+
+%\draw[draw=nice_orange] (removal_ellipse_center) ellipse (.5 and 1.25);
+
+%words
+\node[right] (current_txt) at (-3,3.25) {\Huge {History}};
+\node[right] (current_txt) at (4,3.25) {\Huge {Current}};
+\node[text=nice_blue, right] (intake_txt) at (8,2.25) {\Huge Intakes Received};
+\node[text=nice_green, right] (screen_txt) at (8,1.25) {\Huge Screened-In Intakes};
+\node[text=nice_orange, right] (rem_txt) at (8,.25) {\Huge Removals};
+
+
+\end{tikzpicture}
+```
+
+`Graphic designer (using the above graphic as a key) to prepare visualization to describe order-specific measures and care-day measures...something similar to what we have below`
+
+```{r general_rate_desc2, engine = "tikz", fig.cap = "CQI Process", fig.ext = 'png', echo=FALSE, fig.height=3, fig.width=3}
+\usetikzlibrary{positioning,arrows, shapes.geometric}
+\begin{tikzpicture}
+
+
+\tikzstyle{lens} = [draw=nice_green, circle, minimum size=2mm, ultra thick]
+\tikzstyle{dot} = [draw, circle, minimum size=1mm, inner sep=0pt]
+
+\definecolor{nice_brown}{HTML}{B15928}
+\definecolor{nice_purple}{HTML}{6A3D9A}
+\definecolor{nice_blue}{HTML}{1F78B4}
+\definecolor{nice_green}{HTML}{33A02C}
+\definecolor{nice_orange}{HTML}{FF7F00}
+
+
+
+
+
+%house and people numerator
+\draw[ultra thick,draw=nice_brown] (0,2) -- (0,0) -- (4,0) -- (4,2) -- (2,4) -- (0,2) -- (0,0);
+
+%%people
+\draw[thick, fill=nice_purple, draw=none] (1.25,2) circle (3mm);
+\draw[thick, fill=nice_purple, draw=none] (2.75,2) circle (3mm);
+\coordinate (head1center) at (1.25,2);
+\coordinate (head2center) at (2.75,2);
+\node[rounded corners=2pt,minimum height=1.3cm,minimum width=0.4cm,fill=nice_purple,below = 3.5mm of head1center] (body1) {};
+\node[rounded corners=2pt,minimum height=1.3cm,minimum width=0.4cm,fill=nice_purple,below = 3.5mm of head2center] (body2) {};
+\draw[draw=nice_purple, line width=1mm,round cap-round cap] ([shift={(2pt,-1pt)}]body1.north east) --++(-90:6mm);
+\draw[draw=nice_purple, line width=1mm,round cap-round cap] ([shift={(-2pt,-1pt)}]body1.north west)--++(-90:6mm);
+\draw[thick,white,-round cap] (body1.south) --++(90:5.5mm);
+\draw[draw=nice_purple, line width=1mm,round cap-round cap] ([shift={(2pt,-1pt)}]body2.north east) --++(-90:6mm);
+\draw[draw=nice_purple, line width=1mm,round cap-round cap] ([shift={(-2pt,-1pt)}]body2.north west)--++(-90:6mm);
+\draw[thick,white,-round cap] (body2.south) --++(90:5.5mm);
+
+%fraction
+
+\draw[ultra thick,] (-5,-.5) -- (9,-.5);
+
+%house and people denominator
+\draw[ultra thick,draw=nice_brown] (0,-3) -- (0,-5) -- (4,-5) -- (4,-3) -- (2,-1) -- (0,-3) -- (0,-5);
+
+\draw[thick,  fill=nice_purple, draw=none] (1.25,-3) circle (3mm);
+\draw[thick,  fill=nice_purple, draw=none] (2.75,-3) circle (3mm);
+\coordinate (head1center) at (1.25,-3);
+\coordinate (head2center) at (2.75,-3);
+\node[rounded corners=2pt,minimum height=1.3cm,minimum width=0.4cm,fill=nice_purple,,below = 3.5mm of head1center] (body1) {};
+\node[rounded corners=2pt,minimum height=1.3cm,minimum width=0.4cm,fill=nice_purple,,below = 3.5mm of head2center] (body2) {};
+\draw[draw=nice_purple, line width=1mm,fill=nice_purple,round cap-round cap] ([shift={(2pt,-1pt)}]body1.north east) --++(-90:6mm);
+\draw[draw=nice_purple, line width=1mm,round cap-round cap] ([shift={(-2pt,-1pt)}]body1.north west)--++(-90:6mm);
+\draw[thick,white,-round cap] (body1.south) --++(90:5.5mm);
+% 
+\draw[draw=nice_purple, line width=1mm,round cap-round cap] ([shift={(2pt,-1pt)}]body2.north east) --++(-90:6mm);
+\draw[draw=nice_purple, line width=1mm,round cap-round cap] ([shift={(-2pt,-1pt)}]body2.north west)--++(-90:6mm);
+\draw[thick,white,-round cap] (body2.south) --++(90:5.5mm);
+
+%left side of the equation 
+\node[] (R_I) at (-8,-.4) {\Huge Rate of Intake = };
+
+%right side of the equation 
+
+%magnifying glass
+%\node[text=nice_green] at (6.25,1.25)  {\Large = X};
+%\node[lens] (lens) at (5.5,1.25)  {};
+%\coordinate (handle) at (5.75,1);
+%\draw[ultra thick, draw=nice_green, round cap-] (handle) -- (lens);
+
+
+%magnifying glass bottom
+%\node[text=nice_green] at (6.25,-3.7)  {\Large = X};
+%\node[lens] (lens) at (5.5,-3.7)  {};
+%\coordinate (handle) at (5.75,-3.95);
+%\draw[ultra thick, draw=nice_green, round cap-] (handle) -- (lens);
+
+
+%exclamation
+%\node[text=nice_blue] at (6.25,2.25)  {\Large = X};
+\coordinate (bar1) at (5.6,2.5);
+\coordinate (bar2) at (5.4,2.5);
+\coordinate (bar3) at (5.5,2.05);
+\draw[fill=nice_blue, draw=none, rounded corners=2pt]  (bar1) --  (bar2) --  (bar3) -- cycle;
+
+\node[dot, draw=none, fill=nice_blue] (dot) at (5.5,2)  {};
+
+%exclamation bottom
+%\node[text=nice_blue] at (6.25,-2.7)  {\Large = X};
+%\coordinate (bar1) at (5.6,-2.45);
+%\coordinate (bar2) at (5.4,-2.45);
+%\coordinate (bar3) at (5.5,-2.9);
+%\draw[fill=nice_blue, draw=none, rounded corners=2pt]  (bar1) --  (bar2) --  (bar3) -- cycle;
+
+%\node[dot, draw=none, fill=nice_blue] (dot) at (5.5,-2.95)  {};
+
+
+%removal
+% \node[text=nice_orange] at (6.25,.2)  {\Large = X};
+% \coordinate (removal_symbol_begin) at (5.2,.25);
+% \coordinate (removal_symbol_end) at (5.85,.2);
+% \path[ultra thick, draw=nice_orange, ->] (removal_symbol_begin) to[bend right] (removal_symbol_end);
+
+%removal bottom
+% \node[text=nice_orange] at (6.25,-4.75)  {\Large = X};
+% \coordinate (removal_symbol_begin) at (5.2,-4.7);
+% \coordinate (removal_symbol_end) at (5.85,-4.75);
+% \path[ultra thick, draw=nice_orange, ->] (removal_symbol_begin) to[bend right] (removal_symbol_end);
+% 
+
+%left side of house
+
+%removal
+% \node[text=nice_orange] at (-1,.2)  {\Large = X};
+% \coordinate (removal_symbol_begin) at (-2,.25);
+% \coordinate (removal_symbol_end) at (-1.35,.2);
+% \path[ultra thick, draw=nice_orange, ->] (removal_symbol_begin) to[bend right] (removal_symbol_end);
+
+%removal bottom
+% \node[text=nice_orange] at (-1,-4.75)  {\Large = X};
+% \coordinate (removal_symbol_begin) at (-2,-4.7);
+% \coordinate (removal_symbol_end) at (-1.35,-4.75);
+% \path[ultra thick, draw=nice_orange, ->] (removal_symbol_begin) to[bend right] (removal_symbol_end);
+% 
+% 
+%exclamation
+% \node[text=nice_blue] at (-1,2.25)  {\Large = X};
+% \coordinate (bar1) at (-1.65,2.5);
+% \coordinate (bar2) at (-1.85,2.5);
+% \coordinate (bar3) at (-1.75,2.05);
+% \draw[fill=nice_blue, draw=none, rounded corners=2pt]  (bar1) --  (bar2) --  (bar3) -- cycle;
+% \node[dot, draw=none, fill=nice_blue] (dot) at (-1.75,2)  {};
+
+
+%exclamation bottom
+% \node[text=nice_blue] at (-1,-2.7)  {\Large = X};
+% \coordinate (bar1) at (-1.65,-2.45);
+% \coordinate (bar2) at (-1.85,-2.45);
+% \coordinate (bar3) at (-1.75,-2.9);
+% \draw[fill=nice_blue, draw=none, rounded corners=2pt]  (bar1) --  (bar2) --  (bar3) -- cycle;
+% 
+% \node[dot, draw=none, fill=nice_blue] (dot) at (-1.75,-2.95)  {};
+% 
+
+%magnifying glass
+% \node[text=nice_green] at (-1,1.25)  {\Large = X};
+% \node[lens] (lens) at (-1.75,1.25)  {};
+% \coordinate (handle) at (-1.5,1);
+% \draw[ultra thick, draw=nice_green, round cap-] (handle) -- (lens);
+% 
+
+%magnifying glass bottom
+% \node[text=nice_green] at (-1,-3.7)  {\Large = X};
+% \node[lens] (lens) at (-1.75,-3.7)  {};
+% \coordinate (handle) at (-1.5,-3.95);
+% \draw[ultra thick, draw=nice_green, round cap-] (handle) -- (lens);
+
+
+%\draw[draw=nice_orange] (removal_ellipse_center) ellipse (.5 and 1.25);
+
+%words
+\node[right] (current_txt) at (-3,3.25) {\Huge {History}};
+\node[right] (current_txt) at (4,3.25) {\Huge {Current}};
+%\node[text=nice_blue, right] (intake_txt) at (8,2.25) {\Huge Intakes Received};
+%\node[text=nice_green, right] (screen_txt) at (8,1.25) {\Huge Screened-In Intakes};
+%\node[text=nice_orange, right] (rem_txt) at (8,.25) {\Huge Removals};
+
+
+\end{tikzpicture}
+```
+
+
+```{r general_rate_desc3, engine = "tikz", fig.cap = "CQI Process", fig.ext = 'png', echo=FALSE, fig.height=3, fig.width=3}
+\usetikzlibrary{positioning,arrows, shapes.geometric}
+\begin{tikzpicture}
+
+\tikzstyle{lens} = [draw=nice_green, circle, minimum size=2mm, ultra thick]
+\tikzstyle{dot} = [draw, circle, minimum size=1mm, inner sep=0pt]
+
+\definecolor{nice_brown}{HTML}{B15928}
+\definecolor{nice_purple}{HTML}{6A3D9A}
+\definecolor{nice_blue}{HTML}{1F78B4}
+\definecolor{nice_green}{HTML}{33A02C}
+\definecolor{nice_orange}{HTML}{FF7F00}
+
+
+
+
+
+%house and people numerator
+\draw[ultra thick,draw=nice_brown] (0,2) -- (0,0) -- (4,0) -- (4,2) -- (2,4) -- (0,2) -- (0,0);
+
+%%people
+\draw[thick, fill=nice_purple, draw=none] (1.25,2) circle (3mm);
+\draw[thick, fill=nice_purple, draw=none] (2.75,2) circle (3mm);
+\coordinate (head1center) at (1.25,2);
+\coordinate (head2center) at (2.75,2);
+\node[rounded corners=2pt,minimum height=1.3cm,minimum width=0.4cm,fill=nice_purple,below = 3.5mm of head1center] (body1) {};
+\node[rounded corners=2pt,minimum height=1.3cm,minimum width=0.4cm,fill=nice_purple,below = 3.5mm of head2center] (body2) {};
+\draw[draw=nice_purple, line width=1mm,round cap-round cap] ([shift={(2pt,-1pt)}]body1.north east) --++(-90:6mm);
+\draw[draw=nice_purple, line width=1mm,round cap-round cap] ([shift={(-2pt,-1pt)}]body1.north west)--++(-90:6mm);
+\draw[thick,white,-round cap] (body1.south) --++(90:5.5mm);
+\draw[draw=nice_purple, line width=1mm,round cap-round cap] ([shift={(2pt,-1pt)}]body2.north east) --++(-90:6mm);
+\draw[draw=nice_purple, line width=1mm,round cap-round cap] ([shift={(-2pt,-1pt)}]body2.north west)--++(-90:6mm);
+\draw[thick,white,-round cap] (body2.south) --++(90:5.5mm);
+
+%fraction
+
+\draw[ultra thick,] (-5,-.5) -- (9,-.5);
+
+%house and people denominator
+\draw[ultra thick,draw=nice_brown] (0,-3) -- (0,-5) -- (4,-5) -- (4,-3) -- (2,-1) -- (0,-3) -- (0,-5);
+
+\draw[thick,  fill=nice_purple, draw=none] (1.25,-3) circle (3mm);
+\draw[thick,  fill=nice_purple, draw=none] (2.75,-3) circle (3mm);
+\coordinate (head1center) at (1.25,-3);
+\coordinate (head2center) at (2.75,-3);
+\node[rounded corners=2pt,minimum height=1.3cm,minimum width=0.4cm,fill=nice_purple,,below = 3.5mm of head1center] (body1) {};
+\node[rounded corners=2pt,minimum height=1.3cm,minimum width=0.4cm,fill=nice_purple,,below = 3.5mm of head2center] (body2) {};
+\draw[draw=nice_purple, line width=1mm,fill=nice_purple,round cap-round cap] ([shift={(2pt,-1pt)}]body1.north east) --++(-90:6mm);
+\draw[draw=nice_purple, line width=1mm,round cap-round cap] ([shift={(-2pt,-1pt)}]body1.north west)--++(-90:6mm);
+\draw[thick,white,-round cap] (body1.south) --++(90:5.5mm);
+% 
+\draw[draw=nice_purple, line width=1mm,round cap-round cap] ([shift={(2pt,-1pt)}]body2.north east) --++(-90:6mm);
+\draw[draw=nice_purple, line width=1mm,round cap-round cap] ([shift={(-2pt,-1pt)}]body2.north west)--++(-90:6mm);
+\draw[thick,white,-round cap] (body2.south) --++(90:5.5mm);
+
+%left side of the equation 
+\node[] (R_I) at (-8.75,-.4) {\Huge Rate of Screening = };
+
+%right side of the equation 
+
+%magnifying glass
+%\node[text=nice_green] at (6.25,1.25)  {\Large = X};
+\node[lens] (lens) at (5.5,1.25)  {};
+\coordinate (handle) at (5.75,1);
+\draw[ultra thick, draw=nice_green, round cap-] (handle) -- (lens);
+
+
+%magnifying glass bottom
+%\node[text=nice_green] at (6.25,-3.7)  {\Large = X};
+%\node[lens] (lens) at (5.5,-3.7)  {};
+%\coordinate (handle) at (5.75,-3.95);
+%\draw[ultra thick, draw=nice_green, round cap-] (handle) -- (lens);
+
+
+%exclamation
+%\node[text=nice_blue] at (6.25,2.25)  {\Large = X};
+\coordinate (bar1) at (5.6,2.5);
+\coordinate (bar2) at (5.4,2.5);
+\coordinate (bar3) at (5.5,2.05);
+\draw[fill=nice_blue, draw=none, rounded corners=2pt]  (bar1) --  (bar2) --  (bar3) -- cycle;
+
+\node[dot, draw=none, fill=nice_blue] (dot) at (5.5,2)  {};
+
+%exclamation bottom
+%\node[text=nice_blue] at (6.25,-2.7)  {\Large = X};
+\coordinate (bar1) at (5.6,-2.45);
+\coordinate (bar2) at (5.4,-2.45);
+\coordinate (bar3) at (5.5,-2.9);
+\draw[fill=nice_blue, draw=none, rounded corners=2pt]  (bar1) --  (bar2) --  (bar3) -- cycle;
+
+\node[dot, draw=none, fill=nice_blue] (dot) at (5.5,-2.95)  {};
+
+
+%removal
+% \node[text=nice_orange] at (6.25,.2)  {\Large = X};
+% \coordinate (removal_symbol_begin) at (5.2,.25);
+% \coordinate (removal_symbol_end) at (5.85,.2);
+% \path[ultra thick, draw=nice_orange, ->] (removal_symbol_begin) to[bend right] (removal_symbol_end);
+
+%removal bottom
+% \node[text=nice_orange] at (6.25,-4.75)  {\Large = X};
+% \coordinate (removal_symbol_begin) at (5.2,-4.7);
+% \coordinate (removal_symbol_end) at (5.85,-4.75);
+% \path[ultra thick, draw=nice_orange, ->] (removal_symbol_begin) to[bend right] (removal_symbol_end);
+% 
+
+%left side of house
+
+%removal
+% \node[text=nice_orange] at (-1,.2)  {\Large = X};
+% \coordinate (removal_symbol_begin) at (-2,.25);
+% \coordinate (removal_symbol_end) at (-1.35,.2);
+% \path[ultra thick, draw=nice_orange, ->] (removal_symbol_begin) to[bend right] (removal_symbol_end);
+
+%removal bottom
+% \node[text=nice_orange] at (-1,-4.75)  {\Large = X};
+% \coordinate (removal_symbol_begin) at (-2,-4.7);
+% \coordinate (removal_symbol_end) at (-1.35,-4.75);
+% \path[ultra thick, draw=nice_orange, ->] (removal_symbol_begin) to[bend right] (removal_symbol_end);
+% 
+% 
+%exclamation
+% \node[text=nice_blue] at (-1,2.25)  {\Large = X};
+% \coordinate (bar1) at (-1.65,2.5);
+% \coordinate (bar2) at (-1.85,2.5);
+% \coordinate (bar3) at (-1.75,2.05);
+% \draw[fill=nice_blue, draw=none, rounded corners=2pt]  (bar1) --  (bar2) --  (bar3) -- cycle;
+% \node[dot, draw=none, fill=nice_blue] (dot) at (-1.75,2)  {};
+
+
+%exclamation bottom
+% \node[text=nice_blue] at (-1,-2.7)  {\Large = X};
+% \coordinate (bar1) at (-1.65,-2.45);
+% \coordinate (bar2) at (-1.85,-2.45);
+% \coordinate (bar3) at (-1.75,-2.9);
+% \draw[fill=nice_blue, draw=none, rounded corners=2pt]  (bar1) --  (bar2) --  (bar3) -- cycle;
+% 
+% \node[dot, draw=none, fill=nice_blue] (dot) at (-1.75,-2.95)  {};
+% 
+
+%magnifying glass
+% \node[text=nice_green] at (-1,1.25)  {\Large = X};
+% \node[lens] (lens) at (-1.75,1.25)  {};
+% \coordinate (handle) at (-1.5,1);
+% \draw[ultra thick, draw=nice_green, round cap-] (handle) -- (lens);
+% 
+
+%magnifying glass bottom
+% \node[text=nice_green] at (-1,-3.7)  {\Large = X};
+% \node[lens] (lens) at (-1.75,-3.7)  {};
+% \coordinate (handle) at (-1.5,-3.95);
+% \draw[ultra thick, draw=nice_green, round cap-] (handle) -- (lens);
+
+
+%\draw[draw=nice_orange] (removal_ellipse_center) ellipse (.5 and 1.25);
+
+%words
+\node[right] (current_txt) at (-3,3.25) {\Huge {History}};
+\node[right] (current_txt) at (4,3.25) {\Huge {Current}};
+%\node[text=nice_blue, right] (intake_txt) at (8,2.25) {\Huge Intakes Received};
+%\node[text=nice_green, right] (screen_txt) at (8,1.25) {\Huge Screened-In Intakes};
+%\node[text=nice_orange, right] (rem_txt) at (8,.25) {\Huge Removals};
+
+
+\end{tikzpicture}
+```
+
+```{r general_rate_desc4, engine = "tikz", fig.cap = "CQI Process", fig.ext = 'png', echo=FALSE, fig.height=3, fig.width=3}
+\usetikzlibrary{positioning,arrows, shapes.geometric}
+\begin{tikzpicture}
+
+\tikzstyle{lens} = [draw=nice_green, circle, minimum size=2mm, ultra thick]
+\tikzstyle{dot} = [draw, circle, minimum size=1mm, inner sep=0pt]
+
+\definecolor{nice_brown}{HTML}{B15928}
+\definecolor{nice_purple}{HTML}{6A3D9A}
+\definecolor{nice_blue}{HTML}{1F78B4}
+\definecolor{nice_green}{HTML}{33A02C}
+\definecolor{nice_orange}{HTML}{FF7F00}
+
+
+
+
+
+%house and people numerator
+\draw[ultra thick,draw=nice_brown] (0,2) -- (0,0) -- (4,0) -- (4,2) -- (2,4) -- (0,2) -- (0,0);
+
+%%people
+\draw[thick, fill=nice_purple, draw=none] (1.25,2) circle (3mm);
+\draw[thick, fill=nice_purple, draw=none] (2.75,2) circle (3mm);
+\coordinate (head1center) at (1.25,2);
+\coordinate (head2center) at (2.75,2);
+\node[rounded corners=2pt,minimum height=1.3cm,minimum width=0.4cm,fill=nice_purple,below = 3.5mm of head1center] (body1) {};
+\node[rounded corners=2pt,minimum height=1.3cm,minimum width=0.4cm,fill=nice_purple,below = 3.5mm of head2center] (body2) {};
+\draw[draw=nice_purple, line width=1mm,round cap-round cap] ([shift={(2pt,-1pt)}]body1.north east) --++(-90:6mm);
+\draw[draw=nice_purple, line width=1mm,round cap-round cap] ([shift={(-2pt,-1pt)}]body1.north west)--++(-90:6mm);
+\draw[thick,white,-round cap] (body1.south) --++(90:5.5mm);
+\draw[draw=nice_purple, line width=1mm,round cap-round cap] ([shift={(2pt,-1pt)}]body2.north east) --++(-90:6mm);
+\draw[draw=nice_purple, line width=1mm,round cap-round cap] ([shift={(-2pt,-1pt)}]body2.north west)--++(-90:6mm);
+\draw[thick,white,-round cap] (body2.south) --++(90:5.5mm);
+
+%fraction
+
+\draw[ultra thick,] (-5,-.5) -- (9,-.5);
+
+%house and people denominator
+\draw[ultra thick,draw=nice_brown] (0,-3) -- (0,-5) -- (4,-5) -- (4,-3) -- (2,-1) -- (0,-3) -- (0,-5);
+
+\draw[thick,  fill=nice_purple, draw=none] (1.25,-3) circle (3mm);
+\draw[thick,  fill=nice_purple, draw=none] (2.75,-3) circle (3mm);
+\coordinate (head1center) at (1.25,-3);
+\coordinate (head2center) at (2.75,-3);
+\node[rounded corners=2pt,minimum height=1.3cm,minimum width=0.4cm,fill=nice_purple,,below = 3.5mm of head1center] (body1) {};
+\node[rounded corners=2pt,minimum height=1.3cm,minimum width=0.4cm,fill=nice_purple,,below = 3.5mm of head2center] (body2) {};
+\draw[draw=nice_purple, line width=1mm,fill=nice_purple,round cap-round cap] ([shift={(2pt,-1pt)}]body1.north east) --++(-90:6mm);
+\draw[draw=nice_purple, line width=1mm,round cap-round cap] ([shift={(-2pt,-1pt)}]body1.north west)--++(-90:6mm);
+\draw[thick,white,-round cap] (body1.south) --++(90:5.5mm);
+% 
+\draw[draw=nice_purple, line width=1mm,round cap-round cap] ([shift={(2pt,-1pt)}]body2.north east) --++(-90:6mm);
+\draw[draw=nice_purple, line width=1mm,round cap-round cap] ([shift={(-2pt,-1pt)}]body2.north west)--++(-90:6mm);
+\draw[thick,white,-round cap] (body2.south) --++(90:5.5mm);
+
+%left side of the equation 
+\node[] (R_I) at (-8.75,-.4) {\Huge Rate of Placement = };
+
+%right side of the equation 
+
+%magnifying glass
+%\node[text=nice_green] at (6.25,1.25)  {\Large = X};
+\node[lens] (lens) at (5.5,1.25)  {};
+\coordinate (handle) at (5.75,1);
+\draw[ultra thick, draw=nice_green, round cap-] (handle) -- (lens);
+
+
+%magnifying glass bottom
+%\node[text=nice_green] at (6.25,-3.7)  {\Large = X};
+\node[lens] (lens) at (5.5,-3.7)  {};
+\coordinate (handle) at (5.75,-3.95);
+\draw[ultra thick, draw=nice_green, round cap-] (handle) -- (lens);
+
+
+%exclamation
+%\node[text=nice_blue] at (6.25,2.25)  {\Large = X};
+\coordinate (bar1) at (5.6,2.5);
+\coordinate (bar2) at (5.4,2.5);
+\coordinate (bar3) at (5.5,2.05);
+\draw[fill=nice_blue, draw=none, rounded corners=2pt]  (bar1) --  (bar2) --  (bar3) -- cycle;
+
+\node[dot, draw=none, fill=nice_blue] (dot) at (5.5,2)  {};
+
+%exclamation bottom
+%\node[text=nice_blue] at (6.25,-2.7)  {\Large = X};
+\coordinate (bar1) at (5.6,-2.45);
+\coordinate (bar2) at (5.4,-2.45);
+\coordinate (bar3) at (5.5,-2.9);
+\draw[fill=nice_blue, draw=none, rounded corners=2pt]  (bar1) --  (bar2) --  (bar3) -- cycle;
+
+\node[dot, draw=none, fill=nice_blue] (dot) at (5.5,-2.95)  {};
+
+
+%removal
+% \node[text=nice_orange] at (6.25,.2)  {\Large = X};
+\coordinate (removal_symbol_begin) at (5.2,.25);
+\coordinate (removal_symbol_end) at (5.85,.2);
+\path[ultra thick, draw=nice_orange, ->] (removal_symbol_begin) to[bend right] (removal_symbol_end);
+
+%removal bottom
+% \node[text=nice_orange] at (6.25,-4.75)  {\Large = X};
+% \coordinate (removal_symbol_begin) at (5.2,-4.7);
+% \coordinate (removal_symbol_end) at (5.85,-4.75);
+% \path[ultra thick, draw=nice_orange, ->] (removal_symbol_begin) to[bend right] (removal_symbol_end);
+% 
+
+%left side of house
+
+%removal
+% \node[text=nice_orange] at (-1,.2)  {\Large = X};
+% \coordinate (removal_symbol_begin) at (-2,.25);
+% \coordinate (removal_symbol_end) at (-1.35,.2);
+% \path[ultra thick, draw=nice_orange, ->] (removal_symbol_begin) to[bend right] (removal_symbol_end);
+
+%removal bottom
+% \node[text=nice_orange] at (-1,-4.75)  {\Large = X};
+% \coordinate (removal_symbol_begin) at (-2,-4.7);
+% \coordinate (removal_symbol_end) at (-1.35,-4.75);
+% \path[ultra thick, draw=nice_orange, ->] (removal_symbol_begin) to[bend right] (removal_symbol_end);
+% 
+% 
+%exclamation
+% \node[text=nice_blue] at (-1,2.25)  {\Large = X};
+% \coordinate (bar1) at (-1.65,2.5);
+% \coordinate (bar2) at (-1.85,2.5);
+% \coordinate (bar3) at (-1.75,2.05);
+% \draw[fill=nice_blue, draw=none, rounded corners=2pt]  (bar1) --  (bar2) --  (bar3) -- cycle;
+% \node[dot, draw=none, fill=nice_blue] (dot) at (-1.75,2)  {};
+
+
+%exclamation bottom
+% \node[text=nice_blue] at (-1,-2.7)  {\Large = X};
+% \coordinate (bar1) at (-1.65,-2.45);
+% \coordinate (bar2) at (-1.85,-2.45);
+% \coordinate (bar3) at (-1.75,-2.9);
+% \draw[fill=nice_blue, draw=none, rounded corners=2pt]  (bar1) --  (bar2) --  (bar3) -- cycle;
+% 
+% \node[dot, draw=none, fill=nice_blue] (dot) at (-1.75,-2.95)  {};
+% 
+
+%magnifying glass
+% \node[text=nice_green] at (-1,1.25)  {\Large = X};
+% \node[lens] (lens) at (-1.75,1.25)  {};
+% \coordinate (handle) at (-1.5,1);
+% \draw[ultra thick, draw=nice_green, round cap-] (handle) -- (lens);
+% 
+
+%magnifying glass bottom
+% \node[text=nice_green] at (-1,-3.7)  {\Large = X};
+% \node[lens] (lens) at (-1.75,-3.7)  {};
+% \coordinate (handle) at (-1.5,-3.95);
+% \draw[ultra thick, draw=nice_green, round cap-] (handle) -- (lens);
+
+
+%\draw[draw=nice_orange] (removal_ellipse_center) ellipse (.5 and 1.25);
+
+%words
+\node[right] (current_txt) at (-3,3.25) {\Huge {History}};
+\node[right] (current_txt) at (4,3.25) {\Huge {Current}};
+%\node[text=nice_blue, right] (intake_txt) at (8,2.25) {\Huge Intakes Received};
+%\node[text=nice_green, right] (screen_txt) at (8,1.25) {\Huge Screened-In Intakes};
+%\node[text=nice_orange, right] (rem_txt) at (8,.25) {\Huge Removals};
+
+
+\end{tikzpicture}
+```
+
+### Order-Specific Demographic Measures of Safety
+
+When we look at order-specific rates, we are trying to get a sense of families who have repeated contact with the child welfare system. For example, if we are trying to get a sense of how many households have a second intake to the child welfare system, we only divide by families who have had a first intake. 
+
+`Graphic designer to prepare visualization to describe order-specific measures and care-day measures...something similar to what we have below`
+
+```{r general_rate_desc5, engine = "tikz", fig.cap = "CQI Process", fig.ext = 'png', echo=FALSE, fig.height=3, fig.width=3}
+\usetikzlibrary{positioning,arrows, shapes.geometric}
+\begin{tikzpicture}
+
+\tikzstyle{lens} = [draw=nice_green, circle, minimum size=2mm, ultra thick]
+\tikzstyle{dot} = [draw, circle, minimum size=1mm, inner sep=0pt]
+
+\definecolor{nice_brown}{HTML}{B15928}
+\definecolor{nice_purple}{HTML}{6A3D9A}
+\definecolor{nice_blue}{HTML}{1F78B4}
+\definecolor{nice_green}{HTML}{33A02C}
+\definecolor{nice_orange}{HTML}{FF7F00}
+
+
+
+
+
+%house and people numerator
+\draw[ultra thick,draw=nice_brown] (0,2) -- (0,0) -- (4,0) -- (4,2) -- (2,4) -- (0,2) -- (0,0);
+
+%%people
+\draw[thick, fill=nice_purple, draw=none] (1.25,2) circle (3mm);
+\draw[thick, fill=nice_purple, draw=none] (2.75,2) circle (3mm);
+\coordinate (head1center) at (1.25,2);
+\coordinate (head2center) at (2.75,2);
+\node[rounded corners=2pt,minimum height=1.3cm,minimum width=0.4cm,fill=nice_purple,below = 3.5mm of head1center] (body1) {};
+\node[rounded corners=2pt,minimum height=1.3cm,minimum width=0.4cm,fill=nice_purple,below = 3.5mm of head2center] (body2) {};
+\draw[draw=nice_purple, line width=1mm,round cap-round cap] ([shift={(2pt,-1pt)}]body1.north east) --++(-90:6mm);
+\draw[draw=nice_purple, line width=1mm,round cap-round cap] ([shift={(-2pt,-1pt)}]body1.north west)--++(-90:6mm);
+\draw[thick,white,-round cap] (body1.south) --++(90:5.5mm);
+\draw[draw=nice_purple, line width=1mm,round cap-round cap] ([shift={(2pt,-1pt)}]body2.north east) --++(-90:6mm);
+\draw[draw=nice_purple, line width=1mm,round cap-round cap] ([shift={(-2pt,-1pt)}]body2.north west)--++(-90:6mm);
+\draw[thick,white,-round cap] (body2.south) --++(90:5.5mm);
+
+%fraction
+
+\draw[ultra thick,] (-5,-.5) -- (9,-.5);
+
+%house and people denominator
+\draw[ultra thick,draw=nice_brown] (0,-3) -- (0,-5) -- (4,-5) -- (4,-3) -- (2,-1) -- (0,-3) -- (0,-5);
+
+\draw[thick,  fill=nice_purple, draw=none] (1.25,-3) circle (3mm);
+\draw[thick,  fill=nice_purple, draw=none] (2.75,-3) circle (3mm);
+\coordinate (head1center) at (1.25,-3);
+\coordinate (head2center) at (2.75,-3);
+\node[rounded corners=2pt,minimum height=1.3cm,minimum width=0.4cm,fill=nice_purple,,below = 3.5mm of head1center] (body1) {};
+\node[rounded corners=2pt,minimum height=1.3cm,minimum width=0.4cm,fill=nice_purple,,below = 3.5mm of head2center] (body2) {};
+\draw[draw=nice_purple, line width=1mm,fill=nice_purple,round cap-round cap] ([shift={(2pt,-1pt)}]body1.north east) --++(-90:6mm);
+\draw[draw=nice_purple, line width=1mm,round cap-round cap] ([shift={(-2pt,-1pt)}]body1.north west)--++(-90:6mm);
+\draw[thick,white,-round cap] (body1.south) --++(90:5.5mm);
+% 
+\draw[draw=nice_purple, line width=1mm,round cap-round cap] ([shift={(2pt,-1pt)}]body2.north east) --++(-90:6mm);
+\draw[draw=nice_purple, line width=1mm,round cap-round cap] ([shift={(-2pt,-1pt)}]body2.north west)--++(-90:6mm);
+\draw[thick,white,-round cap] (body2.south) --++(90:5.5mm);
+
+%left side of the equation 
+\node[align=left] (R_I) at (-8.75,-.4) {\Huge Rate of Placement = \\
+                                          \Huge First-Order};
+
+%right side of the equation 
+
+%magnifying glass
+%\node[text=nice_green] at (6.25,1.25)  {\Large = X};
+\node[lens] (lens) at (5.5,1.25)  {};
+\coordinate (handle) at (5.75,1);
+\draw[ultra thick, draw=nice_green, round cap-] (handle) -- (lens);
+
+
+%magnifying glass bottom
+%\node[text=nice_green] at (6.25,-3.7)  {\Large = X};
+\node[lens] (lens) at (5.5,-3.7)  {};
+\coordinate (handle) at (5.75,-3.95);
+\draw[ultra thick, draw=nice_green, round cap-] (handle) -- (lens);
+
+
+%exclamation
+%\node[text=nice_blue] at (6.25,2.25)  {\Large = X};
+\coordinate (bar1) at (5.6,2.5);
+\coordinate (bar2) at (5.4,2.5);
+\coordinate (bar3) at (5.5,2.05);
+\draw[fill=nice_blue, draw=none, rounded corners=2pt]  (bar1) --  (bar2) --  (bar3) -- cycle;
+
+\node[dot, draw=none, fill=nice_blue] (dot) at (5.5,2)  {};
+
+%exclamation bottom
+%\node[text=nice_blue] at (6.25,-2.7)  {\Large = X};
+\coordinate (bar1) at (5.6,-2.45);
+\coordinate (bar2) at (5.4,-2.45);
+\coordinate (bar3) at (5.5,-2.9);
+\draw[fill=nice_blue, draw=none, rounded corners=2pt]  (bar1) --  (bar2) --  (bar3) -- cycle;
+
+\node[dot, draw=none, fill=nice_blue] (dot) at (5.5,-2.95)  {};
+
+
+%removal
+\node[text=nice_orange] at (6.25,.2)  {\Large 1};
+\coordinate (removal_symbol_begin) at (5.2,.25);
+\coordinate (removal_symbol_end) at (5.85,.2);
+\path[ultra thick, draw=nice_orange, ->] (removal_symbol_begin) to[bend right] (removal_symbol_end);
+
+%removal bottom
+% \node[text=nice_orange] at (6.25,-4.75)  {\Large = X};
+% \coordinate (removal_symbol_begin) at (5.2,-4.7);
+% \coordinate (removal_symbol_end) at (5.85,-4.75);
+% \path[ultra thick, draw=nice_orange, ->] (removal_symbol_begin) to[bend right] (removal_symbol_end);
+% 
+
+%left side of house
+
+%removal
+\node[text=nice_orange] at (-1,.2)  {\Large 0};
+\coordinate (removal_symbol_begin) at (-2,.25);
+\coordinate (removal_symbol_end) at (-1.35,.2);
+\path[ultra thick, draw=nice_orange, ->] (removal_symbol_begin) to[bend right] (removal_symbol_end);
+
+%removal bottom
+\node[text=nice_orange] at (-1,-4.75)  {\Large 0};
+\coordinate (removal_symbol_begin) at (-2,-4.7);
+\coordinate (removal_symbol_end) at (-1.35,-4.75);
+\path[ultra thick, draw=nice_orange, ->] (removal_symbol_begin) to[bend right] (removal_symbol_end);
+% 
+% 
+%exclamation
+% \node[text=nice_blue] at (-1,2.25)  {\Large = X};
+% \coordinate (bar1) at (-1.65,2.5);
+% \coordinate (bar2) at (-1.85,2.5);
+% \coordinate (bar3) at (-1.75,2.05);
+% \draw[fill=nice_blue, draw=none, rounded corners=2pt]  (bar1) --  (bar2) --  (bar3) -- cycle;
+% \node[dot, draw=none, fill=nice_blue] (dot) at (-1.75,2)  {};
+
+
+%exclamation bottom
+% \node[text=nice_blue] at (-1,-2.7)  {\Large = X};
+% \coordinate (bar1) at (-1.65,-2.45);
+% \coordinate (bar2) at (-1.85,-2.45);
+% \coordinate (bar3) at (-1.75,-2.9);
+% \draw[fill=nice_blue, draw=none, rounded corners=2pt]  (bar1) --  (bar2) --  (bar3) -- cycle;
+% 
+% \node[dot, draw=none, fill=nice_blue] (dot) at (-1.75,-2.95)  {};
+% 
+
+%magnifying glass
+% \node[text=nice_green] at (-1,1.25)  {\Large = X};
+% \node[lens] (lens) at (-1.75,1.25)  {};
+% \coordinate (handle) at (-1.5,1);
+% \draw[ultra thick, draw=nice_green, round cap-] (handle) -- (lens);
+% 
+
+%magnifying glass bottom
+% \node[text=nice_green] at (-1,-3.7)  {\Large = X};
+% \node[lens] (lens) at (-1.75,-3.7)  {};
+% \coordinate (handle) at (-1.5,-3.95);
+% \draw[ultra thick, draw=nice_green, round cap-] (handle) -- (lens);
+
+
+%\draw[draw=nice_orange] (removal_ellipse_center) ellipse (.5 and 1.25);
+
+%words
+\node[right] (current_txt) at (-3,3.25) {\Huge {History}};
+\node[right] (current_txt) at (4,3.25) {\Huge {Current}};
+%\node[text=nice_blue, right] (intake_txt) at (8,2.25) {\Huge Intakes Received};
+%\node[text=nice_green, right] (screen_txt) at (8,1.25) {\Huge Screened-In Intakes};
+%\node[text=nice_orange, right] (rem_txt) at (8,.25) {\Huge Removals};
+
+
+\end{tikzpicture}
+```
+
+
+
+
+```{r gen_ref_calcs, engine='R', warning=FALSE, message=FALSE, echo=FALSE, fig.align='center', cache=TRUE}
+require(RODBC)
+require(pocr)
+require(sqldf)
+con <- odbcConnect("Test Annie")
+sp_rate_referral <- sqlQuery(con, "call sp_rate_referral('0','0','0')")
+sp_rate_referral_clean <- cr_clean(sp_rate_referral)
+
+get.rows <- sp_rate_referral_clean$date >= as.Date("2009-02-01") & 
+            sp_rate_referral_clean$date <= as.Date("2014-07-01") 
+sp_rate_referral_clean <- sp_rate_referral_clean[get.rows, ] 
+
+ts1 <- ts(sp_rate_referral_clean$referral.rate, start=c(2009,2), frequency=12)
+stl1 <- stl(ts1, "per")$time.series
+sp_rate_referral_clean$type <- "Observed"
+stl_dat <- sp_rate_referral_clean[,c("date", "cnt.referrals", "tot.pop", "referral.rate", "type")]
+stl_dat$type <- "Deseasonalized Trend"
+stl_dat$referral.rate <- stl1[,2]
+sp_rate_referral_clean <- rbind(sp_rate_referral_clean, stl_dat)
+
+sp_rate_referral_clean_2014 <- subset(sp_rate_referral_clean, date > as.Date("2013-06-01") & date <= as.Date("2014-06-01"))
+sp_rate_referral_clean_2013 <- subset(sp_rate_referral_clean, date > as.Date("2012-06-01") & date <= as.Date("2013-06-01"))
+
+
+R_I_14 <- mean(sp_rate_referral_clean_2014$referral.rate)
+R_I_13 <- mean(sp_rate_referral_clean_2013$referral.rate)
+```
+
+```{r gen_ref_calc_plot1, engine='R', warning=FALSE, message=FALSE, echo=FALSE, fig.cap="General Rate of Intakes", cache=TRUE}
+pR_I <- ggplot(sp_rate_referral_clean[sp_rate_referral_clean$type=="Deseasonalized Trend",]
+       , aes(x=date
+                                   ,y=referral.rate
+                                           #,group=type
+                                           #,colour=type
+                                   )) + 
+  geom_line(size=1, colour=poc_colors[2]) +
+  #geom_smooth(colour=poc_colors[3], fill=NA, size=2) + 
+  xlab("") +
+  ylab("General Rate of Intakes") + 
+  scale_color_manual(labels = c("Deseasonalized Trend"
+                                  ,"Observations")
+                       ,values=c(poc_colors[3:4])
+                       ,guide=guide_legend(title= "")
+                       ) +
+
+  theme_bw()
+```
+
+```{r gen_ref_calc_plot2, engine='R', warning=FALSE, message=FALSE, echo=FALSE, cache=TRUE}
+pR_I_counts <- ggplot(sp_rate_referral_clean[sp_rate_referral_clean$type=="Deseasonalized Trend",]
+       , aes(x=date
+                                   ,y=cnt.referrals
+                                           #,group=type
+                                           #,colour=type
+                                   )) + 
+  #geom_line(size=1, colour=poc_colors[2]) +
+  geom_smooth(colour=poc_colors[3], fill=NA, size=2) + 
+  xlab("") +
+  ylab("Count of Intakes") + 
+  scale_color_manual(labels = c("Deseasonalized Trend"
+                                  ,"Observations")
+                       ,values=c(poc_colors[3:4])
+                       ,guide=guide_legend(title= "")
+                       ) +
+  theme_bw()
+```
+
+```{r gen_ref_calc_plot3, engine='R', warning=FALSE, message=FALSE, echo=FALSE, cache=TRUE}
+
+require(pocr)
+con <- odbcConnect("POC")
+dat <- sqlQuery(con, "select 
+                        sum([cnt_referrals]) all_ref
+                        ,ref_gt_3
+                        ,ref1.start_date
+                      	,ref_gt_3*1.0/sum([cnt_referrals]) prp_gt3
+                      from ca_ods.prtl.rate_referrals_order_specific ref1
+                      	join (select 
+                      			sum([cnt_referrals]) ref_gt_3
+                      			,start_date
+                      		from ca_ods.prtl.rate_referrals_order_specific
+                      		where county_cd = 0 
+                      			and nth_order > 3
+                      			and start_date >= '2009-01-01'
+                      		group by 
+                      			start_date) ref2
+                      		on ref1.start_date = ref2.start_date
+                      where county_cd = 0 
+                      group by 
+                      	ref_gt_3
+                      	,ref1.start_date")
+pR_I_prpgt3 <- ggplot(dat
+       , aes(x=start_date
+                                   ,y=prp_gt3
+                                           #,group=type
+                                           ,colour=poc_colors[3]
+                                   )) + 
+  #geom_line(size=1, colour=poc_colors[2]) +
+  geom_smooth(colour=poc_colors[3], fill=NA, size=2) + 
+  xlab("") +
+  ylab("Proportion of Intakes with More than 3 Prior Intakes") + 
+  theme_bw()
+```
+
+```{r gen_screen_plot1, engine='R', warning=FALSE, message=FALSE, echo=FALSE, cache=TRUE}
+
+require(pocr)
+con <- odbcConnect("Test Annie")
+sp_rate_referral_scrn_in <- sqlQuery(con, "call sp_rate_referral_scrn_in('0','0','0')")
+sp_rate_referral_scrn_in_clean <- cr_clean(sp_rate_referral_scrn_in)
+
+get.rows <- sp_rate_referral_scrn_in_clean$date >= as.Date("2009-02-01") & 
+            sp_rate_referral_scrn_in_clean$date <= as.Date("2014-07-01") 
+sp_rate_referral_scrn_in_clean <- sp_rate_referral_scrn_in_clean[get.rows, ] 
+
+ts1 <- ts(sp_rate_referral_scrn_in_clean$referral.rate, start=c(2009,2), frequency=12)
+stl1 <- stl(ts1, "per")$time.series
+sp_rate_referral_scrn_in_clean$type <- "Observed"
+stl_dat <- sp_rate_referral_scrn_in_clean[,c("date", "cnt.referrals", "tot.pop", "referral.rate", "type")]
+stl_dat$type <- "Deseasonalized Trend"
+stl_dat$referral.rate <- stl1[,2]
+sp_rate_referral_scrn_in_clean <- rbind(sp_rate_referral_scrn_in_clean, stl_dat)
+
+
+pR_S <- ggplot(sp_rate_referral_scrn_in_clean[sp_rate_referral_scrn_in_clean$type=="Deseasonalized Trend",]
+       ,aes(x=date
+                                           ,y=referral.rate
+                                           #,group=type
+                                           #,colour=type
+            )) + 
+  geom_line(size=2, colour=poc_colors[2]) +
+  xlab("") +
+  ylab("Screened-In Intakes Per 1,000 Intakes") + 
+  scale_color_manual(labels = c("Deseasonalized Trend"
+                                  ,"Observations")
+                       ,values=c(poc_colors[3:4])
+                       ,guide=guide_legend(title= "")
+                       ) +
+  theme_bw()
+
+sp_rate_referral_scrn_in_clean_2014 <- subset(sp_rate_referral_scrn_in_clean, date > as.Date("2013-06-01") & date <= as.Date("2014-06-01"))
+sp_rate_referral_scrn_in_clean_2013 <- subset(sp_rate_referral_scrn_in_clean, date > as.Date("2012-06-01") & date <= as.Date("2013-06-01"))
+
+R_S_14 <- round(mean(sp_rate_referral_scrn_in_clean_2014$referral.rate), 0)
+R_S_13 <- round(mean(sp_rate_referral_scrn_in_clean_2013$referral.rate), 0)
+```
+
+```{r gen_screen_plot2, engine='R', warning=FALSE, message=FALSE, echo=FALSE, cache=TRUE}
+require(pocr)
+con <- odbcConnect("Test Annie")
+pR_S_counts <- ggplot(sp_rate_referral_scrn_in_clean[sp_rate_referral_scrn_in_clean$type=="Deseasonalized Trend",]
+       , aes(x=date
+                                   ,y=cnt.referrals
+                                           #,group=type
+                                           #,colour=type
+                                   )) + 
+  #geom_line(size=1, colour=poc_colors[2]) +
+  geom_smooth(colour=poc_colors[3], fill=NA, size=2) + 
+  xlab("") +
+  ylab("Count of Screened-In Intakes") + 
+  scale_color_manual(labels = c("Deseasonalized Trend"
+                                  ,"Observations")
+                       ,values=c(poc_colors[3:4])
+                       ,guide=guide_legend(title= "")
+                       ) +
+  theme_bw()
+```
+
+```{r gen_place_plot1, engine='R', warning=FALSE, message=FALSE, echo=FALSE, cache=TRUE}
+require(pocr)
+con <- odbcConnect("Test Annie")
+sp_rate_placement <- sqlQuery(con, "call sp_rate_placement('0','0','0')")
+sp_rate_placement_clean <- cr_clean(sp_rate_placement)
+
+get.rows <- sp_rate_placement_clean$cohort.date >= as.Date("2009-02-01") & 
+             sp_rate_placement_clean$cohort.date <= as.Date("2014-07-01") 
+sp_rate_placement_clean <- sp_rate_placement_clean[get.rows, ] 
+
+
+ts1 <- ts(sp_rate_placement_clean$placement.rate, start=c(2009,2), frequency=12)
+stl1 <- stl(ts1, "per")$time.series
+sp_rate_placement_clean$type <- "Observed"
+stl_dat <- sp_rate_placement_clean[,c("cohort.date", "cnt.households.w.plcm", "cnt.referrals.u18", "placement.rate", "type")]
+stl_dat$type <- "Deseasonalized Trend"
+stl_dat$placement.rate <- stl1[,2]
+sp_rate_placement_clean <- rbind(sp_rate_placement_clean, stl_dat)
+
+
+pR_P <- ggplot(sp_rate_placement_clean[sp_rate_placement_clean$type=="Deseasonalized Trend",]
+                               , aes(x=cohort.date
+                                    ,y=placement.rate
+                                           #,group=type
+                                           #,colour=type
+                                    )) + 
+  geom_line(size=2, colour=poc_colors[2]) +
+  xlab("") +
+  ylab("Placements Per 1,000 Screened-In Intakes") + 
+  scale_color_manual(labels = c("Deseasonalized Trend"
+                                  ,"Observations")
+                       ,values=c(poc_colors[3:4])
+                       ,guide=guide_legend(title= "")
+                       ) +
+  theme_bw()
+```
+
+```{r gen_place_plot2, engine='R', warning=FALSE, message=FALSE, echo=FALSE, cache=TRUE}
+require(pocr)
+con <- odbcConnect("Test Annie")
+pR_P_counts <- ggplot(sp_rate_placement_clean[sp_rate_placement_clean$type=="Deseasonalized Trend",]
+                               , aes(x=cohort.date
+                                    ,y=cnt.households.w.plcm
+                                           #,group=type
+                                           #,colour=type
+                                    )) + 
+  #geom_line(size=2, colour=poc_colors[2]) +
+  geom_smooth(size=2, colour=poc_colors[3], fill=NA) +
+  xlab("") +
+  ylab("Count of Placements") + 
+  scale_color_manual(labels = c("Deseasonalized Trend"
+                                  ,"Observations")
+                       ,values=c(poc_colors[3:4])
+                       ,guide=guide_legend(title= "")
+                       ) +
+  theme_bw()
+
+sp_rate_placement_clean_2014 <- subset(sp_rate_placement_clean, cohort.date > as.Date("2013-06-01") & cohort.date <= as.Date("2014-06-01"))
+sp_rate_placement_clean_2013 <- subset(sp_rate_placement_clean, cohort.date > as.Date("2012-06-01") & cohort.date <= as.Date("2013-06-01"))
+
+
+R_P_14 <- mean(sp_rate_placement_clean_2014$placement.rate)
+R_P_13 <- mean(sp_rate_placement_clean_2013$placement.rate)
+
+```
+
+```{r ord_int_plot1, engine='R', warning=FALSE, message=FALSE, echo=FALSE, cache=TRUE}
+require(pocr)
+con <- odbcConnect("Test Annie")
+sp_rate_referrals_order <- sqlQuery(con, "call sp_rate_referrals_order('0','0','1,2,3')")
+sp_rate_referrals_order_clean <- cr_clean(sp_rate_referrals_order)
+
+get.rows <- sp_rate_referrals_order_clean$date >= as.Date("2009-02-01") & 
+             sp_rate_referrals_order_clean$date <= as.Date("2014-07-01") 
+sp_rate_referrals_order_clean <- sp_rate_referrals_order_clean[get.rows, ] 
+
+piR_I <- ggplot(sp_rate_referrals_order_clean, aes(x=date
+                                          ,y=referral.rate
+                                          ,group=order
+                                          ,colour=order)) + 
+  #geom_point(size=2.5) +
+  geom_smooth(method="lm") +
+  xlab("") +
+  ylab("Intakes Per 1,000 Households") + 
+  scale_color_manual(values=c(poc_colors[1:3])
+                       ,guide=guide_legend(title= "Order of Intake")
+                       ) +
+  theme_bw() +
+  theme(legend.position="bottom")
+
+
+sp_rate_referrals_order1_clean_2014 <- subset(sp_rate_referrals_order_clean, date > as.Date("2013-06-01") & 
+                                                date <= as.Date("2014-06-01") &
+                                                cd.order == 1)
+sp_rate_referrals_order1_clean_2013 <- subset(sp_rate_referrals_order_clean, date > as.Date("2012-06-01") & 
+                                                date <= as.Date("2013-06-01") &
+                                                cd.order == 1)
+
+
+sp_rate_referrals_order2_clean_2014 <- subset(sp_rate_referrals_order_clean, date > as.Date("2013-06-01") & 
+                                                date <= as.Date("2014-06-01") &
+                                                cd.order == 2)
+sp_rate_referrals_order2_clean_2013 <- subset(sp_rate_referrals_order_clean, date > as.Date("2012-06-01") & 
+                                                date <= as.Date("2013-06-01") &
+                                                cd.order == 2)
+
+sp_rate_referrals_order3_clean_2014 <- subset(sp_rate_referrals_order_clean, date > as.Date("2013-06-01") & 
+                                                date <= as.Date("2014-06-01") &
+                                                cd.order == 3)
+sp_rate_referrals_order3_clean_2013 <- subset(sp_rate_referrals_order_clean, date > as.Date("2012-06-01") & 
+                                                date <= as.Date("2013-06-01") &
+                                                cd.order == 3)
+
+
+R_I_14.1 <- mean(sp_rate_referrals_order1_clean_2014$referral.rate)
+R_I_13.1 <- mean(sp_rate_referrals_order1_clean_2013$referral.rate)
+
+R_I_14.2 <- mean(sp_rate_referrals_order2_clean_2014$referral.rate)
+R_I_13.2 <- mean(sp_rate_referrals_order2_clean_2013$referral.rate)
+
+R_I_14.3 <- mean(sp_rate_referrals_order3_clean_2014$referral.rate)
+R_I_13.3 <- mean(sp_rate_referrals_order3_clean_2013$referral.rate)
+
+```
+
+```{r ord_scrn_plot1, engine='R', warning=FALSE, message=FALSE, echo=FALSE, cache=TRUE}
+require(pocr)
+con <- odbcConnect("Test Annie")
+sp_rate_referrals_scrn_in_order <- sqlQuery(con
+                                            ,"call sp_rate_referrals_scrn_in_order('0','0','1,2,3')")
+sp_rate_referrals_scrn_in_order_clean <- cr_clean(sp_rate_referrals_scrn_in_order)
+
+get.rows <- sp_rate_referrals_scrn_in_order_clean$date >= as.Date("2009-02-01") & 
+             sp_rate_referrals_scrn_in_order_clean$date <= as.Date("2014-07-01") 
+sp_rate_referrals_scrn_in_order_clean <- sp_rate_referrals_scrn_in_order_clean[get.rows, ] 
+
+piR_S <- ggplot(sp_rate_referrals_scrn_in_order_clean, aes(x=date
+                                          ,y=referral.rate
+                                          ,group=order
+                                          ,colour=order)) + 
+  #geom_point(size=2.5) +
+  geom_smooth(method="lm") +
+  xlab("") +
+  ylab("Screenings Per 1,000 Intakes") + 
+  scale_color_manual(values=c(poc_colors[1:3])
+                       ,guide=guide_legend(title= "Order of Screening")
+                       ) +
+  theme_bw() +
+  theme(legend.position="bottom")
+
+
+sp_rate_referrals_scrn_in_order1_clean_2014 <- subset(sp_rate_referrals_scrn_in_order_clean, date > as.Date("2013-06-01") & 
+                                                date <= as.Date("2014-06-01") &
+                                                cd.order == 1)
+sp_rate_referrals_scrn_in_order1_clean_2013 <- subset(sp_rate_referrals_scrn_in_order_clean, date > as.Date("2012-06-01") & 
+                                                date <= as.Date("2013-06-01") &
+                                                cd.order == 1)
+
+
+sp_rate_referrals_scrn_in_order2_clean_2014 <- subset(sp_rate_referrals_scrn_in_order_clean, date > as.Date("2013-06-01") & 
+                                                date <= as.Date("2014-06-01") &
+                                                cd.order == 2)
+sp_rate_referrals_scrn_in_order2_clean_2013 <- subset(sp_rate_referrals_scrn_in_order_clean, date > as.Date("2012-06-01") & 
+                                                date <= as.Date("2013-06-01") &
+                                                cd.order == 2)
+
+sp_rate_referrals_scrn_in_order3_clean_2014 <- subset(sp_rate_referrals_scrn_in_order_clean, date > as.Date("2013-06-01") & 
+                                                date <= as.Date("2014-06-01") &
+                                                cd.order == 3)
+sp_rate_referrals_scrn_in_order3_clean_2013 <- subset(sp_rate_referrals_scrn_in_order_clean, date > as.Date("2012-06-01") & 
+                                                date <= as.Date("2013-06-01") &
+                                                cd.order == 3)
+
+
+R_S_14.1 <- mean(sp_rate_referrals_scrn_in_order1_clean_2014$referral.rate)
+R_S_13.1 <- mean(sp_rate_referrals_scrn_in_order1_clean_2013$referral.rate)
+
+R_S_14.2 <- mean(sp_rate_referrals_scrn_in_order2_clean_2014$referral.rate)
+R_S_13.2 <- mean(sp_rate_referrals_scrn_in_order2_clean_2013$referral.rate)
+
+R_S_14.3 <- mean(sp_rate_referrals_scrn_in_order3_clean_2014$referral.rate)
+R_S_13.3 <- mean(sp_rate_referrals_scrn_in_order3_clean_2013$referral.rate)
+```
+
+```{r ord_place_plot1, engine='R', warning=FALSE, message=FALSE, echo=FALSE, cache=TRUE}
+require(pocr)
+con <- odbcConnect("Test Annie")
+sp_rate_placement_order <- sqlQuery(con,"call sp_rate_placement_order('0','0','1,2,3')")
+sp_rate_placement_order_clean <- cr_clean(sp_rate_placement_order)
+
+get.rows <- sp_rate_placement_order_clean$cohort.date >= as.Date("2009-02-01") & 
+             sp_rate_placement_order_clean$cohort.date <= as.Date("2014-07-01") 
+sp_rate_placement_order_clean <- sp_rate_placement_order_clean[get.rows, ] 
+
+piR_P <- ggplot(sp_rate_placement_order_clean, aes(x=cohort.date
+                                          ,y=placement.rate
+                                          ,group=order
+                                          ,colour=order)) + 
+  #geom_point(size=2.5) +
+  geom_smooth(method="lm") +
+  xlab("") +
+  ylab("Placements Per 1,000 Screened-In Intakes") + 
+  scale_color_manual(labels = c("First Order"
+                                  ,"Second Order"
+                                  ,"Third Order")
+                       ,values=c(poc_colors[1:3])
+                       ,guide=guide_legend(title= "Order of Placement")
+                       ) +
+  theme_bw() +
+  theme(legend.position="bottom")
+
+
+sp_rate_placement_order1_clean2014 <- subset(sp_rate_placement_order_clean, cohort.date > as.Date("2013-06-01") & 
+                                                cohort.date <= as.Date("2014-06-01") &
+                                                cd.order == 1)
+sp_rate_placement_order1_clean2013 <- subset(sp_rate_placement_order_clean, cohort.date > as.Date("2012-06-01") & 
+                                                cohort.date <= as.Date("2013-06-01") &
+                                                cd.order == 1)
+
+
+sp_rate_placement_order2_clean2014 <- subset(sp_rate_placement_order_clean, cohort.date > as.Date("2013-06-01") & 
+                                                cohort.date <= as.Date("2014-06-01") &
+                                                cd.order == 2)
+sp_rate_placement_order2_clean2013 <- subset(sp_rate_placement_order_clean, cohort.date > as.Date("2012-06-01") & 
+                                                cohort.date <= as.Date("2013-06-01") &
+                                                cd.order == 2)
+
+sp_rate_placement_order3_clean2014 <- subset(sp_rate_placement_order_clean, cohort.date > as.Date("2013-06-01") & 
+                                                cohort.date <= as.Date("2014-06-01") &
+                                                cd.order == 3)
+sp_rate_placement_order3_clean2013 <- subset(sp_rate_placement_order_clean, cohort.date > as.Date("2012-06-01") & 
+                                                cohort.date <= as.Date("2013-06-01") &
+                                                cd.order == 3)
+
+
+R_P_14.1 <- mean(sp_rate_placement_order1_clean2014$placement.rate)
+R_P_13.1 <- mean(sp_rate_placement_order1_clean2013$placement.rate)
+
+R_P_14.2 <- mean(sp_rate_placement_order2_clean2014$placement.rate)
+R_P_13.2 <- mean(sp_rate_placement_order2_clean2013$placement.rate)
+
+R_P_14.3 <- mean(sp_rate_placement_order3_clean2014$placement.rate)
+R_P_13.3 <- mean(sp_rate_placement_order3_clean2013$placement.rate)
+```
+
+```{r R_F, engine='R', warning=FALSE, message=FALSE, echo=FALSE, cache=TRUE}
+require(pocr)
+con <- odbcConnect("Test Annie")
+sp_rate_care_day_maltreatment <- sqlQuery(con,"call sp_rate_care_day_maltreatment('0')")
+sp_rate_care_day_maltreatment_clean <- cr_clean(sp_rate_care_day_maltreatment)
+
+#hard coding 2014 in
+sp_rate_care_day_maltreatment_clean <- rbind(sp_rate_care_day_maltreatment_clean, c(2014, 196, 3099673, 6.323247646))
+
+n <- length(sp_rate_care_day_maltreatment_clean$care.day.incident.rate)
+mean_rate <- mean(sp_rate_care_day_maltreatment_clean$care.day.incident.rate[1:n-1])
+sp_rate_care_day_maltreatment_clean$variance <- abs(sp_rate_care_day_maltreatment_clean$care.day.incident.rate - mean_rate)
+mean_variance <- mean(sp_rate_care_day_maltreatment_clean$variance)
+
+sp_rate_care_day_maltreatment_clean$lcl <- mean_rate-(mean_variance*qnorm(0.997))
+sp_rate_care_day_maltreatment_clean$ucl <- mean_rate+(mean_variance*qnorm(0.997))
+
+dat1 <- sp_rate_care_day_maltreatment_clean[,c("fiscal.yr", "care.day.incident.rate")]
+names(dat1) <- c("year", "value")
+dat1$var <- "Care Day Incident Rate" 
+dat2 <- sp_rate_care_day_maltreatment_clean[,c("fiscal.yr", "ucl")]
+names(dat2) <- c("year", "value")
+dat2$var <- "Upper Limit" 
+dat3 <- sp_rate_care_day_maltreatment_clean[,c("fiscal.yr", "lcl")]
+names(dat3) <- c("year", "value")
+dat3$var <- "Lower Limit" 
+
+dat <- rbind(dat1, dat2, dat3)
+
+pR_F <- ggplot(dat, aes(x=year
+                ,y=value
+                ,group=var
+                ,colour=var)) + 
+  geom_line(size=1) +
+  xlab("") +
+  ylab("Maltreatment Substantiations Per 100,000 Care Days") + 
+  scale_color_manual(labels = c("Observed Rate"
+                                  ,"Lower Limit"
+                                  ,"Upper Limit")
+                      ,name = ""
+                       ,values=c(poc_colors[c(1,3,2)])
+                       ) +
+  theme_bw() +
+  theme(legend.position="bottom")
+
+R_F_14 <- dat[dat$year==2014, ]$value[1]
+R_F_13 <- dat[dat$year==2013, ]$value[1]
+```
+
+```{r dR_M, engine='R', warning=FALSE, message=FALSE, echo=FALSE, cache=TRUE}
+require(pocr)
+con <- odbcConnect("POC")
+
+rate_care_day_movement <- sqlQuery(con,"select
+                                          fiscal_yr
+                                          ,years_in_care
+                                        	,placement_moves*100000.0/care_days movement_rate
+                                        from ca_ods.base.placement_care_days_mobility
+                                        where exclude_7day = 1
+                                        	and exclude_nondcfs = 1
+                                        	and exclude_trh = 1
+                                        	and age_yrs_removal = -99
+                                        	and age_yrs_exit = -99 
+                                        	and county_cd = 0
+                                        	and cd_race = 0 
+                                          and years_in_care <= 2")
+
+
+rate_care_day_movement_0 <- subset(rate_care_day_movement, years_in_care == 0)
+mean_rate_0 <- mean(rate_care_day_movement_0$movement_rate[1:n-1])
+rate_care_day_movement_0$variance <- abs(rate_care_day_movement_0$movement_rate - mean_rate_0)
+mean_variance_0 <- mean(rate_care_day_movement_0$variance)
+rate_care_day_movement_0$lcl <- mean_rate_0-(mean_variance_0*qnorm(0.997))
+rate_care_day_movement_0$ucl <- mean_rate_0+(mean_variance_0*qnorm(0.997))
+
+rate_care_day_movement_1 <- subset(rate_care_day_movement, years_in_care == 1)
+mean_rate_1 <- mean(rate_care_day_movement_1$movement_rate[1:n-1])
+rate_care_day_movement_1$variance <- abs(rate_care_day_movement_1$movement_rate - mean_rate_1)
+mean_variance_1 <- mean(rate_care_day_movement_1$variance)
+rate_care_day_movement_1$lcl <- mean_rate_1-(mean_variance_1*qnorm(0.997))
+rate_care_day_movement_1$ucl <- mean_rate_1+(mean_variance_1*qnorm(0.997))
+
+rate_care_day_movement_2 <- subset(rate_care_day_movement, years_in_care == 2)
+mean_rate_2 <- mean(rate_care_day_movement_2$movement_rate[1:n-1])
+rate_care_day_movement_2$variance <- abs(rate_care_day_movement_2$movement_rate - mean_rate_2)
+mean_variance_2 <- mean(rate_care_day_movement_2$variance)
+rate_care_day_movement_2$lcl <- mean_rate_2-(mean_variance_2*qnorm(0.997))
+rate_care_day_movement_2$ucl <- mean_rate_2+(mean_variance_2*qnorm(0.997))
+
+rate_care_day_movement <- rbind(rate_care_day_movement_2[,-which(names(rate_care_day_movement_2) %in% c("variance"))]
+                                ,rate_care_day_movement_1[,-which(names(rate_care_day_movement_1) %in% c("variance"))]
+                                ,rate_care_day_movement_0[,-which(names(rate_care_day_movement_0) %in% c("variance"))])
+
+names(rate_care_day_movement) <- c("fiscal_yr"
+                                   ,"years_in_care"
+                                   ,"Movement Rate"
+                                   ,"Lower Limit"
+                                   ,"Upper Limit")
+
+#write.csv(rate_care_day_movement, "rate_care_day_movement.csv")
+
+rate_care_day_movement_long <- melt(rate_care_day_movement, id.vars = c("fiscal_yr", "years_in_care"))
+
+rate_care_day_movement_long$years_in_care <- as.factor(rate_care_day_movement_long$years_in_care)
+
+levels(rate_care_day_movement_long$years_in_care) <- c("First Year Care Days", "Second Year Care Days", "Third Year Care Days")
+
+pdR_M <- ggplot(rate_care_day_movement_long[rate_care_day_movement_long$variable!="Movement Rate",]
+       ,aes(x=fiscal_yr
+            ,y=value
+            ,group=variable
+            ,colour=variable)) + 
+  geom_line(size=1) +
+  geom_point(data=rate_care_day_movement_long[rate_care_day_movement_long$variable=="Movement Rate",]
+             ,aes(x=fiscal_yr
+                  ,y=value)
+             ,size=3) + 
+  geom_smooth(data=rate_care_day_movement_long[rate_care_day_movement_long$variable=="Movement Rate",]
+             ,aes(x=fiscal_yr
+                  ,y=value)
+             ,fill=NA
+             ,method="lm") +
+  xlab("") +
+  ylab("Movement Rate Per 100,000 Care Days (Duration-Specific)") + 
+  scale_color_manual(name="", values=c(poc_colors[c(1,4,2)])) +
+  facet_wrap(~years_in_care) +
+  theme_bw() +
+  theme(legend.position="bottom")
+
+R_M_14.1 <- rate_care_day_movement[rate_care_day_movement$fiscal_yr==2014 & rate_care_day_movement$years_in_care==0, ][[3]]
+R_M_13.1 <- rate_care_day_movement[rate_care_day_movement$fiscal_yr==2013 & rate_care_day_movement$years_in_care==0, ][[3]]
+
+R_M_14.2 <- rate_care_day_movement[rate_care_day_movement$fiscal_yr==2014 & rate_care_day_movement$years_in_care==1, ][[3]]
+R_M_13.2 <- rate_care_day_movement[rate_care_day_movement$fiscal_yr==2013 & rate_care_day_movement$years_in_care==1, ][[3]]
+
+R_M_14.3 <- rate_care_day_movement[rate_care_day_movement$fiscal_yr==2014 & rate_care_day_movement$years_in_care==2, ][[3]]
+R_M_13.3 <- rate_care_day_movement[rate_care_day_movement$fiscal_yr==2013 & rate_care_day_movement$years_in_care==2, ][[3]]
+
+```
+
+
+```{r dR_Mtx, engine='R', warning=FALSE, message=FALSE, echo=FALSE, cache=TRUE}
+require(pocr)
+con <- odbcConnect("POC")
+rate_care_day_movement_tx <- sqlQuery(con,"select
+                                          fiscal_yr
+                                          ,years_in_care
+                                        	,kin_cnt*100000.0/care_days movement_rate_to_kin
+                                        	,foster_cnt*100000.0/care_days movement_rate_to_foster
+                                        	,group_cnt*100000.0/care_days movement_rate_to_group 
+                                        from ca_ods.base.placement_care_days_mobility
+                                        where exclude_7day = 1
+                                        	and exclude_nondcfs = 1
+                                        	and exclude_trh = 1
+                                        	and age_yrs_removal = -99
+                                        	and age_yrs_exit = -99 
+                                        	and county_cd = 0
+                                        	and cd_race = 0 
+                                        	and years_in_care <= 2")
+
+
+rate_care_day_movement_kin_0 <- subset(rate_care_day_movement_tx, years_in_care == 0)
+mean_rate_0 <- mean(rate_care_day_movement_kin_0$movement_rate_to_kin[1:n-1])
+rate_care_day_movement_kin_0$variance <- abs(rate_care_day_movement_kin_0$movement_rate_to_kin - mean_rate_0)
+mean_variance_0 <- mean(rate_care_day_movement_kin_0$variance)
+rate_care_day_movement_kin_0$lcl_kin <- mean_rate_0-(mean_variance_0*qnorm(0.997))
+rate_care_day_movement_kin_0$ucl_kin <- mean_rate_0+(mean_variance_0*qnorm(0.997))
+
+rate_care_day_movement_foster_0 <- subset(rate_care_day_movement_tx, years_in_care == 0)
+mean_rate_0 <- mean(rate_care_day_movement_foster_0$movement_rate_to_foster[1:n-1])
+rate_care_day_movement_foster_0$variance <- abs(rate_care_day_movement_foster_0$movement_rate_to_foster - mean_rate_0)
+mean_variance_0 <- mean(rate_care_day_movement_foster_0$variance)
+rate_care_day_movement_foster_0$lcl_foster <- mean_rate_0-(mean_variance_0*qnorm(0.997))
+rate_care_day_movement_foster_0$ucl_foster <- mean_rate_0+(mean_variance_0*qnorm(0.997))
+
+rate_care_day_movement_group_0 <- subset(rate_care_day_movement_tx, years_in_care == 0)
+mean_rate_0 <- mean(rate_care_day_movement_group_0$movement_rate_to_group[1:n-1])
+rate_care_day_movement_group_0$variance <- abs(rate_care_day_movement_group_0$movement_rate_to_group - mean_rate_0)
+mean_variance_0 <- mean(rate_care_day_movement_group_0$variance)
+rate_care_day_movement_group_0$lcl_group <- mean_rate_0-(mean_variance_0*qnorm(0.997))
+rate_care_day_movement_group_0$ucl_group <- mean_rate_0+(mean_variance_0*qnorm(0.997))
+
+rate_care_day_movement_kin_1 <- subset(rate_care_day_movement_tx, years_in_care == 1)
+mean_rate_1 <- mean(rate_care_day_movement_kin_1$movement_rate_to_kin[1:n-1])
+rate_care_day_movement_kin_1$variance <- abs(rate_care_day_movement_kin_1$movement_rate_to_kin - mean_rate_1)
+mean_variance_1 <- mean(rate_care_day_movement_kin_1$variance)
+rate_care_day_movement_kin_1$lcl_kin <- mean_rate_1-(mean_variance_1*qnorm(0.997))
+rate_care_day_movement_kin_1$ucl_kin <- mean_rate_1+(mean_variance_1*qnorm(0.997))
+
+rate_care_day_movement_foster_1 <- subset(rate_care_day_movement_tx, years_in_care == 1)
+mean_rate_1 <- mean(rate_care_day_movement_foster_1$movement_rate_to_foster[1:n-1])
+rate_care_day_movement_foster_1$variance <- abs(rate_care_day_movement_foster_1$movement_rate_to_foster - mean_rate_1)
+mean_variance_1 <- mean(rate_care_day_movement_foster_1$variance)
+rate_care_day_movement_foster_1$lcl_foster <- mean_rate_1-(mean_variance_1*qnorm(0.997))
+rate_care_day_movement_foster_1$ucl_foster <- mean_rate_1+(mean_variance_1*qnorm(0.997))
+
+rate_care_day_movement_group_1 <- subset(rate_care_day_movement_tx, years_in_care == 1)
+mean_rate_1 <- mean(rate_care_day_movement_group_1$movement_rate_to_group[1:n-1])
+rate_care_day_movement_group_1$variance <- abs(rate_care_day_movement_group_1$movement_rate_to_group - mean_rate_1)
+mean_variance_1 <- mean(rate_care_day_movement_group_1$variance)
+rate_care_day_movement_group_1$lcl_group <- mean_rate_1-(mean_variance_1*qnorm(0.997))
+rate_care_day_movement_group_1$ucl_group <- mean_rate_1+(mean_variance_1*qnorm(0.997))
+
+rate_care_day_movement_kin_2 <- subset(rate_care_day_movement_tx, years_in_care == 2)
+mean_rate_2 <- mean(rate_care_day_movement_kin_2$movement_rate_to_kin[1:n-1])
+rate_care_day_movement_kin_2$variance <- abs(rate_care_day_movement_kin_2$movement_rate_to_kin - mean_rate_2)
+mean_variance_2 <- mean(rate_care_day_movement_kin_2$variance)
+rate_care_day_movement_kin_2$lcl_kin <- mean_rate_2-(mean_variance_2*qnorm(0.997))
+rate_care_day_movement_kin_2$ucl_kin <- mean_rate_2+(mean_variance_2*qnorm(0.997))
+
+rate_care_day_movement_foster_2 <- subset(rate_care_day_movement_tx, years_in_care == 2)
+mean_rate_2 <- mean(rate_care_day_movement_foster_2$movement_rate_to_foster[1:n-1])
+rate_care_day_movement_foster_2$variance <- abs(rate_care_day_movement_foster_2$movement_rate_to_foster - mean_rate_2)
+mean_variance_2 <- mean(rate_care_day_movement_foster_2$variance)
+rate_care_day_movement_foster_2$lcl_foster <- mean_rate_2-(mean_variance_2*qnorm(0.997))
+rate_care_day_movement_foster_2$ucl_foster <- mean_rate_2+(mean_variance_2*qnorm(0.997))
+
+rate_care_day_movement_group_2 <- subset(rate_care_day_movement_tx, years_in_care == 2)
+mean_rate_2 <- mean(rate_care_day_movement_group_2$movement_rate_to_group[1:n-1])
+rate_care_day_movement_group_2$variance <- abs(rate_care_day_movement_group_2$movement_rate_to_group - mean_rate_2)
+mean_variance_2 <- mean(rate_care_day_movement_group_2$variance)
+rate_care_day_movement_group_2$lcl_group <- mean_rate_2-(mean_variance_2*qnorm(0.997))
+rate_care_day_movement_group_2$ucl_group <- mean_rate_2+(mean_variance_2*qnorm(0.997))
+
+
+rate_care_day_movement_group <- rbind(rate_care_day_movement_group_0[,-which(names(rate_care_day_movement_group_0) %in% c("movement_rate_to_kin"
+                                                                                          ,"movement_rate_to_foster"
+                                                                                          ,"variance"))]
+                                      ,rate_care_day_movement_group_1[,-which(names(rate_care_day_movement_group_1) %in% c("movement_rate_to_kin"
+                                                                                           ,"movement_rate_to_foster"
+                                                                                           ,"variance"))]
+                                      ,rate_care_day_movement_group_2[,-which(names(rate_care_day_movement_group_2) %in% c("movement_rate_to_kin"
+                                                                                           ,"movement_rate_to_foster"
+                                                                                           ,"variance"))])
+names(rate_care_day_movement_group) <- c("fiscal_yr", "years_in_care", "movement_rate", "lcl", "ucl")
+
+rate_care_day_movement_foster <- rbind(rate_care_day_movement_foster_0[,-which(names(rate_care_day_movement_foster_0) %in% c("movement_rate_to_kin"
+                                                                                          ,"movement_rate_to_group"
+                                                                                          ,"variance"))]
+                                      ,rate_care_day_movement_foster_1[,-which(names(rate_care_day_movement_foster_1) %in% c("movement_rate_to_kin"
+                                                                                           ,"movement_rate_to_group"
+                                                                                           ,"variance"))]
+                                      ,rate_care_day_movement_foster_2[,-which(names(rate_care_day_movement_foster_2) %in% c("movement_rate_to_kin"
+                                                                                           ,"movement_rate_to_group"
+                                                                                           ,"variance"))])
+names(rate_care_day_movement_foster) <- c("fiscal_yr", "years_in_care", "movement_rate", "lcl", "ucl")
+
+rate_care_day_movement_kin <- rbind(rate_care_day_movement_kin_0[,-which(names(rate_care_day_movement_kin_0) %in% c("movement_rate_to_foster"
+                                                                                          ,"movement_rate_to_group"
+                                                                                          ,"variance"))]
+                                      ,rate_care_day_movement_kin_1[,-which(names(rate_care_day_movement_kin_1) %in% c("movement_rate_to_foster"
+                                                                                           ,"movement_rate_to_group"
+                                                                                           ,"variance"))]
+                                      ,rate_care_day_movement_kin_2[,-which(names(rate_care_day_movement_kin_2) %in% c("movement_rate_to_foster"
+                                                                                           ,"movement_rate_to_group"
+                                                                                           ,"variance"))])
+names(rate_care_day_movement_kin) <- c("fiscal_yr", "years_in_care", "movement_rate", "lcl", "ucl")
+
+rate_care_day_movement_kin$type <- "Transition to Kin"
+rate_care_day_movement_group$type <- "Transition to Group"
+rate_care_day_movement_foster$type <- "Transition to Foster"
+
+rate_care_day_movement_tx <- rbind(rate_care_day_movement_kin, rate_care_day_movement_group, rate_care_day_movement_foster)
+
+                                
+
+names(rate_care_day_movement_tx) <- c("fiscal_yr"
+                                       ,"years_in_care"
+                                       ,"Movement Rate"
+                                       ,"Lower Limit"
+                                       ,"Upper Limit"
+                                       ,"type")
+
+#write.csv(rate_care_day_movement_tx, "rate_care_day_movement_tx.csv")
+
+
+
+rate_care_day_movement_tx_long <- melt(rate_care_day_movement_tx, id.vars = c("fiscal_yr", "years_in_care", "type"))
+
+rate_care_day_movement_tx_long$years_in_care <- as.factor(rate_care_day_movement_tx_long$years_in_care)
+
+levels(rate_care_day_movement_tx_long$years_in_care) <- c("First Year Care Days", "Second Year Care Days", "Third Year Care Days")
+
+pdR_Mtx <- ggplot(rate_care_day_movement_tx_long[rate_care_day_movement_tx_long$variable!="Movement Rate",]
+       ,aes(x=fiscal_yr
+            ,y=value
+            ,group=variable
+            ,colour=variable)) + 
+  geom_line(size=1) +
+  geom_point(data=rate_care_day_movement_tx_long[rate_care_day_movement_tx_long$variable=="Movement Rate",]
+             ,aes(x=fiscal_yr
+                  ,y=value)
+             ,size=3) + 
+  geom_smooth(data=rate_care_day_movement_tx_long[rate_care_day_movement_tx_long$variable=="Movement Rate",]
+             ,aes(x=fiscal_yr
+                  ,y=value)
+             ,fill=NA
+             ,method="lm") +
+  xlab("") +
+  ylab("Movement Rate Per 100,000 Care Days (Transition-Duration-Specific)") + 
+  scale_color_manual(name="", values=c(poc_colors[c(1,4,2)])) +
+  facet_grid(type~years_in_care, scales = "free_y") +
+  theme_bw() +
+  theme(legend.position="bottom")
+
+R_Mk_14.1 <- rate_care_day_movement_tx[rate_care_day_movement_tx$fiscal_yr==2014 & 
+                                     rate_care_day_movement_tx$years_in_care==0 & 
+                                     rate_care_day_movement_tx$type == "Transition to Kin", ][[3]]
+R_Mk_13.1 <- rate_care_day_movement_tx[rate_care_day_movement_tx$fiscal_yr==2013 & 
+                                        rate_care_day_movement_tx$years_in_care==0 &
+                                        rate_care_day_movement_tx$type == "Transition to Kin", ][[3]]
+
+R_Mk_14.2 <- rate_care_day_movement_tx[rate_care_day_movement_tx$fiscal_yr==2014 & 
+                                        rate_care_day_movement_tx$years_in_care==1 &
+                                        rate_care_day_movement_tx$type == "Transition to Kin", ][[3]]
+R_Mk_13.2 <- rate_care_day_movement_tx[rate_care_day_movement_tx$fiscal_yr==2013 & 
+                                        rate_care_day_movement_tx$years_in_care==1 &
+                                        rate_care_day_movement_tx$type == "Transition to Kin", ][[3]]
+
+R_Mk_14.3 <- rate_care_day_movement_tx[rate_care_day_movement_tx$fiscal_yr==2014 & 
+                                        rate_care_day_movement_tx$years_in_care==2 &
+                                        rate_care_day_movement_tx$type == "Transition to Kin", ][[3]]
+R_Mk_13.3 <- rate_care_day_movement_tx[rate_care_day_movement_tx$fiscal_yr==2013 & 
+                                        rate_care_day_movement_tx$years_in_care==2 &
+                                        rate_care_day_movement_tx$type == "Transition to Kin", ][[3]]
+
+R_Mf_14.1 <- rate_care_day_movement_tx[rate_care_day_movement_tx$fiscal_yr==2014 & 
+                                     rate_care_day_movement_tx$years_in_care==0 & 
+                                     rate_care_day_movement_tx$type == "Transition to Foster", ][[3]]
+R_Mf_13.1 <- rate_care_day_movement_tx[rate_care_day_movement_tx$fiscal_yr==2013 & 
+                                        rate_care_day_movement_tx$years_in_care==0 &
+                                        rate_care_day_movement_tx$type == "Transition to Foster", ][[3]]
+
+R_Mf_14.2 <- rate_care_day_movement_tx[rate_care_day_movement_tx$fiscal_yr==2014 & 
+                                        rate_care_day_movement_tx$years_in_care==1 &
+                                        rate_care_day_movement_tx$type == "Transition to Foster", ][[3]]
+R_Mf_13.2 <- rate_care_day_movement_tx[rate_care_day_movement_tx$fiscal_yr==2013 & 
+                                        rate_care_day_movement_tx$years_in_care==1 &
+                                        rate_care_day_movement_tx$type == "Transition to Foster", ][[3]]
+
+R_Mf_14.3 <- rate_care_day_movement_tx[rate_care_day_movement_tx$fiscal_yr==2014 & 
+                                        rate_care_day_movement_tx$years_in_care==2 &
+                                        rate_care_day_movement_tx$type == "Transition to Foster", ][[3]]
+R_Mf_13.3 <- rate_care_day_movement_tx[rate_care_day_movement_tx$fiscal_yr==2013 & 
+                                        rate_care_day_movement_tx$years_in_care==2 &
+                                        rate_care_day_movement_tx$type == "Transition to Foster", ][[3]]
+
+
+R_Mg_14.1 <- rate_care_day_movement_tx[rate_care_day_movement_tx$fiscal_yr==2014 & 
+                                     rate_care_day_movement_tx$years_in_care==0 & 
+                                     rate_care_day_movement_tx$type == "Transition to Group", ][[3]]
+R_Mg_13.1 <- rate_care_day_movement_tx[rate_care_day_movement_tx$fiscal_yr==2013 & 
+                                        rate_care_day_movement_tx$years_in_care==0 &
+                                        rate_care_day_movement_tx$type == "Transition to Group", ][[3]]
+
+R_Mg_14.2 <- rate_care_day_movement_tx[rate_care_day_movement_tx$fiscal_yr==2014 & 
+                                        rate_care_day_movement_tx$years_in_care==1 &
+                                        rate_care_day_movement_tx$type == "Transition to Group", ][[3]]
+R_Mg_13.2 <- rate_care_day_movement_tx[rate_care_day_movement_tx$fiscal_yr==2013 & 
+                                        rate_care_day_movement_tx$years_in_care==1 &
+                                        rate_care_day_movement_tx$type == "Transition to Group", ][[3]]
+
+R_Mg_14.3 <- rate_care_day_movement_tx[rate_care_day_movement_tx$fiscal_yr==2014 & 
+                                        rate_care_day_movement_tx$years_in_care==2 &
+                                        rate_care_day_movement_tx$type == "Transition to Group", ][[3]]
+R_Mg_13.3 <- rate_care_day_movement_tx[rate_care_day_movement_tx$fiscal_yr==2013 & 
+                                        rate_care_day_movement_tx$years_in_care==2 &
+                                        rate_care_day_movement_tx$type == "Transition to Group", ][[3]]
+```
+
+```{r aR_OTR, engine='R', warning=FALSE, message=FALSE, echo=FALSE, cache=TRUE}
+require(pocr)
+con <- odbcConnect("POC")
+
+rate_care_day_otr <- sqlQuery(con,"select
+                                      fiscal_yr
+                                      ,age_in_fy
+                                      ,care_days_otr*1.0/care_days otr_rate
+                                  from ca_ods.base.placement_care_days_otr
+                                  where excludes_7day = 1
+                                      and excludes_nondcfs = 1
+                                      and excludes_trh = 1
+                                      and cd_cnty = 0
+                                    and age_in_fy >= 13
+                                  order by fiscal_yr, age_in_fy")
+
+
+rate_care_day_otr_13 <- subset(rate_care_day_otr, age_in_fy == 13)
+mean_rate_13 <- mean(rate_care_day_otr_13$otr_rate[1:n-1])
+rate_care_day_otr_13$variance <- abs(rate_care_day_otr_13$otr_rate - mean_rate_13)
+mean_variance_13 <- mean(rate_care_day_otr_13$variance)
+rate_care_day_otr_13$lcl <- mean_rate_13-(mean_variance_13*qnorm(0.997))
+rate_care_day_otr_13$ucl <- mean_rate_13+(mean_variance_13*qnorm(0.997))
+
+rate_care_day_otr_14 <- subset(rate_care_day_otr, age_in_fy == 14)
+mean_rate_14 <- mean(rate_care_day_otr_14$otr_rate[1:n-1])
+rate_care_day_otr_14$variance <- abs(rate_care_day_otr_14$otr_rate - mean_rate_14)
+mean_variance_14 <- mean(rate_care_day_otr_14$variance)
+rate_care_day_otr_14$lcl <- mean_rate_14-(mean_variance_14*qnorm(0.997))
+rate_care_day_otr_14$ucl <- mean_rate_14+(mean_variance_14*qnorm(0.997))
+
+rate_care_day_otr_15 <- subset(rate_care_day_otr, age_in_fy == 15)
+mean_rate_15 <- mean(rate_care_day_otr_15$otr_rate[1:n-1])
+rate_care_day_otr_15$variance <- abs(rate_care_day_otr_15$otr_rate - mean_rate_15)
+mean_variance_15 <- mean(rate_care_day_otr_15$variance)
+rate_care_day_otr_15$lcl <- mean_rate_15-(mean_variance_15*qnorm(0.997))
+rate_care_day_otr_15$ucl <- mean_rate_15+(mean_variance_15*qnorm(0.997))
+
+rate_care_day_otr_16 <- subset(rate_care_day_otr, age_in_fy == 16)
+mean_rate_16 <- mean(rate_care_day_otr_16$otr_rate[1:n-1])
+rate_care_day_otr_16$variance <- abs(rate_care_day_otr_16$otr_rate - mean_rate_16)
+mean_variance_16 <- mean(rate_care_day_otr_16$variance)
+rate_care_day_otr_16$lcl <- mean_rate_16-(mean_variance_16*qnorm(0.997))
+rate_care_day_otr_16$ucl <- mean_rate_16+(mean_variance_16*qnorm(0.997))
+
+rate_care_day_otr_17 <- subset(rate_care_day_otr, age_in_fy == 17)
+mean_rate_17 <- mean(rate_care_day_otr_17$otr_rate[1:n-1])
+rate_care_day_otr_17$variance <- abs(rate_care_day_otr_17$otr_rate - mean_rate_17)
+mean_variance_17 <- mean(rate_care_day_otr_17$variance)
+rate_care_day_otr_17$lcl <- mean_rate_17-(mean_variance_17*qnorm(0.997))
+rate_care_day_otr_17$ucl <- mean_rate_17+(mean_variance_17*qnorm(0.997))
+
+
+rate_care_day_otr <- rbind(rate_care_day_otr_13[,-which(names(rate_care_day_otr_13) %in% c("variance"))]
+                          ,rate_care_day_otr_14[,-which(names(rate_care_day_otr_14) %in% c("variance"))]
+                          ,rate_care_day_otr_15[,-which(names(rate_care_day_otr_15) %in% c("variance"))]
+                          ,rate_care_day_otr_16[,-which(names(rate_care_day_otr_16) %in% c("variance"))]
+                          ,rate_care_day_otr_17[,-which(names(rate_care_day_otr_17) %in% c("variance"))])
+
+names(rate_care_day_otr) <- c("fiscal_yr"
+                               ,"age_in_fy"
+                               ,"On-The-Run Rate"
+                               ,"Lower Limit"
+                               ,"Upper Limit")
+
+#write.csv(rate_care_day_otr, "rate_care_day_otr.csv")
+
+rate_care_day_otr_long <- melt(rate_care_day_otr, id.vars = c("fiscal_yr", "age_in_fy"))
+
+rate_care_day_otr_long$age_in_fy <- as.factor(rate_care_day_otr_long$age_in_fy)
+
+levels(rate_care_day_otr_long$age_in_fy) <- c("13 Year Old Care Days"
+                                              ,"14 Year Old Care Days"
+                                              ,"15 Year Old Care Days"
+                                              ,"16 Year Old Care Days"
+                                              ,"17 Year Old Care Days")
+
+
+
+paR_OTR <- ggplot(rate_care_day_otr_long[rate_care_day_otr_long$variable!="On-The-Run Rate",]
+       ,aes(x=fiscal_yr
+            ,y=value
+            ,group=variable
+            ,colour=variable)) + 
+  geom_line(size=1) +
+  geom_point(data=rate_care_day_otr_long[rate_care_day_otr_long$variable=="On-The-Run Rate",]
+             ,aes(x=fiscal_yr
+                  ,y=value)
+             ,size=3) + 
+  geom_smooth(data=rate_care_day_otr_long[rate_care_day_otr_long$variable=="On-The-Run Rate",]
+             ,aes(x=fiscal_yr
+                  ,y=value)
+             ,fill=NA
+             ,method="lm") +  
+  geom_smooth(fill=NA, method="lm") +
+  scale_y_continuous(labels = percent) +
+  xlab("") +
+  ylab("On-The-Run Rate (Age-Specific)") + 
+  scale_color_manual(name="", values=c(poc_colors[c(1,4,2)])) +
+  facet_grid(~age_in_fy) +
+  theme_bw() +
+  theme(legend.position="bottom")
+
+
+R_OTR_14.13 <- rate_care_day_otr[rate_care_day_otr$fiscal_yr==2014 & rate_care_day_otr$age_in_fy==13, ][[3]]
+R_OTR_13.13 <- rate_care_day_otr[rate_care_day_otr$fiscal_yr==2013 & rate_care_day_otr$age_in_fy==13, ][[3]]
+
+R_OTR_14.14 <- rate_care_day_otr[rate_care_day_otr$fiscal_yr==2014 & rate_care_day_otr$age_in_fy==14, ][[3]]
+R_OTR_13.14 <- rate_care_day_otr[rate_care_day_otr$fiscal_yr==2013 & rate_care_day_otr$age_in_fy==14, ][[3]]
+
+R_OTR_14.15 <- rate_care_day_otr[rate_care_day_otr$fiscal_yr==2014 & rate_care_day_otr$age_in_fy==15, ][[3]]
+R_OTR_13.15 <- rate_care_day_otr[rate_care_day_otr$fiscal_yr==2013 & rate_care_day_otr$age_in_fy==15, ][[3]]
+
+R_OTR_14.16 <- rate_care_day_otr[rate_care_day_otr$fiscal_yr==2014 & rate_care_day_otr$age_in_fy==16, ][[3]]
+R_OTR_13.16 <- rate_care_day_otr[rate_care_day_otr$fiscal_yr==2013 & rate_care_day_otr$age_in_fy==16, ][[3]]
+
+R_OTR_14.17 <- rate_care_day_otr[rate_care_day_otr$fiscal_yr==2014 & rate_care_day_otr$age_in_fy==17, ][[3]]
+R_OTR_13.17 <- rate_care_day_otr[rate_care_day_otr$fiscal_yr==2013 & rate_care_day_otr$age_in_fy==17, ][[3]]
+
+```
+
+```{r I_pm365, engine='R', warning=FALSE, message=FALSE, echo=FALSE, cache=TRUE}
+require(pocr)
+require(mstate)
+library(RODBC)
+
+con <- odbcConnect("POC")
+
+
+sp_perm <- sqlQuery(con, "select * from ca_ods.base.episode_entries")
+
+# tmat <- trans.comprisk(2, names = levels(sp_reun$discharge_type))
+# 
+# sp_reun$stat1 <- as.numeric(sp_reun$stat == 1)
+# 
+# sp_reun$stat2 <- as.numeric(sp_reun$stat == 2)
+# 
+# sp_reun_lng <- msprep(time = c(NA, "los", "los")
+#                       ,status = c(NA, "stat1", "stat2")
+#                       ,data = sp_reun
+#                       ,keep = "state_fiscal_yyyy"
+#                       ,trans = tmat)
+# 
+# sp_reun_lng <- expand.covs(sp_reun_lng, "state_fiscal_yyyy")
+
+ci <- Cuminc(time = "los", status = "stat", group = "state_fiscal_yyyy", data = sp_perm)
+
+#write.csv(ci, "ci_perm.csv")
+
+point365 <- data.frame(year = 2000:2014
+                       ,perm = rep(NA, length(2000:2014)))
+
+for(i in 1:length(2000:2014)){
+  point365[i,2] <- ci[which(ci$state_fiscal_yyyy == (i+1999)), ][which.min(abs(ci[which(ci$state_fiscal_yyyy == (i+1999)), ]$time - 365)), ]$CI.1
+}
+
+n <- length(point365$perm)
+mean_rate <- mean(point365$perm[1:n-1])
+point365$variance <- abs(point365$perm - mean_rate)
+mean_variance <- mean(point365$variance)
+
+point365$lcl <- mean_rate-(mean_variance*qnorm(0.997))
+point365$ucl <- mean_rate+(mean_variance*qnorm(0.997))
+
+#write.csv(point365, "point365_perm.csv")
+
+
+point365_long <- melt(point365[,c("year", "perm", "lcl", "ucl")], id.vars = "year")
+
+levels(point365_long$variable) <- c("Permanency Incidence"
+                                    ,"Lower Limit"
+                                    ,"Upper Limit")
+
+pI_pm365 <- ggplot(point365_long
+       ,aes(x=year
+            ,y=value
+            ,group=variable
+            ,colour=variable)) + 
+  geom_line(size=1) +
+  xlab("") +
+  ylab("Cummulative Incidence of Permanency at One Year") + 
+  scale_y_continuous(labels = percent) +
+  scale_color_manual(name = ""
+                     ,values=c(poc_colors[c(1,3,2)])) +
+  theme_bw() +
+  theme(legend.position="bottom")
+
+I_pm365_14 <- point365[point365$year==2014, ][[2]]
+I_pm365_13 <- point365[point365$year==2013, ][[2]]
+
+```
+
+```{r I_ad365, engine='R', warning=FALSE, message=FALSE, echo=FALSE, cache=TRUE}
+require(pocr)
+require(mstate)
+library(mstate)
+library(pocr)
+
+con <- odbcConnect("POC")
+
+sp_adt <- sqlQuery(con, "select * from ca_ods.base.episode_lf_entries")
+sp_adt$stat <- ifelse(sp_adt$stat == 3, 2, sp_adt$stat)
+
+# 
+# tmat <- trans.comprisk(2, names = levels(sp_adt$discharge_type))
+# 
+# sp_reun$stat1 <- as.numeric(sp_reun$stat == 1)
+# 
+# sp_reun$stat2 <- as.numeric(sp_reun$stat == 2)
+# 
+# sp_reun_lng <- msprep(time = c(NA, "los", "los")
+#                       ,status = c(NA, "stat1", "stat2")
+#                       ,data = sp_reun
+#                       ,keep = "state_fiscal_yyyy"
+#                       ,trans = tmat)
+# 
+# sp_reun_lng <- expand.covs(sp_reun_lng, "state_fiscal_yyyy")
+
+ci <- Cuminc(time = "lolf"
+             ,status = "stat"
+             ,group = "state_fiscal_yyyy"
+             ,data = sp_adt
+             ,variance = FALSE)
+
+#write.csv(ci, "ci_adt.csv")
+
+point365 <- data.frame(year = 2000:2014
+                       ,adt = rep(NA, length(2000:2014)))
+
+for(i in 1:length(2000:2014)){
+  point365[i,2] <- ci[which(ci$state_fiscal_yyyy == (i+1999)), ][which.min(abs(ci[which(ci$state_fiscal_yyyy == (i+1999)), ]$time - 365)), ]$CI.2
+}
+
+n <- length(point365$adt)
+mean_rate <- mean(point365$adt[1:n-1])
+point365$variance <- abs(point365$adt - mean_rate)
+mean_variance <- mean(point365$variance)
+
+point365$lcl <- mean_rate-(mean_variance*qnorm(0.997))
+point365$ucl <- mean_rate+(mean_variance*qnorm(0.997))
+
+#write.csv(point365, "point365_adt.csv")
+
+point365_long <- melt(point365[,c("year", "adt", "lcl", "ucl")], id.vars = "year")
+
+levels(point365_long$variable) <- c("Adoption Incidence"
+                                    ,"Lower Limit"
+                                    ,"Upper Limit")
+
+
+
+
+pI_ad365 <- ggplot(point365_long
+       ,aes(x=year
+            ,y=value
+            ,group=variable
+            ,colour=variable)) + 
+  geom_line(size=1) +
+  scale_y_continuous(labels = percent) +
+  xlab("") +
+  ylab("Cummulative Incidence of Adoption at One Year") + 
+  scale_color_manual(name = ""
+                     ,values=c(poc_colors[c(1,3,2)])) +
+  theme_bw() +
+  theme(legend.position="bottom")
+
+I_ad365_14 <- point365[point365$year==2014, ][[2]]
+I_ad365_13 <- point365[point365$year==2013, ][[2]]
+
+
+```
+
+```{r I_rnt365, engine='R', warning=FALSE, message=FALSE, echo=FALSE, cache=TRUE}
+library(mstate)
+require(pocr)
+con <- odbcConnect("POC")
+sp_reent <- sqlQuery(con, "select * from ca_ods.base.episode_reentries")
+
+# 
+# tmat <- trans.comprisk(2, names = levels(sp_adt$discharge_type))
+# 
+# sp_reun$stat1 <- as.numeric(sp_reun$stat == 1)
+# 
+# sp_reun$stat2 <- as.numeric(sp_reun$stat == 2)
+# 
+# sp_reun_lng <- msprep(time = c(NA, "los", "los")
+#                       ,status = c(NA, "stat1", "stat2")
+#                       ,data = sp_reun
+#                       ,keep = "state_fiscal_yyyy"
+#                       ,trans = tmat)
+# 
+# sp_reun_lng <- expand.covs(sp_reun_lng, "state_fiscal_yyyy")
+
+ci <- Cuminc(time = "lop"
+             ,status = "stat"
+             ,group = "state_fiscal_yyyy"
+             ,data = sp_reent)
+
+#write.csv(ci, "ci_reent.csv")
+
+point365 <- data.frame(year = 2000:2014
+                       ,reent = rep(NA, length(2000:2014)))
+
+#write.csv(point365, "point365_reent.csv")
+
+for(i in 1:length(2000:2014)){
+  point365[i,2] <- ci[which(ci$state_fiscal_yyyy == (i+1999)), ][which.min(abs(ci[which(ci$state_fiscal_yyyy == (i+1999)), ]$time - 365)), ]$CI.1
+}
+
+n <- length(point365$reent)
+mean_rate <- mean(point365$reent[1:n-1])
+point365$variance <- abs(point365$reent - mean_rate)
+mean_variance <- mean(point365$variance)
+
+point365$lcl <- mean_rate-(mean_variance*qnorm(0.997))
+point365$ucl <- mean_rate+(mean_variance*qnorm(0.997))
+
+point365_long <- melt(point365[,c("year", "reent", "lcl", "ucl")], id.vars = "year")
+
+levels(point365_long$variable) <- c("Reentry Incidence"
+                                    ,"Lower Limit"
+                                    ,"Upper Limit")
+
+pI_rt365 <- ggplot(point365_long
+       ,aes(x=year
+            ,y=value
+            ,group=variable
+            ,colour=variable)) + 
+  geom_line(size=1) +
+  scale_y_continuous(labels = percent) +
+  xlab("") +
+  ylab("Cummulative Incidence of Reentry at One Year") + 
+  scale_color_manual(name = ""
+                     ,values=c(poc_colors[c(1,3,2)])) +
+  theme_bw() +
+  theme(legend.position="bottom")
+
+I_rt365_14 <- point365[point365$year==2014, ][[2]]
+I_rt365_13 <- point365[point365$year==2013, ][[2]]
+
+```
+
+```{r R_SP, engine='R', warning=FALSE, message=FALSE, echo=FALSE, cache=TRUE}
+library(pocr)
+library(RODBC)
+
+con <- odbcConnect("POC")
+sp_sib_plcmt <- sqlQuery(con, "select * from ca_ods.base.sibling_care_days_placed_tghr")
+sp_sib_plcmt$rate <- sp_sib_plcmt$care_days_tghr/sp_sib_plcmt$care_days
+sp_sib_plcmt <- sp_sib_plcmt[order(sp_sib_plcmt$fiscal_yr),] 
+
+n <- length(sp_sib_plcmt$care_days_tghr)
+mean_rate <- mean(sp_sib_plcmt$rate[1:n-1])
+sp_sib_plcmt$variance <- abs(sp_sib_plcmt$rate - mean_rate)
+mean_variance <- mean(sp_sib_plcmt$variance)
+
+sp_sib_plcmt$lcl <- mean_rate-(mean_variance*qnorm(0.997))
+sp_sib_plcmt$ucl <- mean_rate+(mean_variance*qnorm(0.997))
+
+#write.csv(sp_sib_plcmt, "rate_sib_plcmt.csv")
+
+sp_sib_plcmt_long <- melt(sp_sib_plcmt[,c("fiscal_yr", "rate", "lcl", "ucl")], id.vars = "fiscal_yr")
+
+
+levels(sp_sib_plcmt_long$variable) <- c("Sibling Placement Rate"
+                                    ,"Lower Limit"
+                                    ,"Upper Limit")
+
+
+pR_SP <- ggplot(sp_sib_plcmt_long
+       ,aes(x=fiscal_yr
+            ,y=value
+            ,group=variable
+            ,colour=variable)) + 
+  geom_line(size=1) +
+  xlab("") +
+  ylab("Rate of Sibling Placement") + 
+  scale_color_manual(name = ""
+                     ,values=c(poc_colors[c(1,3,2)])) +
+  theme_bw() +
+  theme(legend.position="bottom")
+
+R_SP_14 <- sp_sib_plcmt[sp_sib_plcmt$fiscal_yr==2014, ][[4]]
+R_SP_13 <- sp_sib_plcmt[sp_sib_plcmt$fiscal_yr==2013, ][[4]]
+
+```
+
+
+```{r R_ATP, engine='R', warning=FALSE, message=FALSE, echo=FALSE, cache=TRUE}
+library(pocr)
+library(RODBC)
+
+con <- odbcConnect("POC")
+con <- odbcConnect("POC")
+library(Hmisc)
+
+sp_exits_planning <- sqlQuery(con, "select * from ca_ods.base.exits_planning")
+
+sp_exits_planning$planning_rate <- binconf(x=sp_exits_planning$exits_with_plans, n=sp_exits_planning$exits)[,1]
+
+sp_exits_planning$lower <- binconf(x=sp_exits_planning$exits_with_plans, n=sp_exits_planning$exits)[,2]
+
+sp_exits_planning$upper <- binconf(x=sp_exits_planning$exits_with_plans, n=sp_exits_planning$exits)[,3]
+
+write.csv(sp_exits_planning, "rate_exits_planning.csv")
+
+pR_ATP <- ggplot(sp_exits_planning, aes(y=planning_rate, x=fiscal_yr)) +
+  geom_bar(position="dodge", stat="identity",  fill=poc_colors[1]) +
+  geom_errorbar(aes(ymin=lower, ymax=upper), position="dodge", width=0.25, size=1) +
+  xlab("") +
+  ylab("Rate of Adult-Transition Planning") + 
+  theme_bw() 
+
+R_ATP_14 <- sp_exits_planning[sp_exits_planning$fiscal_yr==2014, ][[4]]
+R_ATP_13 <- sp_exits_planning[sp_exits_planning$fiscal_yr==2013, ][[4]]
+```
+
+
+```{r R_L_3, engine='R', warning=FALSE, message=FALSE, echo=FALSE, cache=TRUE}
+
+require(RODBC)
+require(ggplot2)
+require(reshape2)
+require(pocr)
+con <- odbcConnect("Test Annie")
+library(Hmisc)
+
+grade_three_lit <- sqlQuery(con, "SELECT
+  year
+    ,cd_student_type
+    ,i0
+    ,i1
+    ,passed
+    ,fl_disability
+FROM test_annie.prtl_lit3_perc
+where 
+  cd_student_type = 3;")
+
+dodge <- position_dodge(width=0.9)
+
+grade_three_lit$fl_disability <- as.factor(grade_three_lit$fl_disability)
+
+levels(grade_three_lit$fl_disability) <- c("Foster Children (Non-Disabled)"
+                                                               ,"Foster Children (Disabled)")
+grade_three_lit$year <- format(grade_three_lit$year, "%Y")
+
+pR_L_3 <- ggplot(grade_three_lit, aes(y=passed
+                            ,x=year
+                            ,fill=fl_disability)) +
+  geom_bar(position=position_dodge(width = 0.9
+                                         ,height = NULL)
+           ,stat="identity") +
+  geom_errorbar(aes(ymin=i0, ymax=i1)
+                ,width=0.4
+                ,position=position_dodge(width = 0.9
+                                         ,height = NULL)
+                ,size=1) +
+  xlab("") +
+  scale_fill_manual(values = poc_colors[1:2], name="") +
+  ylab("Third Grade Literacy Rate") + 
+  theme_bw() +
+    theme(legend.position="bottom")
+
+R_L3_08 <- grade_three_lit[grade_three_lit$year==2008 & grade_three_lit$fl_disability=="Foster Children (Non-Disabled)", ][[5]]
+R_L3_07 <- grade_three_lit[grade_three_lit$year==2007 & grade_three_lit$fl_disability=="Foster Children (Non-Disabled)", ][[5]]
+
+
+```
+
+```{r R_D, engine='R', warning=FALSE, message=FALSE, echo=FALSE, cache=TRUE}
+
+require(RODBC)
+require(ggplot2)
+require(reshape2)
+require(pocr)
+con <- odbcConnect("Test Annie")
+library(Hmisc)
+library(dplyr)
+high_school_comp <- sqlQuery(con, "call `sp_dropout_perc`('3');")
+
+high_school_comp8 <- high_school_comp %>% filter(`Grade Level` == 9) %>%
+  mutate(`Grade Level` = 8)
+hsc <- rbind(high_school_comp8, high_school_comp)
+
+pR_D <- ggplot(hsc[hsc$fl_disability==0,]
+       ,aes(x=`Grade Level` + 0.5
+            ,y=`Drop Out Percent` / 100
+            )) + 
+  geom_step(size=1.8, direction = "vh") +
+  scale_x_continuous(limits = c(8.5, 12.5)) +
+  scale_y_continuous(limits = c(0, .40), labels = percent_format()) +
+  xlab("Grade Level") +
+  ylab("Percent Exiting High School Before Graduation") +
+  theme_bw() 
+
+R_D_07 <- hsc[hsc[,1]==12 & hsc[,2]==2007 & hsc$fl_disability==0, ][[8]]
+```
+##(Page 10 Copy)
+
+### Safety Measures at a Glance
+
+```{r safety_table_prep, engine='R', warning=FALSE, message=FALSE, echo=FALSE}
+metric <- c("General Rate of Intakes"
+            ,"General Rate of Screening"
+            ,"General Rate of Placement"
+            ,"1st Order Intakes"
+            ,"2nd Order Intakes"
+            ,"3rd Order Intakes"
+            ,"1st Order Screenings"
+            ,"2nd Order Screenings"
+            ,"3rd Order Screenings"
+            ,"1st Order Placements"
+            ,"2nd Order Placements"
+            ,"3rd Order Placements"
+            ,"Care-Day Finding Rate")
+
+prior <- c(paste0(round(R_I_13, 2)) 
+                ,paste0(round(R_S_13, 2))
+                ,paste0(round(R_P_13, 2))
+                ,paste0(round(R_I_13.1, 2))
+                ,paste0(round(R_I_13.2, 2))
+                ,paste0(round(R_I_13.3, 2))
+                ,paste0(round(R_S_13.1, 2))
+                ,paste0(round(R_S_13.2, 2))
+                ,paste0(round(R_S_13.3, 2))
+                ,paste0(round(R_P_13.1, 2))
+                ,paste0(round(R_P_13.2, 2))
+                ,paste0(round(R_P_13.3, 2))
+                ,paste0(round(R_F_13, 2))
+)
+
+current <- c(paste0(round(R_I_14, 2)) 
+                ,paste0(round(R_S_14, 2))
+                ,paste0(round(R_P_14, 2))
+                ,paste0(round(R_I_14.1, 2))
+                ,paste0(round(R_I_14.2, 2))
+                ,paste0(round(R_I_14.3, 2))
+                ,paste0(round(R_S_14.1, 2))
+                ,paste0(round(R_S_14.2, 2))
+                ,paste0(round(R_S_14.3, 2))
+                ,paste0(round(R_P_14.1, 2))
+                ,paste0(round(R_P_14.2, 2))
+                ,paste0(round(R_P_14.3, 2))
+                ,paste0(round(R_F_14, 2))
+)
+
+change <- c("Monitoring Period" 
+            ,"Monitoring Period"
+            ,"Monitoring Period"
+            ,"Monitoring Period"
+            ,"Monitoring Period"
+            ,"Monitoring Period"
+            ,"Monitoring Period"
+            ,"Monitoring Period"
+            ,"Monitoring Period"
+            ,"Monitoring Period"
+            ,"Monitoring Period"
+            ,"Monitoring Period"
+            ,"Within Expectations")
+
+trend <- c("Trending Up" 
+            ,"Trending Down"
+            ,"Trending Down"
+            ,"Stable"
+            ,"Stable"
+            ,"Stable"
+            ,"Trending Down"
+            ,"Trending Down"
+            ,"Trending Down"
+            ,"Stable"
+            ,"Trending Down"
+            ,"Trending Down"
+            ,"Stable")
+
+recent <- rep(2014, 13)
+
+
+safety_summary <- data.frame(prior, current, recent, change, trend)
+
+colnames(safety_summary) <- c(
+                        "Prior Value"
+                        ,"Current Value"
+                        ,"Most Recent Year"
+                        ,"Extent of Change"
+                        ,"Overall Trend")
+
+rownames(safety_summary) <- metric
+```
+
+```{r safety_table, engine='R', warning=FALSE, message=FALSE, echo=FALSE, results='asis'}
+            library(knitr)
+            library(xtable)
+            kable(safety_summary)
+            #xtable(safety_summary,digits=c(0,2,2,0,1,1), align = "rccccc", type='html')
+#print(mat, sanitize.text.function = function(x){x})
+```
+
+##(Page 11 Copy)
+### Permanency Measures at a Glance
+```{r permanency_prep, engine='R', warning=FALSE, message=FALSE, echo=FALSE, cache=TRUE, results='asis'}
+
+
+metric <- c("Movement Rate (1st Year)"
+            ,"Movement Rate (2nd Year)"
+            ,"Movement Rate (3rd Year)"
+            ,"Movement Rate (1st Year Transitions to Foster Care)"
+            ,"Movement Rate (2nd Year Transitions to Foster Care)"
+            ,"Movement Rate (3rd Year Transitions to Foster Care)"
+            ,"Movement Rate (1st Year Transitions to Kinship Care)"
+            ,"Movement Rate (2nd Year Transitions to Kinship Care)"
+            ,"Movement Rate (3rd Year Transitions to Kinship Care)"
+            ,"Movement Rate (1st Year Transitions to Group Care)"
+            ,"Movement Rate (2nd Year Transitions to Group Care)"
+            ,"Movement Rate (3rd Year Transitions to Group Care)"
+            ,"On-the-Run Rate (13 Year Old Care Days)"
+            ,"On-the-Run Rate (14 Year Old Care Days)"
+            ,"On-the-Run Rate (15 Year Old Care Days)"
+            ,"On-the-Run Rate (16 Year Old Care Days)"
+            ,"On-the-Run Rate (17 Year Old Care Days)"
+            ,"Incidence of Permanency Before 1 Year"
+            ,"Incidence of Adoption Before 1 Year Legally Free"
+            ,"Incidence of Reentry Before 1 Year")
+
+prior <- c(paste0(round(R_M_13.1, 2)) 
+           ,paste0(round(R_M_13.2, 2))
+           ,paste0(round(R_M_13.3, 2))
+           ,paste0(round(R_Mf_13.1, 2))
+           ,paste0(round(R_Mf_13.2, 2))
+           ,paste0(round(R_Mf_13.3, 2))
+           ,paste0(round(R_Mg_13.1, 2))
+           ,paste0(round(R_Mg_13.2, 2))
+           ,paste0(round(R_Mg_13.3, 2))
+           ,paste0(round(R_Mk_13.1, 2))
+           ,paste0(round(R_Mk_13.2, 2))
+           ,paste0(round(R_Mk_13.3, 2))
+           ,paste0(round(R_OTR_13.13*100, 2), "\\%")
+           ,paste0(round(R_OTR_13.14*100, 2), "\\%")
+           ,paste0(round(R_OTR_13.15*100, 2), "\\%")
+           ,paste0(round(R_OTR_13.16*100, 2), "\\%")
+           ,paste0(round(R_OTR_13.17*100, 2), "\\%")
+           ,paste0(round(I_pm365_13*100, 2), "\\%")
+           ,paste0(round(I_ad365_13*100, 2), "\\%")
+           ,paste0(round(I_rt365_13*100, 2), "\\%"))
+
+current <- c(paste0(round(R_M_14.1, 2))
+           ,paste0(round(R_M_14.2, 2))
+           ,paste0(round(R_M_14.3, 2))
+           ,paste0(round(R_Mf_14.1, 2))
+           ,paste0(round(R_Mf_14.2, 2))
+           ,paste0(round(R_Mf_14.3, 2))
+           ,paste0(round(R_Mg_14.1, 2))
+           ,paste0(round(R_Mg_14.2, 2))
+           ,paste0(round(R_Mg_14.3, 2))
+           ,paste0(round(R_Mk_14.1, 2))
+           ,paste0(round(R_Mk_14.2, 2))
+           ,paste0(round(R_Mk_14.3, 2))
+           ,paste0(round(R_OTR_14.13*100, 2), "\\%")
+           ,paste0(round(R_OTR_14.14*100, 2), "\\%")
+           ,paste0(round(R_OTR_14.15*100, 2), "\\%")
+           ,paste0(round(R_OTR_14.16*100, 2), "\\%")
+           ,paste0(round(R_OTR_14.17*100, 2), "\\%")
+           ,paste0(round(I_pm365_14*100, 2), "\\%")
+           ,paste0(round(I_ad365_14*100, 2), "\\%")
+           ,paste0(round(I_rt365_14*100, 2), "\\%"))
+
+change <- c("Within Expectations" 
+            ,"Within Expectations"
+            ,"Within Expectations"
+            ,"Within Expectations"
+            ,"Within Expectations"
+            ,"Within Expectations"
+            ,"Within Expectations"
+            ,"Within Expectations"
+            ,"Within Expectations"
+            ,"Within Expectations"
+            ,"Within Expectations"
+            ,"Within Expectations"
+            ,"Within Expectations"
+            ,"Within Expectations"
+            ,"Within Expectations"
+            ,"Within Expectations"
+            ,"Within Expectations"
+            ,"Within Expectations"
+            ,"Within Expectations"
+            ,"Above Expectations")
+
+trend <- c("Trending Down" 
+            ,"Trending Down"
+            ,"Trending Down"
+            ,"Trending Down"
+            ,"Trending Down"
+            ,"Trending Down"
+            ,"Trending Down"
+            ,"Trending Down"
+            ,"Stable"
+            ,"Trending Up"
+            ,"Trending Up"
+            ,"Trending Up"
+            ,"Trending Down"
+            ,"Trending Down"
+            ,"Trending Down"
+            ,"Trending Down"
+            ,"Trending Down"
+            ,"Trending Down"
+            ,"Trending Up"
+            ,"Trending Up")
+
+recent <- rep(2014, 20)
+
+permanency_summary <- data.frame(prior, current, recent, change, trend)
+
+colnames(permanency_summary) <- c(
+                        "Prior Value"
+                        ,"Current Value"
+                        ,"Most Recent Year"
+                        ,"Extent of Change"
+                        ,"Overall Trend")
+
+rownames(permanency_summary) <- metric
+
+```
+
+```{r permanency_table, engine='R', warning=FALSE, message=FALSE, echo=FALSE, cache=TRUE, results='asis'}
+            library(knitr)
+            #library(xtable)
+            kable(permanency_summary)
+            #xtable(permanency_summary,digits=c(0,2,2,0,1,1), align = "rccccc", type='html')
+#print(mat, sanitize.text.function = function(x){x})
+```
+
+##(Page 12 Copy)
+### Wellbeing Measures at a Glance
+
+```{r wellbeing_prep, engine='R', warning=FALSE, message=FALSE, echo=FALSE, cache=TRUE, results='asis'}
+
+metric <- c("Sibling Placement Rate"
+            ,"Adult Transition Planning Rate"
+            ,"Third Grade Literacy Rate"
+            ,"High School Dropout Rate"
+            ,"Adult Grade Completion Rate")
+
+prior <- c(paste0(round(R_SP_13*100, 2), "\\%")
+            ,paste0(round(R_ATP_13*100, 2), "\\%")
+            ,paste0(round(R_L3_07, 2)),"--","--")
+
+current <- c(paste0(round(R_SP_14*100, 2), "\\%")
+            ,paste0(round(R_ATP_14*100, 2), "\\%")
+            ,paste0(round(R_L3_08, 2))
+            ,paste0(round(R_D_07, 2))
+            ,"--")
+
+change <- c("{Within Expectations" 
+            ,"Monitoring Period"
+            ,"Monitoring Period"
+            ,"Monitoring Period"
+            ,"--")
+
+trend <- c("Trending Up" 
+            ,"Trending Up"
+            ,"Stable"
+            ,"--"
+            ,"--")
+
+recent <- c(2014, 2014, 2007, 2008, "--")
+
+wellbeing_summary <- data.frame(prior, current, recent, change, trend)
+
+colnames(wellbeing_summary) <- c(
+                        "Prior Value"
+                        ,"Current Value"
+                        ,"Most Recent Year"
+                        ,"Extent of Change"
+                        ,"Overall Trend")
+
+rownames(wellbeing_summary) <- metric
+```
+
+```{r wellbeing_table, engine='R', warning=FALSE, message=FALSE, echo=FALSE, cache=TRUE, results='asis'}
+            library(knitr)
+            #library(xtable)
+            kable(wellbeing_summary)
+            #xtable(wellbeing_summary,digits=c(0,2,2,0,1,1), align = "rccccc", type='html')
+#print(mat, sanitize.text.function = function(x){x})
+```
+
+## (Page 13-27 Copy)
+###Understanding the Indicators - Major Findings for 2014
+
+####Helping High-Risk Children and Families
+
+Taken as a whole, the indicators outlined above seem to show that the child welfare system has been in the process of helping higher-risk families than what we have seen in previous years. This is evident in our first couple of safety indicators shown in the graphs below. 
+
+```{r pivot_to_high_risk, engine='R', warning=FALSE, message=FALSE, echo=FALSE, results='asis'}
+require(pocr)
+pR_I
+piR_I
+```
+
+These graphs show that while the overall rate of intakes is up (as are raw counts as shown in the graph below), first through third order intakes is trending slightly down. 
+
+```{r pivot_to_high_risk2, engine='R', warning=FALSE, message=FALSE, echo=FALSE, results='asis'}
+require(pocr)
+pR_I_counts
+```
+
+One possibility for this pattern is that higher order referrals (fourth order or higher) are starting to make up a larger proportion of the overall count of intakes. The graph below plots the proportion of all intakes in a given month that are fourth order or higher. As we can see, there is a definite upward trend in the proportion intakes that are fourth order or higher. As higher-order intakes tend to consitute higher-risk cases, this trend is consistent with the notion that CA is encountering higher-risk cases than they have in years past. 
+
+```{r pivot_to_high_risk3, engine='R', warning=FALSE, message=FALSE, echo=FALSE, results='asis'}
+require(pocr)
+pR_I_prpgt3
+```
+
+While the cases that CA is presented with (i.e. intakes) appear to be higher risk cases, the rate of screened-in intakes is actually down slightly. 
+
+```{r pivot_to_high_risk4, engine='R', warning=FALSE, message=FALSE, echo=FALSE, results='asis'}
+require(pocr)
+pR_S
+piR_S
+```
+
+While there are many possible explanations for these trends, when we look at the raw counts of screened-in intakes the numbers appear fairly stable. That is, while rates of screening are down (especially for lower-risk, first through third order screenings) CA appears to be maintaining fairly stable *counts* of screened-in intakes. Data presented 
+[elsewhere](https://docs.google.com/viewer?url=http%3A%2F%2Fpartnersforourchildren.org%2Fsites%2Fdefault%2Ffiles%2Fu82%2Fdata_trends_forum_presentation_11-12-13.pdf) have also shown that the proportion of screened-in intakes where a child has been assessed to be at imminent risk of serious harm have has been drastically increasing over this same time period. This pattern is consistent with the notion that CA has been encountering and screening-in higher-risk cases relative to previous years. 
+
+```{r pivot_to_high_risk5, engine='R', warning=FALSE, message=FALSE, echo=FALSE, results='asis'}
+require(pocr)
+pR_S_counts
+```
+
+While CA appears to be handling a higher-risk population of households, the metrics related to placement suggest that these families are not ending up in placement at higher rates. In fact, general and order-specific placements all appear to be trending down.
+
+```{r pivot_to_high_risk6, engine='R', warning=FALSE, message=FALSE, echo=FALSE, results='asis'}
+require(pocr)
+pR_P
+piR_P
+```
+
+The tendency of CA to be engaged with higher-risk children and families may also be evident in some of the permanency metrics that we are observing. Specifically, those permanency metrics concerned with the timing of permanency; the overall incidence of permanency, the incidence of adoption, and the incidence of reentry. 
+
+```{r pivot_to_high_risk7, engine='R', warning=FALSE, message=FALSE, echo=FALSE, results='asis'}
+require(pocr)
+pI_pm365
+pI_ad365
+pI_rt365
+```
+
+All of these metrics would seem to indicate that the population of foster children *who do* enter out-of-home care are of a higher risk profile than they have been in years past. All other things being equal, higher-risk children and families will tend to exhibit lower rates of reunification and higher rates of adoption. Among children who do reunify, we would expect (if the risk profile of the child welfare population is increasing) an increasing rate of reentry. This is precisely the pattern that we see in the three graphs displayed above. In fact, the cumulative incidence of reentry at one year has increased more than we would have expected in the past year (if we assume a relatively stable increasing rate of reentry). One of the activities in the next annual agenda of partnership between CA and POC will focus on better understanding this increase.  
+
+####Improving the Lives of Children Inside the System
+
+While the observed trends of data appear to indicate that the work of CA is pivoting to higher-risk children and families, there is evidence from the metrics in safety, permanency, and well-being that CA is making steady gains in improving the lives of children in out-of-home care. Starting with the simple care-day finding rate shown below, we see that over time CA has hovered in between 5 and 8 maltreatment substantiations per 100,000 days of care - less than one-tenth of one-percent of care days. 
+
+```{r improving_lives1, engine='R', warning=FALSE, message=FALSE, echo=FALSE, results='asis'}
+require(pocr)
+pR_F
+```
+
+We can see too that CA is making steady gains at reducing the placement mobility of foster children - both in terms of foster placement moves and days spent on-the-run. 
+
+```{r improving_lives2, engine='R', warning=FALSE, message=FALSE, echo=FALSE, results='asis'}
+require(pocr)
+pdR_M
+pdR_Mtx
+paR_OTR
+```
+
+When we break out mobility rates by transition type, we see that when placement moves are required, there is an increasing preference for transitions to kinship care as opposed to foster homes or group care settings. Focus on family preservation is not limited to kinship transitions either. CA also appears to be making steady gains in the rate of sibling placement as shown in the graph below. 
+
+```{r improving_lives3, engine='R', warning=FALSE, message=FALSE, echo=FALSE, results='asis'}
+require(pocr)
+pR_SP
+```
+
+####Understanding the Lives of Children Beyond the System
+Our first year of reporting educational outcomes has been focused on building a durable institution through which foster child educational outcomes can be reliably reported into the future. At this time, some of our educational reporting is limited due to a lack of available data in recent years. The nature of educational data also requires that we wait several years to observe a particular outcome. Nonetheless, some interesting trends are evident within the available data. 
+
+To start, CA appears to be making steady gains in the rate of planning activities for foster children nearing the age of 18. As shown in the graph below, over 80 percent of children who were in care at the age of 17-1/2 had completed some sort of transitional planning to adulthood. 
+
+```{r understanding1, engine='R', warning=FALSE, message=FALSE, echo=FALSE, results='asis'}
+require(pocr)
+pR_ATP
+```
+
+Looking specifically at educational data, we can observe some apparently stable trends of third-grade literacy among foster children with clear and apparently stable differences by disability status. The reader is invited to explore this trend more at the POC data portal to compare foster children to other children receiving free and reduced lunch. 
+
+```{r understanding2, engine='R', warning=FALSE, message=FALSE, echo=FALSE, results='asis'}
+require(pocr)
+pR_L_3
+```
+
+This trend, as well as the drop-out rate for foster children shown below will serve as important baseline measures as POC continues to gain access to educational data. 
+
+```{r understanding3, engine='R', warning=FALSE, message=FALSE, echo=FALSE, results='asis'}
+require(pocr)
+pR_D
+```
+
+NOTE: The data sharing agreement between CEDR and ERDC is currently being revised to facilitate the tracking of post-secondary educational outcomes for foster children. At least two additional measures concerning attempted college credits and post-secondary completion will be added to this report upon revision to the agreement. 
+
+## (Page 28-29 Copy)
+###Moving Forward - Tasks for 2015
+
+####Gaining a Better Understanding of Well-being
+
+#####Continue to explore educational data related to foster children. 
+Throughout the next year we plan to gain access to more current data concerning the educational status of foster children. We also hope to explore more measures within the educational data so that we can better understand the educational experience of foster children in Washington.
+
+#####Continue to explore other sources of data. 
+Throughout the next year we also plan to explore, in partnership with CA and DSHS, the possibility of including more administrative data metrics in the well-being section of future reports. Potential target data sets will be collaboratively identified through the existing partnership between CA and POC. 
+
+####Gaining a Better Understanding of System Change
+
+#####Explore refinements to our current change assessment approach
+While the control-chart approach utilized throughout this document is a reasonable approach to take for assessing change, it requires many assumptions about our data that may not be realistic. Over the course of the next year, we intend to explore refinements to this approach to better understand changes to the child welfare system in Washington. 
+
+#####Explore the application of advances in control group selection
+A fundamental problem with the manner in which we are currently reporting data is our relative inability to identify what children served by the child welfare system "should" look like. This is particularly problematic for any of our well-being measures. For example, the third-grade literacy rate for foster children may look problematic to some observers. However, it is not at all clear from the data what the literacy rate for foster children *should* be. One approach to this problem would be to try and statistically identify a comparison group for foster children. While not typically applied to the problem of performance monitoring, several well-established techniques exist to identify control groups. Throughout the course of the next year, in partnership with CA and DSHS, we will work to explore the possibility of applying such method to the annual review.  
+
+## (Page 30 Copy)
+
+Thank you section

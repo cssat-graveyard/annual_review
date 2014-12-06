@@ -1,0 +1,121 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{fourier}
+\usepackage{amsmath}
+\usetikzlibrary{positioning,arrows, shapes.geometric}
+\usepackage{xcolor}
+\begin{document}
+\begin{tikzpicture}
+
+\tikzstyle{lens} = [draw=nice_green, circle, minimum size=2mm, ultra thick]
+\tikzstyle{dot} = [draw, circle, minimum size=1mm, inner sep=0pt]
+
+\definecolor{nice_brown}{HTML}{B15928}
+\definecolor{nice_purple}{HTML}{6A3D9A}
+\definecolor{nice_blue}{HTML}{1F78B4}
+\definecolor{nice_green}{HTML}{33A02C}
+\definecolor{nice_orange}{HTML}{FF7F00}
+
+
+
+
+
+%house and people numerator
+\draw[ultra thick,draw=nice_brown] (0,2) -- (0,0) -- (4,0) -- (4,2) -- (2,4) -- (0,2) -- (0,0);
+
+%%people
+\draw[thick, fill=nice_purple, draw=none] (1.25,2) circle (3mm);
+\draw[thick, fill=nice_purple, draw=none] (2.75,2) circle (3mm);
+\coordinate (head1center) at (1.25,2);
+\coordinate (head2center) at (2.75,2);
+\node[rounded corners=2pt,minimum height=1.3cm,minimum width=0.4cm,fill=nice_purple,below = 3.5mm of head1center] (body1) {};
+\node[rounded corners=2pt,minimum height=1.3cm,minimum width=0.4cm,fill=nice_purple,below = 3.5mm of head2center] (body2) {};
+\draw[draw=nice_purple, line width=1mm,round cap-round cap] ([shift={(2pt,-1pt)}]body1.north east) --++(-90:6mm);
+\draw[draw=nice_purple, line width=1mm,round cap-round cap] ([shift={(-2pt,-1pt)}]body1.north west)--++(-90:6mm);
+\draw[thick,white,-round cap] (body1.south) --++(90:5.5mm);
+\draw[draw=nice_purple, line width=1mm,round cap-round cap] ([shift={(2pt,-1pt)}]body2.north east) --++(-90:6mm);
+\draw[draw=nice_purple, line width=1mm,round cap-round cap] ([shift={(-2pt,-1pt)}]body2.north west)--++(-90:6mm);
+\draw[thick,white,-round cap] (body2.south) --++(90:5.5mm);
+
+%fraction
+
+\draw[ultra thick,] (-5,-.5) -- (12,-.5);
+
+%house and people denominator
+\draw[ultra thick,draw=nice_brown] (0,-3) -- (0,-5) -- (4,-5) -- (4,-3) -- (2,-1) -- (0,-3) -- (0,-5);
+
+\draw[thick,  fill=nice_purple, draw=none] (1.25,-3) circle (3mm);
+\draw[thick,  fill=nice_purple, draw=none] (2.75,-3) circle (3mm);
+\coordinate (head1center) at (1.25,-3);
+\coordinate (head2center) at (2.75,-3);
+\node[rounded corners=2pt,minimum height=1.3cm,minimum width=0.4cm,fill=nice_purple,,below = 3.5mm of head1center] (body1) {};
+\node[rounded corners=2pt,minimum height=1.3cm,minimum width=0.4cm,fill=nice_purple,,below = 3.5mm of head2center] (body2) {};
+\draw[draw=nice_purple, line width=1mm,fill=nice_purple,round cap-round cap] ([shift={(2pt,-1pt)}]body1.north east) --++(-90:6mm);
+\draw[draw=nice_purple, line width=1mm,round cap-round cap] ([shift={(-2pt,-1pt)}]body1.north west)--++(-90:6mm);
+\draw[thick,white,-round cap] (body1.south) --++(90:5.5mm);
+% 
+\draw[draw=nice_purple, line width=1mm,round cap-round cap] ([shift={(2pt,-1pt)}]body2.north east) --++(-90:6mm);
+\draw[draw=nice_purple, line width=1mm,round cap-round cap] ([shift={(-2pt,-1pt)}]body2.north west)--++(-90:6mm);
+\draw[thick,white,-round cap] (body2.south) --++(90:5.5mm);
+
+%left side of the equation 
+%\node[] (R_I) at (-7,-.4) {\Huge Measure = };
+
+%right side of the equation 
+
+%magnifying glass
+\node[lens] (lens) at (5.5,1.25)  {};
+\coordinate (handle) at (5.75,1);
+\draw[ultra thick, draw=nice_green, round cap-] (handle) -- (lens);
+
+%exclamation
+\coordinate (bar1) at (5.6,2.5);
+\coordinate (bar2) at (5.4,2.5);
+\coordinate (bar3) at (5.5,2.05);
+\draw[fill=nice_blue, draw=none, rounded corners=2pt]  (bar1) --  (bar2) --  (bar3) -- cycle;
+
+\node[dot, draw=none, fill=nice_blue] (dot) at (5.5,2)  {};
+
+
+%removal circle
+%\coordinate (remova_arrow_end) at (4.5,2);
+
+\node[ultra thick, draw=nice_orange, ellipse, minimum width=30pt, minimum height=80pt](removal_ellipse) at (2.75,1.25) {};
+
+\coordinate (removal_arrow_end) at (5.65,.25);
+
+\path[ultra thick, draw=nice_orange, ->] (removal_ellipse.east) to[bend right] (removal_arrow_end);
+
+%left side of house
+
+%removal
+\coordinate (removal_symbol_begin) at (-2,.25);
+\coordinate (removal_symbol_end) at (-1.35,.2);
+\path[ultra thick, draw=nice_orange, ->] (removal_symbol_begin) to[bend right] (removal_symbol_end);
+
+
+%exclamation
+\coordinate (bar1) at (-1.65,2.5);
+\coordinate (bar2) at (-1.85,2.5);
+\coordinate (bar3) at (-1.75,2.05);
+\draw[fill=nice_blue, draw=none, rounded corners=2pt]  (bar1) --  (bar2) --  (bar3) -- cycle;
+\node[dot, draw=none, fill=nice_blue] (dot) at (-1.75,2)  {};
+
+%magnifying glass
+\node[lens] (lens) at (-1.75,1.25)  {};
+\coordinate (handle) at (-1.5,1);
+\draw[ultra thick, draw=nice_green, round cap-] (handle) -- (lens);
+
+%\draw[draw=nice_orange] (removal_ellipse_center) ellipse (.5 and 1.25);
+
+%words
+\node[right] (current_txt) at (-3,3.25) {\Huge {History}};
+\node[right] (current_txt) at (4,3.25) {\Huge {Current}};
+\node[text=nice_blue, right] (intake_txt) at (8,2.25) {\Huge Intakes Received};
+\node[text=nice_green, right] (screen_txt) at (8,1.25) {\Huge Screened-In Intakes};
+\node[text=nice_orange, right] (rem_txt) at (8,.25) {\Huge Removals};
+
+
+\end{tikzpicture}
+\end{document}
+

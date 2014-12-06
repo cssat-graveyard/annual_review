@@ -1,0 +1,42 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{fourier}
+\usepackage{amsmath}
+\usetikzlibrary{positioning,arrows, shapes.geometric}
+\usepackage{xcolor}
+\begin{document}
+\begin{tikzpicture}[thick,scale=0.6, every node/.style={transform shape}]
+
+\tikzstyle{lens} = [draw=nice_green, circle, minimum size=2mm, ultra thick]
+\tikzstyle{dot} = [draw, circle, minimum size=1mm, inner sep=0pt]
+
+\definecolor{nice_brown}{HTML}{B15928}
+\definecolor{nice_purple}{HTML}{6A3D9A}
+\definecolor{nice_blue}{HTML}{1F78B4}
+\definecolor{nice_green}{HTML}{33A02C}
+\definecolor{nice_orange}{HTML}{FF7F00}
+
+
+
+
+
+%house and people numerator
+\draw[ultra thick,draw=nice_brown] (0,2) -- (0,0) -- (4,0) -- (4,2) -- (2,4) -- (0,2) -- (0,0);
+
+%%people
+\draw[thick, fill=nice_purple, draw=none] (1.25,2) circle (3mm);
+\draw[thick, fill=nice_purple, draw=none] (2.75,2) circle (3mm);
+\coordinate (head1center) at (1.25,2);
+\coordinate (head2center) at (2.75,2);
+\node[rounded corners=2pt,minimum height=1.3cm,minimum width=0.4cm,fill=nice_purple,below = 3.5mm of head1center] (body1) {};
+\node[rounded corners=2pt,minimum height=1.3cm,minimum width=0.4cm,fill=nice_purple,below = 3.5mm of head2center] (body2) {};
+\draw[draw=nice_purple, line width=1mm,round cap-round cap] ([shift={(2pt,-1pt)}]body1.north east) --++(-90:6mm);
+\draw[draw=nice_purple, line width=1mm,round cap-round cap] ([shift={(-2pt,-1pt)}]body1.north west)--++(-90:6mm);
+\draw[thick,white,-round cap] (body1.south) --++(90:5.5mm);
+\draw[draw=nice_purple, line width=1mm,round cap-round cap] ([shift={(2pt,-1pt)}]body2.north east) --++(-90:6mm);
+\draw[draw=nice_purple, line width=1mm,round cap-round cap] ([shift={(-2pt,-1pt)}]body2.north west)--++(-90:6mm);
+\draw[thick,white,-round cap] (body2.south) --++(90:5.5mm);
+
+\end{tikzpicture}
+\end{document}
+
