@@ -1,0 +1,33 @@
+---
+title: "Measurement Specification for General Rate of Intakes"
+author: "Joe Mienko"
+date: "Saturday, December 06, 2014"
+output: html_document
+---
+
+# General Rate of Intakes ($R_I$)
+
+## Formal Definition
+
+The general rate of intakes (i.e. reports of safety concerns) ($R_I$) shall be defined as the total number of household intakes received by Children's Administration (CA) per month, per 1,000 households with own children under the age of 18 as defined by the US Census. This measure will focus on \emph{all} categories of intakes to the child welfare system except intakes made to the division of licensed resources (DLR). This measure thus includes contacts to the child welfare system in which at least one child in a household is alleged to have been a victim of child maltreatment (i.e. child protective services (CPS) intakes), contacts in which no child maltreatment is indicated but at least one child in a household is identified at iminent risk of serious harm (i.e. risk-only intakes), contacts in which a parent contacts the child welfare system seeking placement of their child (i.e. child and family welfare services (CFWS) intakes), and contacts in which a caretaker contacts the child welfare system seeking assistance with one or more adolescent youth in a household (i.e. family reconciliation services (FRS)). When reported, the measure shall be disagragated by each category.  
+
+$$
+R_I = \frac{I}{H} \cdot 1,000
+$$
+
+where $I$ represents the total number of referrals occurring during the month and $H$ the population of households with own children under the age of 18 as defined by the US Census. If more than one referral is received for a given household within a 48 hour period, those referrals will only be counted once. To the extent that estimates are available, values of $H$ (and subsequent measures of the general population used in this document) shall be calculated from the following sources in order of priority:
+
+1. US Census for a given year,
+2. American Community Survey (ACS), 
+3. Office of Financial Management (OFM), and 
+4. Linear interpolation taking the above estimates as "True" values. 
+
+```{r}
+summary(cars)
+```
+
+You can also embed plots, for example:
+
+```{r, echo=FALSE}
+plot(cars)
+```
