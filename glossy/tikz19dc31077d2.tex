@@ -1,0 +1,168 @@
+\documentclass{article}
+\include{preview}
+\usepackage[pdftex,active,tightpage]{preview}
+\usepackage{amsmath}
+\usepackage{tikz}
+\usetikzlibrary{matrix}
+\begin{document}
+\begin{preview}
+%% TIKZ_CODE %%
+\usetikzlibrary{fit,calendar}
+
+
+
+\definecolor{nice_brown}{HTML}{B15928}
+\definecolor{nice_purple}{HTML}{6A3D9A}
+\definecolor{nice_blue}{HTML}{1F78B4}
+\definecolor{nice_green}{HTML}{33A02C}
+\definecolor{nice_orange}{HTML}{FF7F00}
+\definecolor{nice_red}{HTML}{E31A1C}
+
+
+\makeatother%
+
+\begin{document}
+%\begin{center}
+\begin{tikzpicture}[scale=6,font=\fontsize{25}{12}\selectfont\bfseries]
+% 
+% \coordinate (in_home_begin) at (4,0);
+% \coordinate (in_home_end) at (5,0);
+% %\path[ultra thick, draw=nice_orange, ->] (in_home_begin) to[bend right] (in_home_end);
+% \draw[draw=none, line width=2pt, rounded corners, opacity=0.2, fill=nice_blue] (in_home_begin) +(-5pt,-5pt) rectangle +(25pt,5pt) {};
+
+\node[align=center] at (1.5,.5) {Timmy's Hypothetical Month in Care\\(First Year)};
+
+\node[align=center] at (1.5,-2.4) {Jane's Hypothetical Month in Care\\(End of First Year Start of Second)}; 
+
+\node[align=center] at (5,-1) {\underline{Timmy Activity}};
+\node[align=center, text=nice_blue] at (5,-1.25) {8 Foster Home Care Days (Year 1)};
+\node[align=center, text=nice_orange] at (5,-1.5) {14 Group Home Care Days (Year 1)};
+\node[align=center, text=nice_brown] at (5,-1.75) {1 Movement to Group Home (Year 1)};
+
+
+\node[align=center] at (5,-2.25) {\underline{Jane Activity}};
+\node[align=center, text=nice_blue] at (5,-2.5) {3 Foster Home Care Days (Year 1)};
+\node[align=center, text=nice_blue] at (5,-2.75) {19 Foster Home Care Days (Year 2)};
+
+\node[align=center, text=nice_red] at (5,-3) {8 Kinship Home Care Days (Year 2)};
+
+\node[align=center, text=nice_brown] at (5,-3.25) {1 Movement to Kinship Home (Year 2)};
+\node[align=center, text=nice_brown] at (5,-3.5) {1 Movement to Foster Home (Year 2)};
+
+\node[align=center] at (5,-4) {\underline{Example Calculation}};
+
+\node[align=center, ] at (5,-4.25) {$\textrm{Year 1 Movement Rate} = \frac{\textrm{1 Movement}}{\textrm{ 25 Care Days}}$};
+
+
+\node[rectangle
+      ,draw=none
+      ,rounded corners
+      ,fill=nice_purple
+      ,opacity=0.2
+      ,minimum width=10cm
+      ,minimum height=2cm] at (5,1) {}; 
+
+\node[] at (5,1) {Own Home}; 
+
+\node[rectangle
+      ,draw=none
+      ,rounded corners
+      ,fill=nice_blue
+      ,opacity=0.2
+      ,minimum width=10cm
+      ,minimum height=2cm] at (5,.625) {}; 
+
+\node[] at (5,.625) {Foster Home}; 
+
+\node[rectangle
+      ,draw=none
+      ,rounded corners
+      ,fill=nice_orange
+      ,opacity=0.2
+      ,minimum width=10cm
+      ,minimum height=2cm] at (5,.25) {}; 
+
+\node[] at (5,.25) {Group Home}; 
+
+\node[rectangle
+      ,draw=none
+      ,rounded corners
+      ,fill=nice_red
+      ,opacity=0.2
+      ,minimum width=10cm
+      ,minimum height=2cm] at (5,-.125) {}; 
+
+\node[] at (5,-.125) {Kinship Home}; 
+
+
+\node[rectangle
+      ,draw=none
+      ,rounded corners
+      ,fill=nice_green
+      ,opacity=0.2
+      ,minimum width=10cm
+      ,minimum height=2cm] at (5,-.5) {}; 
+
+\node[] at (5,-.5) {1 Year Since Removal}; 
+
+
+\calendar (hyp_cal) [dates=2013-05-01 to 2013-06-30
+                    ,week list
+                    ,month label above centered
+                    ,month text={}
+                    ,day yshift = 0.4cm];
+
+%at home
+\draw[draw=none, line width=2pt, rounded corners, opacity=0.2, fill=nice_purple] (hyp_cal-2013-05-01) +(-5pt,-5pt) rectangle +(65pt,5pt) ;
+\draw[draw=none, line width=2pt, rounded corners, opacity=0.2, fill=nice_purple] (hyp_cal-2013-05-06) +(-5pt,-5pt) rectangle +(20pt,5pt) ;
+
+%foster care
+\draw[draw=none, line width=2pt, rounded corners, opacity=0.2, fill=nice_blue] (hyp_cal-2013-05-08) +(-5pt,-5pt) rectangle +(65pt,5pt) ;
+\draw[draw=none, line width=2pt, rounded corners, opacity=0.2, fill=nice_blue] (hyp_cal-2013-05-13) +(-4pt,-5pt) rectangle +(35pt,5pt) ;
+
+%group care
+\draw[draw=none, line width=2pt, rounded corners, opacity=0.2, fill=nice_orange] (hyp_cal-2013-05-16) +(-5pt,-5pt) rectangle +(51pt,5pt) ;
+\draw[draw=none, line width=2pt, rounded corners, opacity=0.2, fill=nice_orange] (hyp_cal-2013-05-20) +(-4pt,-5pt) rectangle +(96pt,5pt) ;
+
+%back home
+\draw[draw=none, line width=2pt, rounded corners, opacity=0.2, fill=nice_purple] (hyp_cal-2013-05-30) +(-5pt,-5pt) rectangle +(20pt,5pt) ;
+\draw[draw=none, line width=2pt, rounded corners, opacity=0.2, fill=nice_orange] (hyp_cal-2013-05-27) +(-4pt,-5pt) rectangle +(35pt,5pt) ;
+
+\path[ultra thick
+      ,draw=nice_brown
+      ,line width=4pt
+      ,->] (hyp_cal-2013-05-15) to[bend right] (hyp_cal-2013-05-16);
+
+
+%foster care
+\draw[draw=none, line width=2pt, rounded corners, opacity=0.2, fill=nice_blue] (hyp_cal-2013-06-01) +(-5pt,-5pt) rectangle +(20pt,5pt) ;
+\draw[draw=none, line width=2pt, rounded corners, opacity=0.2, fill=nice_blue] (hyp_cal-2013-06-03) +(-5pt,-5pt) rectangle +(95pt,5pt) ;
+\draw[draw=none, line width=2pt, rounded corners, opacity=0.2, fill=nice_blue] (hyp_cal-2013-06-10) +(-4pt,-5pt) rectangle +(96pt,5pt) ;
+\draw[draw=none, line width=2pt, rounded corners, opacity=0.2, fill=nice_blue] (hyp_cal-2013-06-17) +(-4pt,-5pt) rectangle +(6pt,5pt) ;
+
+
+
+%kinship
+\draw[draw=none, line width=2pt, rounded corners, opacity=0.2, fill=nice_red] (hyp_cal-2013-06-18) +(-4pt,-5pt) rectangle +(81pt,5pt) ;
+\draw[draw=none, line width=2pt, rounded corners, opacity=0.2, fill=nice_red] (hyp_cal-2013-06-24) +(-4pt,-5pt) rectangle +(20pt,5pt) ;
+
+
+\draw[draw=none, line width=2pt, rounded corners, opacity=0.2, fill=nice_blue] (hyp_cal-2013-06-26) +(-5pt,-5pt) rectangle +(66pt,5pt) ;
+
+\draw[draw=none, line width=2pt, rounded corners, opacity=0.2, fill=nice_green] (hyp_cal-2013-06-04) circle (5pt);
+
+\path[ultra thick
+      ,draw=nice_brown
+      ,line width=4pt
+      ,->] (hyp_cal-2013-06-17) to[bend right] (hyp_cal-2013-06-18);
+
+\path[ultra thick
+      ,draw=nice_brown
+      ,line width=4pt
+      ,->] (hyp_cal-2013-06-25) to[bend right] (hyp_cal-2013-06-26);
+
+\end{tikzpicture}
+
+\end{document}
+\end{preview}
+\end{document}
