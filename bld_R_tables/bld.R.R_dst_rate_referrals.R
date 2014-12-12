@@ -40,6 +40,10 @@ dat$start_date <- strptime(dat$start_date, format="%Y-%m-%d")
 sqlQuery(con, "drop table R.R_dst_rate_referrals")
 
 sqlSave(con
-        ,dat = dat[,c("start_date", "referral_rate", "trend")]
+        ,dat = dat[,c("start_date"
+                      ,"county_cd"
+                      ,"entry_point"
+                      ,"referral_rate"
+                      ,"trend")]
         ,tablename = "R.R_dst_rate_referrals"
         ,rownames = F)
